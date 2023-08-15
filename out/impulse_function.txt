@@ -1,0 +1,133 @@
+checkConsistencyPoint(t == 5,
+	True,
+	True,
+	True,
+	{},
+	{ub},
+	{prev_pb_0},
+	{},
+	0)
+
+--
+checkConsistencyPoint(ub == 0,
+	True,
+	True,
+	True,
+	{},
+	{ub},
+	{prev_pb_0},
+	{},
+	0)
+
+--
+checkConsistencyInterval(ub(t) == 0,
+	True,
+	True,
+	{ub(t)},
+	{prev_pb_0 -> 0},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(t == 5 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(t == 5,
+	True,
+	True,
+	True,
+	{prev_pb_0 -> 0},
+	{ub},
+	{prev_pb_0},
+	{},
+	5)
+
+--
+checkConsistencyPoint(t != 5,
+	True,
+	True,
+	True,
+	{prev_pb_0 -> 0},
+	{ub},
+	{prev_pb_0},
+	{},
+	5)
+
+--
+checkConsistencyPoint(False,
+	True,
+	True,
+	True,
+	{prev_pb_0 -> 0},
+	{ub},
+	{prev_pb_0},
+	{},
+	5)
+
+--
+checkConsistencyPoint(t == 5,
+	True,
+	True,
+	True,
+	{prev_pb_0 -> 0},
+	{ub},
+	{prev_pb_0},
+	{},
+	5)
+
+--
+checkConsistencyPoint(t != 5,
+	True,
+	True,
+	True,
+	{prev_pb_0 -> 0},
+	{ub},
+	{prev_pb_0},
+	{},
+	5)
+
+--
+checkConsistencyPoint(ub == 1,
+	True,
+	True,
+	True,
+	{prev_pb_0 -> 0},
+	{ub},
+	{prev_pb_0},
+	{},
+	5)
+
+--
+checkConsistencyInterval(t == 5,
+	True,
+	True,
+	{ub(t)},
+	{prev_pb_0 -> 1},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ub(t) == 0,
+	True,
+	True,
+	{ub(t)},
+	{prev_pb_0 -> 1},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(5 + t == 5 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+

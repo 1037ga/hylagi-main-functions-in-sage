@@ -1,0 +1,578 @@
+checkConsistencyPoint(ux == 0 && Inequality(99/100, Less, Derivative(1)(dx), Less, 101/100) && Derivative(2)(dx) == 0,
+	True,
+	True,
+	True,
+	{},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uy == 0 && Derivative(1)(dy) == 2 && Derivative(2)(dy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	0)
+
+--
+checkConsistencyInterval(uy(t) == -2 + Sqrt(3)*ux(t) && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> 0, prev_py_0 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_px_1 < 101/100 && prev_px_1 > 99/100,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy(t) == 2 + ux(t) && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> 0, prev_py_0 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_px_1 < 101/100 && prev_px_1 > 99/100,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy(t) == -3 - ux(t)/Sqrt(3) && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> 0, prev_py_0 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_px_1 < 101/100 && prev_px_1 > 99/100,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy(t) == 4 - ux(t) && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> 0, prev_py_0 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_px_1 < 101/100 && prev_px_1 > 99/100,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	True,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> 0, prev_py_0 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_px_1 < 101/100 && prev_px_1 > 99/100,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	True,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> 0, prev_py_0 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_px_1 < 101/100 && prev_px_1 > 99/100,
+	True,
+	{})
+
+--
+minimizeTime(-2 + Sqrt(3)*t*p_px_1_1 == 2*t && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2 + t*p_px_1_1 == 2*t && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-3 - (t*p_px_1_1)/Sqrt(3) == 2*t && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(4 - t*p_px_1_1 == 2*t && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime(-2/(-2 + p_px_1_1),
+	4/(2 + p_px_1_1),
+	99/100 < p_px_1_1 && p_px_1_1 < 101/100,
+	99/100 < p_px_1_1 && p_px_1_1 < 101/100)
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && prev_py_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (4*p_px_1_1)/(2 + p_px_1_1), prev_py_0 -> 8/(2 + p_px_1_1), prev_px_1 -> p_px_1_1, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	4/(2 + p_px_1_1))
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && prev_px_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (4*p_px_1_1)/(2 + p_px_1_1), prev_py_0 -> 8/(2 + p_px_1_1), prev_px_1 -> p_px_1_1, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	4/(2 + p_px_1_1))
+
+--
+checkConsistencyPoint(prev_py_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (4*p_px_1_1)/(2 + p_px_1_1), prev_py_0 -> 8/(2 + p_px_1_1), prev_px_1 -> p_px_1_1, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	4/(2 + p_px_1_1))
+
+--
+checkConsistencyPoint(prev_px_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (4*p_px_1_1)/(2 + p_px_1_1), prev_py_0 -> 8/(2 + p_px_1_1), prev_px_1 -> p_px_1_1, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	4/(2 + p_px_1_1))
+
+--
+checkConsistencyInterval(uy(t) == 4 - ux(t) && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (4*p_px_1_1)/(2 + p_px_1_1), prev_py_0 -> 8/(2 + p_px_1_1), prev_px_1 -> -2, prev_py_1 -> -p_px_1_1},
+	True,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	{p_px_1_1})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (4*p_px_1_1)/(2 + p_px_1_1), prev_py_0 -> 8/(2 + p_px_1_1), prev_px_1 -> -2, prev_py_1 -> -p_px_1_1},
+	True,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	{p_px_1_1})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (4*p_px_1_1)/(2 + p_px_1_1), prev_py_0 -> 8/(2 + p_px_1_1), prev_px_1 -> -2, prev_py_1 -> -p_px_1_1},
+	True,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	{p_px_1_1})
+
+--
+minimizeTime(-2 + Sqrt(3)*(-2*t + (4*p_px_1_1)/(2 + p_px_1_1)) == -(t*p_px_1_1) + 8/(2 + p_px_1_1) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2 - 2*t + (4*p_px_1_1)/(2 + p_px_1_1) == -(t*p_px_1_1) + 8/(2 + p_px_1_1) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-3 - (-2*t + (4*p_px_1_1)/(2 + p_px_1_1))/Sqrt(3) == -(t*p_px_1_1) + 8/(2 + p_px_1_1) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(4 + 2*t - (4*p_px_1_1)/(2 + p_px_1_1) == -(t*p_px_1_1) + 8/(2 + p_px_1_1) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime((-2*(-2 + 3*p_px_1_1))/(-4 + p_px_1_1^2),
+	(42 + 9*p_px_1_1 + 4*Sqrt(3)*p_px_1_1)/((2 + p_px_1_1)*(2*Sqrt(3) + 3*p_px_1_1)),
+	99/100 < p_px_1_1 && p_px_1_1 < 101/100,
+	99/100 < p_px_1_1 && p_px_1_1 < 101/100)
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && prev_py_1 == Derivative(1)(dx),
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (4*(-1 + p_px_1_1))/(-2 + p_px_1_1), prev_py_0 -> (-8 + 6*p_px_1_1)/(-2 + p_px_1_1), prev_px_1 -> -2, prev_py_1 -> -p_px_1_1, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	-2/(-2 + p_px_1_1))
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && prev_px_1 == Derivative(1)(dy),
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (4*(-1 + p_px_1_1))/(-2 + p_px_1_1), prev_py_0 -> (-8 + 6*p_px_1_1)/(-2 + p_px_1_1), prev_px_1 -> -2, prev_py_1 -> -p_px_1_1, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	-2/(-2 + p_px_1_1))
+
+--
+checkConsistencyPoint(prev_py_1 == Derivative(1)(dx),
+	ux == prev_px_0,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (4*(-1 + p_px_1_1))/(-2 + p_px_1_1), prev_py_0 -> (-8 + 6*p_px_1_1)/(-2 + p_px_1_1), prev_px_1 -> -2, prev_py_1 -> -p_px_1_1, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	-2/(-2 + p_px_1_1))
+
+--
+checkConsistencyPoint(prev_px_1 == Derivative(1)(dy),
+	uy == prev_py_0,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (4*(-1 + p_px_1_1))/(-2 + p_px_1_1), prev_py_0 -> (-8 + 6*p_px_1_1)/(-2 + p_px_1_1), prev_px_1 -> -2, prev_py_1 -> -p_px_1_1, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	-2/(-2 + p_px_1_1))
+
+--
+checkConsistencyInterval(uy(t) == 2 + ux(t) && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (4*(-1 + p_px_1_1))/(-2 + p_px_1_1), prev_py_0 -> (-8 + 6*p_px_1_1)/(-2 + p_px_1_1), prev_px_1 -> -p_px_1_1, prev_py_1 -> -2},
+	True,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	{p_px_1_1})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (4*(-1 + p_px_1_1))/(-2 + p_px_1_1), prev_py_0 -> (-8 + 6*p_px_1_1)/(-2 + p_px_1_1), prev_px_1 -> -p_px_1_1, prev_py_1 -> -2},
+	True,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	{p_px_1_1})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (4*(-1 + p_px_1_1))/(-2 + p_px_1_1), prev_py_0 -> (-8 + 6*p_px_1_1)/(-2 + p_px_1_1), prev_px_1 -> -p_px_1_1, prev_py_1 -> -2},
+	True,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	{p_px_1_1})
+
+--
+minimizeTime(-2 + Sqrt(3)*((4*(-1 + p_px_1_1))/(-2 + p_px_1_1) - t*p_px_1_1) == -2*t + (-8 + 6*p_px_1_1)/(-2 + p_px_1_1) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-2*t + (-8 + 6*p_px_1_1)/(-2 + p_px_1_1) == 2 + (4*(-1 + p_px_1_1))/(-2 + p_px_1_1) - t*p_px_1_1 && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-3 - ((4*(-1 + p_px_1_1))/(-2 + p_px_1_1) - t*p_px_1_1)/Sqrt(3) == -2*t + (-8 + 6*p_px_1_1)/(-2 + p_px_1_1) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-2*t + (-8 + 6*p_px_1_1)/(-2 + p_px_1_1) == 4 - (4*(-1 + p_px_1_1))/(-2 + p_px_1_1) + t*p_px_1_1 && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime((4*(3 - Sqrt(3) - 2*p_px_1_1 + Sqrt(3)*p_px_1_1))/((-2 + p_px_1_1)*(-2 + Sqrt(3)*p_px_1_1)),
+	(-42 - 4*Sqrt(3) + 27*p_px_1_1 + 4*Sqrt(3)*p_px_1_1)/((-2 + p_px_1_1)*(6 + Sqrt(3)*p_px_1_1)),
+	99/100 < p_px_1_1 && p_px_1_1 < 101/100,
+	99/100 < p_px_1_1 && p_px_1_1 < 101/100)
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && prev_px_1 == Sqrt(3)*prev_py_1 + 2*Derivative(1)(dx),
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (12 - 27*p_px_1_1)/(6 + Sqrt(3)*p_px_1_1), prev_py_0 -> (2*(-9 - 2*Sqrt(3) + 3*Sqrt(3)*p_px_1_1))/(6 + Sqrt(3)*p_px_1_1), prev_px_1 -> -p_px_1_1, prev_py_1 -> -2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	(27 + 2*Sqrt(3))/(6 + Sqrt(3)*p_px_1_1))
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && Sqrt(3)*prev_px_1 + prev_py_1 + 2*Derivative(1)(dy) == 0,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (12 - 27*p_px_1_1)/(6 + Sqrt(3)*p_px_1_1), prev_py_0 -> (2*(-9 - 2*Sqrt(3) + 3*Sqrt(3)*p_px_1_1))/(6 + Sqrt(3)*p_px_1_1), prev_px_1 -> -p_px_1_1, prev_py_1 -> -2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	(27 + 2*Sqrt(3))/(6 + Sqrt(3)*p_px_1_1))
+
+--
+checkConsistencyPoint(prev_px_1 == Sqrt(3)*prev_py_1 + 2*Derivative(1)(dx),
+	ux == prev_px_0,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (12 - 27*p_px_1_1)/(6 + Sqrt(3)*p_px_1_1), prev_py_0 -> (2*(-9 - 2*Sqrt(3) + 3*Sqrt(3)*p_px_1_1))/(6 + Sqrt(3)*p_px_1_1), prev_px_1 -> -p_px_1_1, prev_py_1 -> -2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	(27 + 2*Sqrt(3))/(6 + Sqrt(3)*p_px_1_1))
+
+--
+checkConsistencyPoint(Sqrt(3)*prev_px_1 + prev_py_1 + 2*Derivative(1)(dy) == 0,
+	uy == prev_py_0,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (12 - 27*p_px_1_1)/(6 + Sqrt(3)*p_px_1_1), prev_py_0 -> (2*(-9 - 2*Sqrt(3) + 3*Sqrt(3)*p_px_1_1))/(6 + Sqrt(3)*p_px_1_1), prev_px_1 -> -p_px_1_1, prev_py_1 -> -2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	(27 + 2*Sqrt(3))/(6 + Sqrt(3)*p_px_1_1))
+
+--
+checkConsistencyInterval(uy(t) == -3 - ux(t)/Sqrt(3) && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (12 - 27*p_px_1_1)/(6 + Sqrt(3)*p_px_1_1), prev_py_0 -> (2*(-9 - 2*Sqrt(3) + 3*Sqrt(3)*p_px_1_1))/(6 + Sqrt(3)*p_px_1_1), prev_px_1 -> (2*Sqrt(3) - p_px_1_1)/2, prev_py_1 -> (2 + Sqrt(3)*p_px_1_1)/2},
+	True,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	{p_px_1_1})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (12 - 27*p_px_1_1)/(6 + Sqrt(3)*p_px_1_1), prev_py_0 -> (2*(-9 - 2*Sqrt(3) + 3*Sqrt(3)*p_px_1_1))/(6 + Sqrt(3)*p_px_1_1), prev_px_1 -> (2*Sqrt(3) - p_px_1_1)/2, prev_py_1 -> (2 + Sqrt(3)*p_px_1_1)/2},
+	True,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	{p_px_1_1})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (12 - 27*p_px_1_1)/(6 + Sqrt(3)*p_px_1_1), prev_py_0 -> (2*(-9 - 2*Sqrt(3) + 3*Sqrt(3)*p_px_1_1))/(6 + Sqrt(3)*p_px_1_1), prev_px_1 -> (2*Sqrt(3) - p_px_1_1)/2, prev_py_1 -> (2 + Sqrt(3)*p_px_1_1)/2},
+	True,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	{p_px_1_1})
+
+--
+minimizeTime(-2 + Sqrt(3)*((t*(2*Sqrt(3) - p_px_1_1))/2 + (12 - 27*p_px_1_1)/(6 + Sqrt(3)*p_px_1_1)) == (t*(2 + Sqrt(3)*p_px_1_1))/2 + (2*(-9 - 2*Sqrt(3) + 3*Sqrt(3)*p_px_1_1))/(6 + Sqrt(3)*p_px_1_1) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime((t*(2 + Sqrt(3)*p_px_1_1))/2 + (2*(-9 - 2*Sqrt(3) + 3*Sqrt(3)*p_px_1_1))/(6 + Sqrt(3)*p_px_1_1) == 2 + (t*(2*Sqrt(3) - p_px_1_1))/2 + (12 - 27*p_px_1_1)/(6 + Sqrt(3)*p_px_1_1) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-3 - ((t*(2*Sqrt(3) - p_px_1_1))/2 + (12 - 27*p_px_1_1)/(6 + Sqrt(3)*p_px_1_1))/Sqrt(3) == (t*(2 + Sqrt(3)*p_px_1_1))/2 + (2*(-9 - 2*Sqrt(3) + 3*Sqrt(3)*p_px_1_1))/(6 + Sqrt(3)*p_px_1_1) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime((t*(2 + Sqrt(3)*p_px_1_1))/2 + (2*(-9 - 2*Sqrt(3) + 3*Sqrt(3)*p_px_1_1))/(6 + Sqrt(3)*p_px_1_1) == 4 - (t*(2*Sqrt(3) - p_px_1_1))/2 - (12 - 27*p_px_1_1)/(6 + Sqrt(3)*p_px_1_1) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime((6 + 16*Sqrt(3) - 35*Sqrt(3)*p_px_1_1)/(-12 + 4*Sqrt(3)*p_px_1_1 + 3*p_px_1_1^2),
+	(-2*(-42 - 4*Sqrt(3) + 27*p_px_1_1 + 4*Sqrt(3)*p_px_1_1))/(12 - 12*Sqrt(3) + 8*Sqrt(3)*p_px_1_1 + 3*p_px_1_1^2 + Sqrt(3)*p_px_1_1^2),
+	99/100 < p_px_1_1 && p_px_1_1 < 101/100,
+	99/100 < p_px_1_1 && p_px_1_1 < 101/100)
+
+
+compareMinTime((-2*(-42 - 4*Sqrt(3) + 27*p_px_1_1 + 4*Sqrt(3)*p_px_1_1))/(12 - 12*Sqrt(3) + 8*Sqrt(3)*p_px_1_1 + 3*p_px_1_1^2 + Sqrt(3)*p_px_1_1^2),
+	(2*(-30 - 4*Sqrt(3) - 27*p_px_1_1 + 2*Sqrt(3)*p_px_1_1))/(-12 - 12*Sqrt(3) - 8*Sqrt(3)*p_px_1_1 - 3*p_px_1_1^2 + Sqrt(3)*p_px_1_1^2),
+	99/100 < p_px_1_1 && p_px_1_1 < 101/100,
+	99/100 < p_px_1_1 && p_px_1_1 < 101/100)
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && prev_py_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (3*(-24*(4 + 7*Sqrt(3)) - 4*(-33 + 8*Sqrt(3))*p_px_1_1 + (-8 + 86*Sqrt(3))*p_px_1_1^2 + 25*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_py_0 -> (-3*(-72*Sqrt(3) + 12*(15 + 4*Sqrt(3))*p_px_1_1 + 6*(8 + 13*Sqrt(3))*p_px_1_1^2 + (21 + 4*Sqrt(3))*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_px_1 -> Sqrt(3) - p_px_1_1/2, prev_py_1 -> 1 + (Sqrt(3)*p_px_1_1)/2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	(-3*(252 + 132*Sqrt(3) + 12*(11 + 7*Sqrt(3))*p_px_1_1 + (21 + 11*Sqrt(3))*p_px_1_1^2))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)))
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && prev_px_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (3*(-24*(4 + 7*Sqrt(3)) - 4*(-33 + 8*Sqrt(3))*p_px_1_1 + (-8 + 86*Sqrt(3))*p_px_1_1^2 + 25*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_py_0 -> (-3*(-72*Sqrt(3) + 12*(15 + 4*Sqrt(3))*p_px_1_1 + 6*(8 + 13*Sqrt(3))*p_px_1_1^2 + (21 + 4*Sqrt(3))*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_px_1 -> Sqrt(3) - p_px_1_1/2, prev_py_1 -> 1 + (Sqrt(3)*p_px_1_1)/2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	(-3*(252 + 132*Sqrt(3) + 12*(11 + 7*Sqrt(3))*p_px_1_1 + (21 + 11*Sqrt(3))*p_px_1_1^2))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)))
+
+--
+checkConsistencyPoint(prev_py_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (3*(-24*(4 + 7*Sqrt(3)) - 4*(-33 + 8*Sqrt(3))*p_px_1_1 + (-8 + 86*Sqrt(3))*p_px_1_1^2 + 25*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_py_0 -> (-3*(-72*Sqrt(3) + 12*(15 + 4*Sqrt(3))*p_px_1_1 + 6*(8 + 13*Sqrt(3))*p_px_1_1^2 + (21 + 4*Sqrt(3))*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_px_1 -> Sqrt(3) - p_px_1_1/2, prev_py_1 -> 1 + (Sqrt(3)*p_px_1_1)/2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	(-3*(252 + 132*Sqrt(3) + 12*(11 + 7*Sqrt(3))*p_px_1_1 + (21 + 11*Sqrt(3))*p_px_1_1^2))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)))
+
+--
+checkConsistencyPoint(prev_px_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	True,
+	{prev_px_0 -> (3*(-24*(4 + 7*Sqrt(3)) - 4*(-33 + 8*Sqrt(3))*p_px_1_1 + (-8 + 86*Sqrt(3))*p_px_1_1^2 + 25*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_py_0 -> (-3*(-72*Sqrt(3) + 12*(15 + 4*Sqrt(3))*p_px_1_1 + 6*(8 + 13*Sqrt(3))*p_px_1_1^2 + (21 + 4*Sqrt(3))*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_px_1 -> Sqrt(3) - p_px_1_1/2, prev_py_1 -> 1 + (Sqrt(3)*p_px_1_1)/2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{p_px_1_1},
+	(-3*(252 + 132*Sqrt(3) + 12*(11 + 7*Sqrt(3))*p_px_1_1 + (21 + 11*Sqrt(3))*p_px_1_1^2))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)))
+
+--
+checkConsistencyInterval(uy(t) == 4 - ux(t) && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (3*(-24*(4 + 7*Sqrt(3)) - 4*(-33 + 8*Sqrt(3))*p_px_1_1 + (-8 + 86*Sqrt(3))*p_px_1_1^2 + 25*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_py_0 -> (-3*(-72*Sqrt(3) + 12*(15 + 4*Sqrt(3))*p_px_1_1 + 6*(8 + 13*Sqrt(3))*p_px_1_1^2 + (21 + 4*Sqrt(3))*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_px_1 -> (-2 - Sqrt(3)*p_px_1_1)/2, prev_py_1 -> (-2*Sqrt(3) + p_px_1_1)/2},
+	True,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	{p_px_1_1})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (3*(-24*(4 + 7*Sqrt(3)) - 4*(-33 + 8*Sqrt(3))*p_px_1_1 + (-8 + 86*Sqrt(3))*p_px_1_1^2 + 25*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_py_0 -> (-3*(-72*Sqrt(3) + 12*(15 + 4*Sqrt(3))*p_px_1_1 + 6*(8 + 13*Sqrt(3))*p_px_1_1^2 + (21 + 4*Sqrt(3))*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_px_1 -> (-2 - Sqrt(3)*p_px_1_1)/2, prev_py_1 -> (-2*Sqrt(3) + p_px_1_1)/2},
+	True,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	{p_px_1_1})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (3*(-24*(4 + 7*Sqrt(3)) - 4*(-33 + 8*Sqrt(3))*p_px_1_1 + (-8 + 86*Sqrt(3))*p_px_1_1^2 + 25*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_py_0 -> (-3*(-72*Sqrt(3) + 12*(15 + 4*Sqrt(3))*p_px_1_1 + 6*(8 + 13*Sqrt(3))*p_px_1_1^2 + (21 + 4*Sqrt(3))*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)), prev_px_1 -> (-2 - Sqrt(3)*p_px_1_1)/2, prev_py_1 -> (-2*Sqrt(3) + p_px_1_1)/2},
+	True,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	{p_px_1_1})
+
+--
+minimizeTime(-2 + Sqrt(3)*((t*(-2 - Sqrt(3)*p_px_1_1))/2 + (3*(-24*(4 + 7*Sqrt(3)) - 4*(-33 + 8*Sqrt(3))*p_px_1_1 + (-8 + 86*Sqrt(3))*p_px_1_1^2 + 25*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2))) == (t*(-2*Sqrt(3) + p_px_1_1))/2 - (3*(-72*Sqrt(3) + 12*(15 + 4*Sqrt(3))*p_px_1_1 + 6*(8 + 13*Sqrt(3))*p_px_1_1^2 + (21 + 4*Sqrt(3))*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime((t*(-2*Sqrt(3) + p_px_1_1))/2 - (3*(-72*Sqrt(3) + 12*(15 + 4*Sqrt(3))*p_px_1_1 + 6*(8 + 13*Sqrt(3))*p_px_1_1^2 + (21 + 4*Sqrt(3))*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)) == 2 + (t*(-2 - Sqrt(3)*p_px_1_1))/2 + (3*(-24*(4 + 7*Sqrt(3)) - 4*(-33 + 8*Sqrt(3))*p_px_1_1 + (-8 + 86*Sqrt(3))*p_px_1_1^2 + 25*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-3 - ((t*(-2 - Sqrt(3)*p_px_1_1))/2 + (3*(-24*(4 + 7*Sqrt(3)) - 4*(-33 + 8*Sqrt(3))*p_px_1_1 + (-8 + 86*Sqrt(3))*p_px_1_1^2 + 25*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)))/Sqrt(3) == (t*(-2*Sqrt(3) + p_px_1_1))/2 - (3*(-72*Sqrt(3) + 12*(15 + 4*Sqrt(3))*p_px_1_1 + 6*(8 + 13*Sqrt(3))*p_px_1_1^2 + (21 + 4*Sqrt(3))*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime((t*(-2*Sqrt(3) + p_px_1_1))/2 - (3*(-72*Sqrt(3) + 12*(15 + 4*Sqrt(3))*p_px_1_1 + 6*(8 + 13*Sqrt(3))*p_px_1_1^2 + (21 + 4*Sqrt(3))*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)) == 4 - (t*(-2 - Sqrt(3)*p_px_1_1))/2 - (3*(-24*(4 + 7*Sqrt(3)) - 4*(-33 + 8*Sqrt(3))*p_px_1_1 + (-8 + 86*Sqrt(3))*p_px_1_1^2 + 25*p_px_1_1^3))/((6 + Sqrt(3)*p_px_1_1)*(-12*(1 + Sqrt(3)) - 8*Sqrt(3)*p_px_1_1 + (-3 + Sqrt(3))*p_px_1_1^2)) && 0 < t,
+	Inequality(99/100, Less, p_px_1_1, Less, 101/100),
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime((-2*(-72 - 144*Sqrt(3) + 144*p_px_1_1 - 12*Sqrt(3)*p_px_1_1 + 6*p_px_1_1^2 + 84*Sqrt(3)*p_px_1_1^2 + 24*p_px_1_1^3 + Sqrt(3)*p_px_1_1^3))/(-48 + 32*Sqrt(3)*p_px_1_1 + 56*p_px_1_1^2 + 8*Sqrt(3)*p_px_1_1^3 + p_px_1_1^4),
+	(-360 - 48*Sqrt(3) - 372*p_px_1_1 - 96*Sqrt(3)*p_px_1_1 - 6*p_px_1_1^2 - 112*Sqrt(3)*p_px_1_1^2 - 27*p_px_1_1^3 + 2*Sqrt(3)*p_px_1_1^3)/(2*(-72 - 24*Sqrt(3) - 60*p_px_1_1 - 12*Sqrt(3)*p_px_1_1 + 6*p_px_1_1^2 - 14*Sqrt(3)*p_px_1_1^2 - 3*p_px_1_1^3 + Sqrt(3)*p_px_1_1^3)),
+	99/100 < p_px_1_1 && p_px_1_1 < 101/100,
+	99/100 < p_px_1_1 && p_px_1_1 < 101/100)
+
+

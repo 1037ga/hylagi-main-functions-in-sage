@@ -1,0 +1,5 @@
+(y,dy,ddy,p_y,t,prev_y,prev_dy) = var('y dy ddy p_y t prev_y prev_dy')
+y = function('y')(t)
+dy = function('dy')(t)
+S = desolve_system([diff(dy,t) == -10, dy == diff(y,t)],vars=[y,dy], ics=[0,p_y,10])
+print(S)

@@ -1,0 +1,29 @@
+from sage.all import *
+
+def getVariables(lst):
+  return sorted(reduce(lambda acc, l: acc.union(l.variables()), lst, set()), key=lambda x:x.__str__())
+
+def simpleSolve(cons_list):
+  vars = getVariables(cons_list)
+  sol = solve(cons_list, vars)
+  print(sol)
+
+# 充足可能
+(x,y,z,t) = var('x y z t')
+tm = cputime()
+simpleSolve([x==1, x<=2, 2<y])
+print("time:" + cputime(tm).__str__())
+
+tm = cputime()
+simpleSolve([x==2*y+1, y==x+1])
+print("time:" + cputime(t).__str__())
+
+# 充足不可能
+tm = cputime()
+simpleSolve([x==2*y+1, y==x+1, x>1])
+print("time:" + cputime(tm).__str__())
+
+# バウンシングボールの床のガード判定
+tm = cputime()
+simpleSolve([y==5*t^2+10, y==0, y.diff(t, 1)==0, y.diff(t, 2)==-10, t==sqrt(2)])
+print("time:" + cputime(tm).__str__())

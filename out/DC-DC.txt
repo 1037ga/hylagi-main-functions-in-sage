@@ -1,0 +1,1041 @@
+checkConsistencyPoint(us == 0 && us == 0 && Derivative(1)(ds) == 0,
+	True,
+	True,
+	True,
+	{},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{},
+	0)
+
+--
+checkConsistencyPoint(us != 0 && us == 0 && Derivative(1)(ds) == 0,
+	True,
+	True,
+	True,
+	{},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{},
+	0)
+
+--
+checkConsistencyPoint(us == 1 && us == 0 && Derivative(1)(ds) == 0,
+	True,
+	True,
+	True,
+	{},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{},
+	0)
+
+--
+checkConsistencyPoint(0 < uvc && uvc < 5 && urc == 1 && ur0 == 1 && uc == 1 && uvc/(uc*(ur0 + urc)) + Derivative(1)(dvc) == 0,
+	True,
+	True,
+	True,
+	{},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uil == 0 && ul == 1 && url == 1 && uvs == 1 && Derivative(1)(dil) == (-(uil*url) + uvs)/ul,
+	True,
+	True,
+	True,
+	{},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{},
+	0)
+
+--
+checkConsistencyPoint(us == 0 && Derivative(1)(ds) == 0,
+	True,
+	True,
+	True,
+	{},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{},
+	0)
+
+--
+checkConsistencyPoint(utimer == 0 && Derivative(1)(dtimer) == 1,
+	True,
+	True,
+	True,
+	{},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{},
+	0)
+
+--
+checkConsistencyInterval(utimer(t) == 1 && Derivative(1)(utimer)(t) == 1,
+	utimer(0) == prev_ptimer_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> 0, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvs_0 -> 1, prev_pil_1 -> 1, prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -prev_pvc_0/2},
+	prev_pvc_0 < 5 && prev_pvc_0 > 0,
+	True,
+	{})
+
+--
+checkConsistencyInterval(us(t) == 0 && Derivative(1)(us)(t) == 0,
+	uil(0) == prev_pil_0 && us(0) == prev_ps_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> 0, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvs_0 -> 1, prev_pil_1 -> 1, prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -prev_pvc_0/2},
+	prev_pvc_0 < 5 && prev_pvc_0 > 0,
+	True,
+	{})
+
+--
+checkConsistencyInterval(us(t) != 0 && Derivative(1)(us)(t) == 0,
+	uil(0) == prev_pil_0 && us(0) == prev_ps_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> 0, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvs_0 -> 1, prev_pil_1 -> 1, prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -prev_pvc_0/2},
+	prev_pvc_0 < 5 && prev_pvc_0 > 0,
+	True,
+	{})
+
+--
+checkConsistencyInterval(us(t) == 1 && Derivative(1)(us)(t) == 0,
+	uil(0) == prev_pil_0 && us(0) == prev_ps_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> 0, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvs_0 -> 1, prev_pil_1 -> 1, prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -prev_pvc_0/2},
+	prev_pvc_0 < 5 && prev_pvc_0 > 0,
+	True,
+	{})
+
+--
+checkConsistencyInterval(urc(t) == 1 && ur0(t) == 1 && uc(t) == 1 && uvc(t)/(uc(t)*(ur0(t) + urc(t))) + Derivative(1)(uvc)(t) == 0,
+	True,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> 0, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvs_0 -> 1, prev_pil_1 -> 1, prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -prev_pvc_0/2},
+	prev_pvc_0 < 5 && prev_pvc_0 > 0,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ul(t) == 1 && url(t) == 1 && uvs(t) == 1 && Derivative(1)(uil)(t) == (-(uil(t)*url(t)) + uvs(t))/ul(t),
+	True,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> 0, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvs_0 -> 1, prev_pil_1 -> 1, prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -prev_pvc_0/2},
+	prev_pvc_0 < 5 && prev_pvc_0 > 0,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(1)(us)(t) == 0,
+	True,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> 0, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvs_0 -> 1, prev_pil_1 -> 1, prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -prev_pvc_0/2},
+	prev_pvc_0 < 5 && prev_pvc_0 > 0,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(1)(utimer)(t) == 1,
+	True,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> 0, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvs_0 -> 1, prev_pil_1 -> 1, prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -prev_pvc_0/2},
+	prev_pvc_0 < 5 && prev_pvc_0 > 0,
+	True,
+	{})
+
+--
+minimizeTime(t == 1 && 0 < t,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 >= t,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(False,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(us == 0 && Derivative(1)(ds) == 0 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && us == prev_ps_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(us == 1 && Derivative(1)(ds) == 0 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && us == prev_ps_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(Derivative(1)(ds) == 0 && us + prev_ps_0 == 1,
+	us == prev_ps_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(Derivative(1)(dtimer) == 1 && utimer == 0,
+	utimer == prev_ptimer_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(uc == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(ul == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(ur0 == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(urc == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(url == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(uvs == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(us == 0 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(us == 1 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(us != 1 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(us + prev_ps_0 == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(utimer == 0,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyPoint(ul == 1 && url == 1 && uvs == 1 && urc == 1 && ur0 == 1 && uc == 1 && Derivative(1)(dil) == (-(uil*ul*(urc*url + ur0*(urc + url))) + urc*uvs + ur0*(-uvc + uvs))/(ul*(ur0 + urc)) && Derivative(1)(dvc) == (uil*ur0 - uvc)/(uc*ur0 + uc*urc),
+	uil == prev_pil_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> E^(-1), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> -p_pvc_0_1/(2*Sqrt(E))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	1)
+
+--
+checkConsistencyInterval(utimer(t) == 1 && Derivative(1)(utimer)(t) == 1,
+	utimer(0) == prev_ptimer_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> (3 - E - Sqrt(E)*p_pvc_0_1)/(2*E), prev_pvc_1 -> (-1 + E - Sqrt(E)*p_pvc_0_1)/(2*E)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(utimer(t) == 1 && Derivative(1)(utimer)(t) == 1,
+	utimer(0) == prev_ptimer_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> (3 - E - Sqrt(E)*p_pvc_0_1)/(2*E), prev_pvc_1 -> (-1 + E - Sqrt(E)*p_pvc_0_1)/(2*E)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(us(t) == 0 && Derivative(1)(us)(t) == 0,
+	uil(0) == prev_pil_0 && us(0) == prev_ps_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> (3 - E - Sqrt(E)*p_pvc_0_1)/(2*E), prev_pvc_1 -> (-1 + E - Sqrt(E)*p_pvc_0_1)/(2*E)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(us(t) == 1 && Derivative(1)(us)(t) == 0,
+	uil(0) == prev_pil_0 && us(0) == prev_ps_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> (3 - E - Sqrt(E)*p_pvc_0_1)/(2*E), prev_pvc_1 -> (-1 + E - Sqrt(E)*p_pvc_0_1)/(2*E)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(us(t) != 1 && Derivative(1)(us)(t) == 0,
+	uil(0) == prev_pil_0 && us(0) == prev_ps_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> (3 - E - Sqrt(E)*p_pvc_0_1)/(2*E), prev_pvc_1 -> (-1 + E - Sqrt(E)*p_pvc_0_1)/(2*E)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(Derivative(1)(us)(t) == 0,
+	us(0) == prev_ps_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> (3 - E - Sqrt(E)*p_pvc_0_1)/(2*E), prev_pvc_1 -> (-1 + E - Sqrt(E)*p_pvc_0_1)/(2*E)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(Derivative(1)(utimer)(t) == 1,
+	utimer(0) == prev_ptimer_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> (3 - E - Sqrt(E)*p_pvc_0_1)/(2*E), prev_pvc_1 -> (-1 + E - Sqrt(E)*p_pvc_0_1)/(2*E)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(ul(t) == 1 && url(t) == 1 && uvs(t) == 1 && urc(t) == 1 && ur0(t) == 1 && uc(t) == 1 && Derivative(1)(uil)(t) == (-(uil(t)*ul(t)*(urc(t)*url(t) + ur0(t)*(urc(t) + url(t)))) + urc(t)*uvs(t) + ur0(t)*(-uvc(t) + uvs(t)))/(ul(t)*(ur0(t) + urc(t))) && Derivative(1)(uvc)(t) == (uil(t)*ur0(t) - uvc(t))/(uc(t)*(ur0(t) + urc(t))),
+	uil(0) == prev_pil_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E)/E, prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> p_pvc_0_1/Sqrt(E), prev_pvs_0 -> 1, prev_pil_1 -> (3 - E - Sqrt(E)*p_pvc_0_1)/(2*E), prev_pvc_1 -> (-1 + E - Sqrt(E)*p_pvc_0_1)/(2*E)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+minimizeTime(t == 1 && 0 < t,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(False,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 >= t,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(us == 0 && Derivative(1)(ds) == 0 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && us == prev_ps_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(us == 1 && Derivative(1)(ds) == 0 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && us == prev_ps_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(Derivative(1)(ds) == 0 && us + prev_ps_0 == 1,
+	us == prev_ps_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(Derivative(1)(dtimer) == 1 && utimer == 0,
+	utimer == prev_ptimer_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(uc == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(ul == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(ur0 == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(urc == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(url == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(uvs == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(us == 0 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(us != 0 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(us == 1 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(us + prev_ps_0 == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(utimer == 0,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(urc == 1 && ur0 == 1 && uc == 1 && uvc/(uc*(ur0 + urc)) + Derivative(1)(dvc) == 0,
+	uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyPoint(ul == 1 && url == 1 && uvs == 1 && Derivative(1)(dil) == (-(uil*url) + uvs)/ul,
+	uil == prev_pil_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> -(-2 + E)/(2*E^2), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> 1/(2*E) - p_pvc_0_1/E^(3/2)},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	2)
+
+--
+checkConsistencyInterval(utimer(t) == 1 && Derivative(1)(utimer)(t) == 1,
+	utimer(0) == prev_ptimer_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^2)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(utimer(t) == 1 && Derivative(1)(utimer)(t) == 1,
+	utimer(0) == prev_ptimer_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^2)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(us(t) == 0 && Derivative(1)(us)(t) == 0,
+	uil(0) == prev_pil_0 && us(0) == prev_ps_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^2)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(us(t) != 0 && Derivative(1)(us)(t) == 0,
+	uil(0) == prev_pil_0 && us(0) == prev_ps_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^2)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(us(t) == 1 && Derivative(1)(us)(t) == 0,
+	uil(0) == prev_pil_0 && us(0) == prev_ps_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^2)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(Derivative(1)(us)(t) == 0,
+	us(0) == prev_ps_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^2)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(Derivative(1)(utimer)(t) == 1,
+	utimer(0) == prev_ptimer_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^2)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(urc(t) == 1 && ur0(t) == 1 && uc(t) == 1 && uvc(t)/(uc(t)*(ur0(t) + urc(t))) + Derivative(1)(uvc)(t) == 0,
+	uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^2)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(ul(t) == 1 && url(t) == 1 && uvs(t) == 1 && Derivative(1)(uil)(t) == (-(uil(t)*url(t)) + uvs(t))/ul(t),
+	uil(0) == prev_pil_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> (-1 + E + E^2 - Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^2), prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^2)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+minimizeTime(t == 1 && 0 < t,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 >= t,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(False,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(us == 0 && Derivative(1)(ds) == 0 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && us == prev_ps_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(us == 1 && Derivative(1)(ds) == 0 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && us == prev_ps_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(Derivative(1)(ds) == 0 && us + prev_ps_0 == 1,
+	us == prev_ps_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(Derivative(1)(dtimer) == 1 && utimer == 0,
+	utimer == prev_ptimer_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(uc == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(ul == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(ur0 == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(urc == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(url == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(uvs == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(us == 0 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(us == 1 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(us != 1 && us + prev_ps_0 == 1,
+	uil == prev_pil_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(us + prev_ps_0 == 1,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(utimer == 0,
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyPoint(ul == 1 && url == 1 && uvs == 1 && urc == 1 && ur0 == 1 && uc == 1 && Derivative(1)(dil) == (-(uil*ul*(urc*url + ur0*(urc + url))) + urc*uvs + ur0*(-uvc + uvs))/(ul*(ur0 + urc)) && Derivative(1)(dvc) == (uil*ur0 - uvc)/(uc*ur0 + uc*urc),
+	uil == prev_pil_0 && uvc == prev_pvc_0,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	True,
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 0, prev_ptimer_0 -> 1, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (1 - E + E^2 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_ps_1 -> 0, prev_ptimer_1 -> 1, prev_pvc_1 -> (1 + E - E^2 - 3*Sqrt(E)*p_pvc_0_1)/(4*E^(5/2))},
+	{uc, uil, ul, ur0, urc, url, us, utimer, uvc, uvs, Derivative(1)(dil), Derivative(1)(ds), Derivative(1)(dtimer), Derivative(1)(dvc)},
+	{prev_pc_0, prev_pil_0, prev_pil_1, prev_pl_0, prev_pr0_0, prev_prc_0, prev_prl_0, prev_ps_0, prev_ps_1, prev_ptimer_0, prev_ptimer_1, prev_pvc_0, prev_pvc_1, prev_pvs_0},
+	{p_pvc_0_1},
+	3)
+
+--
+checkConsistencyInterval(utimer(t) == 1 && Derivative(1)(utimer)(t) == 1,
+	utimer(0) == prev_ptimer_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (3 + Sqrt(E) - 3*E + E^(3/2) + 3*E^2 - E^(5/2) - 2*E^3 + 3*Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3), prev_pvc_1 -> (-1 + Sqrt(E) + E + E^(3/2) - E^2 - E^(5/2) + 2*E^3 - Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(utimer(t) == 1 && Derivative(1)(utimer)(t) == 1,
+	utimer(0) == prev_ptimer_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (3 + Sqrt(E) - 3*E + E^(3/2) + 3*E^2 - E^(5/2) - 2*E^3 + 3*Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3), prev_pvc_1 -> (-1 + Sqrt(E) + E + E^(3/2) - E^2 - E^(5/2) + 2*E^3 - Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(us(t) == 0 && Derivative(1)(us)(t) == 0,
+	uil(0) == prev_pil_0 && us(0) == prev_ps_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (3 + Sqrt(E) - 3*E + E^(3/2) + 3*E^2 - E^(5/2) - 2*E^3 + 3*Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3), prev_pvc_1 -> (-1 + Sqrt(E) + E + E^(3/2) - E^2 - E^(5/2) + 2*E^3 - Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(us(t) == 1 && Derivative(1)(us)(t) == 0,
+	uil(0) == prev_pil_0 && us(0) == prev_ps_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (3 + Sqrt(E) - 3*E + E^(3/2) + 3*E^2 - E^(5/2) - 2*E^3 + 3*Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3), prev_pvc_1 -> (-1 + Sqrt(E) + E + E^(3/2) - E^2 - E^(5/2) + 2*E^3 - Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(us(t) != 1 && Derivative(1)(us)(t) == 0,
+	uil(0) == prev_pil_0 && us(0) == prev_ps_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (3 + Sqrt(E) - 3*E + E^(3/2) + 3*E^2 - E^(5/2) - 2*E^3 + 3*Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3), prev_pvc_1 -> (-1 + Sqrt(E) + E + E^(3/2) - E^2 - E^(5/2) + 2*E^3 - Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(Derivative(1)(us)(t) == 0,
+	us(0) == prev_ps_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (3 + Sqrt(E) - 3*E + E^(3/2) + 3*E^2 - E^(5/2) - 2*E^3 + 3*Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3), prev_pvc_1 -> (-1 + Sqrt(E) + E + E^(3/2) - E^2 - E^(5/2) + 2*E^3 - Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(Derivative(1)(utimer)(t) == 1,
+	utimer(0) == prev_ptimer_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (3 + Sqrt(E) - 3*E + E^(3/2) + 3*E^2 - E^(5/2) - 2*E^3 + 3*Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3), prev_pvc_1 -> (-1 + Sqrt(E) + E + E^(3/2) - E^2 - E^(5/2) + 2*E^3 - Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+checkConsistencyInterval(ul(t) == 1 && url(t) == 1 && uvs(t) == 1 && urc(t) == 1 && ur0(t) == 1 && uc(t) == 1 && Derivative(1)(uil)(t) == (-(uil(t)*ul(t)*(urc(t)*url(t) + ur0(t)*(urc(t) + url(t)))) + urc(t)*uvs(t) + ur0(t)*(-uvc(t) + uvs(t)))/(ul(t)*(ur0(t) + urc(t))) && Derivative(1)(uvc)(t) == (uil(t)*ur0(t) - uvc(t))/(uc(t)*(ur0(t) + urc(t))),
+	uil(0) == prev_pil_0 && uvc(0) == prev_pvc_0,
+	True,
+	{uc(t), uil(t), ul(t), ur0(t), urc(t), url(t), us(t), utimer(t), uvc(t), uvs(t), Derivative(1)(uil)(t), Derivative(1)(us)(t), Derivative(1)(utimer)(t), Derivative(1)(uvc)(t)},
+	{prev_pc_0 -> 1, prev_pil_0 -> -(1 - E + E^2 - 2*E^3 + Sqrt(E)*p_pvc_0_1)/(2*E^3), prev_pl_0 -> 1, prev_pr0_0 -> 1, prev_prc_0 -> 1, prev_prl_0 -> 1, prev_ps_0 -> 1, prev_ptimer_0 -> 0, prev_pvc_0 -> (-1 - E + E^2 + 3*Sqrt(E)*p_pvc_0_1)/(2*E^(5/2)), prev_pvs_0 -> 1, prev_pil_1 -> (3 + Sqrt(E) - 3*E + E^(3/2) + 3*E^2 - E^(5/2) - 2*E^3 + 3*Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3), prev_pvc_1 -> (-1 + Sqrt(E) + E + E^(3/2) - E^2 - E^(5/2) + 2*E^3 - Sqrt(E)*p_pvc_0_1 - 3*E*p_pvc_0_1)/(4*E^3)},
+	True,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	{p_pvc_0_1})
+
+--
+minimizeTime(t == 1 && 0 < t,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(False,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 >= t,
+	Inequality(0, Less, p_pvc_0_1, Less, 5),
+	0,
+	Infinity)
+
+
+

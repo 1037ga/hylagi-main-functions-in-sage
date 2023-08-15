@@ -1,0 +1,595 @@
+checkConsistencyPoint(ux == 0 && Derivative(1)(dx) == 2 && Derivative(2)(dx) == 0,
+	True,
+	True,
+	True,
+	{},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uy == -3/5 && Derivative(1)(dy) == 1 && Derivative(2)(dy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	0)
+
+--
+checkConsistencyInterval(ux(t)^2 + uy(t)^2 == 1 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> 0, prev_py_0 -> -3/5, prev_px_1 -> 2, prev_py_1 -> 1, prev_px_2 -> 0, prev_py_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	True,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> 0, prev_py_0 -> -3/5, prev_px_1 -> 2, prev_py_1 -> 1, prev_px_2 -> 0, prev_py_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	True,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> 0, prev_py_0 -> -3/5, prev_px_1 -> 2, prev_py_1 -> 1, prev_px_2 -> 0, prev_py_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+minimizeTime((-3/5 + t)^2 + 4*t^2 == 1 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && 2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	True,
+	True,
+	{prev_px_0 -> (2*(3 + Sqrt(89)))/25, prev_py_0 -> (-12 + Sqrt(89))/25, prev_px_1 -> 2, prev_py_1 -> 1, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + Sqrt(89))/25)
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && 2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	True,
+	True,
+	{prev_px_0 -> (2*(3 + Sqrt(89)))/25, prev_py_0 -> (-12 + Sqrt(89))/25, prev_px_1 -> 2, prev_py_1 -> 1, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + Sqrt(89))/25)
+
+--
+checkConsistencyPoint(2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0,
+	True,
+	True,
+	{prev_px_0 -> (2*(3 + Sqrt(89)))/25, prev_py_0 -> (-12 + Sqrt(89))/25, prev_px_1 -> 2, prev_py_1 -> 1, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + Sqrt(89))/25)
+
+--
+checkConsistencyPoint(2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0,
+	True,
+	True,
+	{prev_px_0 -> (2*(3 + Sqrt(89)))/25, prev_py_0 -> (-12 + Sqrt(89))/25, prev_px_1 -> 2, prev_py_1 -> 1, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + Sqrt(89))/25)
+
+--
+checkConsistencyInterval(ux(t)^2 + uy(t)^2 == 1 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (2*(3 + Sqrt(89)))/25, prev_py_0 -> (-12 + Sqrt(89))/25, prev_px_1 -> (-2*(53 + 6*Sqrt(89)))/125, prev_py_1 -> (-53 + 24*Sqrt(89))/125},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (2*(3 + Sqrt(89)))/25, prev_py_0 -> (-12 + Sqrt(89))/25, prev_px_1 -> (-2*(53 + 6*Sqrt(89)))/125, prev_py_1 -> (-53 + 24*Sqrt(89))/125},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (2*(3 + Sqrt(89)))/25, prev_py_0 -> (-12 + Sqrt(89))/25, prev_px_1 -> (-2*(53 + 6*Sqrt(89)))/125, prev_py_1 -> (-53 + 24*Sqrt(89))/125},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(((2*(3 + Sqrt(89)))/25 - (2*(53 + 6*Sqrt(89))*t)/125)^2 + ((-12 + Sqrt(89))/25 + ((-53 + 24*Sqrt(89))*t)/125)^2 == 1 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && 2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	True,
+	True,
+	{prev_px_0 -> (2*(-693 + 19*Sqrt(89)))/3125, prev_py_0 -> (2772 + 19*Sqrt(89))/3125, prev_px_1 -> (-2*(53 + 6*Sqrt(89)))/125, prev_py_1 -> (-53 + 24*Sqrt(89))/125, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3*(1 + Sqrt(89)))/25)
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && 2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	True,
+	True,
+	{prev_px_0 -> (2*(-693 + 19*Sqrt(89)))/3125, prev_py_0 -> (2772 + 19*Sqrt(89))/3125, prev_px_1 -> (-2*(53 + 6*Sqrt(89)))/125, prev_py_1 -> (-53 + 24*Sqrt(89))/125, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3*(1 + Sqrt(89)))/25)
+
+--
+checkConsistencyPoint(2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0,
+	True,
+	True,
+	{prev_px_0 -> (2*(-693 + 19*Sqrt(89)))/3125, prev_py_0 -> (2772 + 19*Sqrt(89))/3125, prev_px_1 -> (-2*(53 + 6*Sqrt(89)))/125, prev_py_1 -> (-53 + 24*Sqrt(89))/125, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3*(1 + Sqrt(89)))/25)
+
+--
+checkConsistencyPoint(2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0,
+	True,
+	True,
+	{prev_px_0 -> (2*(-693 + 19*Sqrt(89)))/3125, prev_py_0 -> (2772 + 19*Sqrt(89))/3125, prev_px_1 -> (-2*(53 + 6*Sqrt(89)))/125, prev_py_1 -> (-53 + 24*Sqrt(89))/125, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3*(1 + Sqrt(89)))/25)
+
+--
+checkConsistencyInterval(ux(t)^2 + uy(t)^2 == 1 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (2*(-693 + 19*Sqrt(89)))/3125, prev_py_0 -> (2772 + 19*Sqrt(89))/3125, prev_px_1 -> (2*(-10007 + 636*Sqrt(89)))/15625, prev_py_1 -> (-10007 - 2544*Sqrt(89))/15625},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (2*(-693 + 19*Sqrt(89)))/3125, prev_py_0 -> (2772 + 19*Sqrt(89))/3125, prev_px_1 -> (2*(-10007 + 636*Sqrt(89)))/15625, prev_py_1 -> (-10007 - 2544*Sqrt(89))/15625},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (2*(-693 + 19*Sqrt(89)))/3125, prev_py_0 -> (2772 + 19*Sqrt(89))/3125, prev_px_1 -> (2*(-10007 + 636*Sqrt(89)))/15625, prev_py_1 -> (-10007 - 2544*Sqrt(89))/15625},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(((2772 + 19*Sqrt(89))/3125 + ((-10007 - 2544*Sqrt(89))*t)/15625)^2 + ((2*(-693 + 19*Sqrt(89)))/3125 + (2*(-10007 + 636*Sqrt(89))*t)/15625)^2 == 1 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && 2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	True,
+	True,
+	{prev_px_0 -> (-2*(-26583 + 17639*Sqrt(89)))/390625, prev_py_0 -> (-106332 - 17639*Sqrt(89))/390625, prev_px_1 -> (2*(-10007 + 636*Sqrt(89)))/15625, prev_py_1 -> (-10007 - 2544*Sqrt(89))/15625, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 5*Sqrt(89))/25)
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && 2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	True,
+	True,
+	{prev_px_0 -> (-2*(-26583 + 17639*Sqrt(89)))/390625, prev_py_0 -> (-106332 - 17639*Sqrt(89))/390625, prev_px_1 -> (2*(-10007 + 636*Sqrt(89)))/15625, prev_py_1 -> (-10007 - 2544*Sqrt(89))/15625, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 5*Sqrt(89))/25)
+
+--
+checkConsistencyPoint(2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0,
+	True,
+	True,
+	{prev_px_0 -> (-2*(-26583 + 17639*Sqrt(89)))/390625, prev_py_0 -> (-106332 - 17639*Sqrt(89))/390625, prev_px_1 -> (2*(-10007 + 636*Sqrt(89)))/15625, prev_py_1 -> (-10007 - 2544*Sqrt(89))/15625, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 5*Sqrt(89))/25)
+
+--
+checkConsistencyPoint(2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0,
+	True,
+	True,
+	{prev_px_0 -> (-2*(-26583 + 17639*Sqrt(89)))/390625, prev_py_0 -> (-106332 - 17639*Sqrt(89))/390625, prev_px_1 -> (2*(-10007 + 636*Sqrt(89)))/15625, prev_py_1 -> (-10007 - 2544*Sqrt(89))/15625, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 5*Sqrt(89))/25)
+
+--
+checkConsistencyInterval(ux(t)^2 + uy(t)^2 == 1 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (-2*(-26583 + 17639*Sqrt(89)))/390625, prev_py_0 -> (-106332 - 17639*Sqrt(89))/390625, prev_px_1 -> (2*(1888867 + 26334*Sqrt(89)))/1953125, prev_py_1 -> (1888867 - 105336*Sqrt(89))/1953125},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (-2*(-26583 + 17639*Sqrt(89)))/390625, prev_py_0 -> (-106332 - 17639*Sqrt(89))/390625, prev_px_1 -> (2*(1888867 + 26334*Sqrt(89)))/1953125, prev_py_1 -> (1888867 - 105336*Sqrt(89))/1953125},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (-2*(-26583 + 17639*Sqrt(89)))/390625, prev_py_0 -> (-106332 - 17639*Sqrt(89))/390625, prev_px_1 -> (2*(1888867 + 26334*Sqrt(89)))/1953125, prev_py_1 -> (1888867 - 105336*Sqrt(89))/1953125},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(((-106332 - 17639*Sqrt(89))/390625 + ((1888867 - 105336*Sqrt(89))*t)/1953125)^2 + ((-2*(-26583 + 17639*Sqrt(89)))/390625 + (2*(1888867 + 26334*Sqrt(89))*t)/1953125)^2 == 1 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && 2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	True,
+	True,
+	{prev_px_0 -> (2*(8010327 + 1572859*Sqrt(89)))/48828125, prev_py_0 -> (-32041308 + 1572859*Sqrt(89))/48828125, prev_px_1 -> (2*(1888867 + 26334*Sqrt(89)))/1953125, prev_py_1 -> (1888867 - 105336*Sqrt(89))/1953125, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 7*Sqrt(89))/25)
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && 2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	True,
+	True,
+	{prev_px_0 -> (2*(8010327 + 1572859*Sqrt(89)))/48828125, prev_py_0 -> (-32041308 + 1572859*Sqrt(89))/48828125, prev_px_1 -> (2*(1888867 + 26334*Sqrt(89)))/1953125, prev_py_1 -> (1888867 - 105336*Sqrt(89))/1953125, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 7*Sqrt(89))/25)
+
+--
+checkConsistencyPoint(2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0,
+	True,
+	True,
+	{prev_px_0 -> (2*(8010327 + 1572859*Sqrt(89)))/48828125, prev_py_0 -> (-32041308 + 1572859*Sqrt(89))/48828125, prev_px_1 -> (2*(1888867 + 26334*Sqrt(89)))/1953125, prev_py_1 -> (1888867 - 105336*Sqrt(89))/1953125, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 7*Sqrt(89))/25)
+
+--
+checkConsistencyPoint(2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0,
+	True,
+	True,
+	{prev_px_0 -> (2*(8010327 + 1572859*Sqrt(89)))/48828125, prev_py_0 -> (-32041308 + 1572859*Sqrt(89))/48828125, prev_px_1 -> (2*(1888867 + 26334*Sqrt(89)))/1953125, prev_py_1 -> (1888867 - 105336*Sqrt(89))/1953125, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 7*Sqrt(89))/25)
+
+--
+checkConsistencyInterval(ux(t)^2 + uy(t)^2 == 1 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (2*(8010327 + 1572859*Sqrt(89)))/48828125, prev_py_0 -> (-32041308 + 1572859*Sqrt(89))/48828125, prev_px_1 -> (-2*(43860527 + 12728904*Sqrt(89)))/244140625, prev_py_1 -> (-43860527 + 50915616*Sqrt(89))/244140625},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (2*(8010327 + 1572859*Sqrt(89)))/48828125, prev_py_0 -> (-32041308 + 1572859*Sqrt(89))/48828125, prev_px_1 -> (-2*(43860527 + 12728904*Sqrt(89)))/244140625, prev_py_1 -> (-43860527 + 50915616*Sqrt(89))/244140625},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (2*(8010327 + 1572859*Sqrt(89)))/48828125, prev_py_0 -> (-32041308 + 1572859*Sqrt(89))/48828125, prev_px_1 -> (-2*(43860527 + 12728904*Sqrt(89)))/244140625, prev_py_1 -> (-43860527 + 50915616*Sqrt(89))/244140625},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(((2*(8010327 + 1572859*Sqrt(89)))/48828125 - (2*(43860527 + 12728904*Sqrt(89))*t)/244140625)^2 + ((-32041308 + 1572859*Sqrt(89))/48828125 + ((-43860527 + 50915616*Sqrt(89))*t)/244140625)^2 == 1 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && 2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	True,
+	True,
+	{prev_px_0 -> (2*(-1264454037 + 108886321*Sqrt(89)))/6103515625, prev_py_0 -> (5057816148 + 108886321*Sqrt(89))/6103515625, prev_px_1 -> (-2*(43860527 + 12728904*Sqrt(89)))/244140625, prev_py_1 -> (-43860527 + 50915616*Sqrt(89))/244140625, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3*(1 + 3*Sqrt(89)))/25)
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && 2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	True,
+	True,
+	{prev_px_0 -> (2*(-1264454037 + 108886321*Sqrt(89)))/6103515625, prev_py_0 -> (5057816148 + 108886321*Sqrt(89))/6103515625, prev_px_1 -> (-2*(43860527 + 12728904*Sqrt(89)))/244140625, prev_py_1 -> (-43860527 + 50915616*Sqrt(89))/244140625, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3*(1 + 3*Sqrt(89)))/25)
+
+--
+checkConsistencyPoint(2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0,
+	True,
+	True,
+	{prev_px_0 -> (2*(-1264454037 + 108886321*Sqrt(89)))/6103515625, prev_py_0 -> (5057816148 + 108886321*Sqrt(89))/6103515625, prev_px_1 -> (-2*(43860527 + 12728904*Sqrt(89)))/244140625, prev_py_1 -> (-43860527 + 50915616*Sqrt(89))/244140625, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3*(1 + 3*Sqrt(89)))/25)
+
+--
+checkConsistencyPoint(2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0,
+	True,
+	True,
+	{prev_px_0 -> (2*(-1264454037 + 108886321*Sqrt(89)))/6103515625, prev_py_0 -> (5057816148 + 108886321*Sqrt(89))/6103515625, prev_px_1 -> (-2*(43860527 + 12728904*Sqrt(89)))/244140625, prev_py_1 -> (-43860527 + 50915616*Sqrt(89))/244140625, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3*(1 + 3*Sqrt(89)))/25)
+
+--
+checkConsistencyInterval(ux(t)^2 + uy(t)^2 == 1 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (2*(-1264454037 + 108886321*Sqrt(89)))/6103515625, prev_py_0 -> (5057816148 + 108886321*Sqrt(89))/6103515625, prev_px_1 -> (2*(-24864331013 + 937795074*Sqrt(89)))/30517578125, prev_py_1 -> (-24864331013 - 3751180296*Sqrt(89))/30517578125},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (2*(-1264454037 + 108886321*Sqrt(89)))/6103515625, prev_py_0 -> (5057816148 + 108886321*Sqrt(89))/6103515625, prev_px_1 -> (2*(-24864331013 + 937795074*Sqrt(89)))/30517578125, prev_py_1 -> (-24864331013 - 3751180296*Sqrt(89))/30517578125},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (2*(-1264454037 + 108886321*Sqrt(89)))/6103515625, prev_py_0 -> (5057816148 + 108886321*Sqrt(89))/6103515625, prev_px_1 -> (2*(-24864331013 + 937795074*Sqrt(89)))/30517578125, prev_py_1 -> (-24864331013 - 3751180296*Sqrt(89))/30517578125},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(((5057816148 + 108886321*Sqrt(89))/6103515625 + ((-24864331013 - 3751180296*Sqrt(89))*t)/30517578125)^2 + ((2*(-1264454037 + 108886321*Sqrt(89)))/6103515625 + (2*(-24864331013 + 937795074*Sqrt(89))*t)/30517578125)^2 == 1 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && 2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	True,
+	True,
+	{prev_px_0 -> (-2*(-8870768547 + 36117871901*Sqrt(89)))/762939453125, prev_py_0 -> (-35483074188 - 36117871901*Sqrt(89))/762939453125, prev_px_1 -> (2*(-24864331013 + 937795074*Sqrt(89)))/30517578125, prev_py_1 -> (-24864331013 - 3751180296*Sqrt(89))/30517578125, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 11*Sqrt(89))/25)
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && 2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	True,
+	True,
+	{prev_px_0 -> (-2*(-8870768547 + 36117871901*Sqrt(89)))/762939453125, prev_py_0 -> (-35483074188 - 36117871901*Sqrt(89))/762939453125, prev_px_1 -> (2*(-24864331013 + 937795074*Sqrt(89)))/30517578125, prev_py_1 -> (-24864331013 - 3751180296*Sqrt(89))/30517578125, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 11*Sqrt(89))/25)
+
+--
+checkConsistencyPoint(2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0,
+	True,
+	True,
+	{prev_px_0 -> (-2*(-8870768547 + 36117871901*Sqrt(89)))/762939453125, prev_py_0 -> (-35483074188 - 36117871901*Sqrt(89))/762939453125, prev_px_1 -> (2*(-24864331013 + 937795074*Sqrt(89)))/30517578125, prev_py_1 -> (-24864331013 - 3751180296*Sqrt(89))/30517578125, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 11*Sqrt(89))/25)
+
+--
+checkConsistencyPoint(2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0,
+	True,
+	True,
+	{prev_px_0 -> (-2*(-8870768547 + 36117871901*Sqrt(89)))/762939453125, prev_py_0 -> (-35483074188 - 36117871901*Sqrt(89))/762939453125, prev_px_1 -> (2*(-24864331013 + 937795074*Sqrt(89)))/30517578125, prev_py_1 -> (-24864331013 - 3751180296*Sqrt(89))/30517578125, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 11*Sqrt(89))/25)
+
+--
+checkConsistencyInterval(ux(t)^2 + uy(t)^2 == 1 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (-2*(-8870768547 + 36117871901*Sqrt(89)))/762939453125, prev_py_0 -> (-35483074188 - 36117871901*Sqrt(89))/762939453125, prev_px_1 -> (2*(3320939821753 + 99482847156*Sqrt(89)))/3814697265625, prev_py_1 -> (3320939821753 - 397931388624*Sqrt(89))/3814697265625},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (-2*(-8870768547 + 36117871901*Sqrt(89)))/762939453125, prev_py_0 -> (-35483074188 - 36117871901*Sqrt(89))/762939453125, prev_px_1 -> (2*(3320939821753 + 99482847156*Sqrt(89)))/3814697265625, prev_py_1 -> (3320939821753 - 397931388624*Sqrt(89))/3814697265625},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{ux(t), uy(t), Derivative(1)(ux)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> (-2*(-8870768547 + 36117871901*Sqrt(89)))/762939453125, prev_py_0 -> (-35483074188 - 36117871901*Sqrt(89))/762939453125, prev_px_1 -> (2*(3320939821753 + 99482847156*Sqrt(89)))/3814697265625, prev_py_1 -> (3320939821753 - 397931388624*Sqrt(89))/3814697265625},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(((-35483074188 - 36117871901*Sqrt(89))/762939453125 + ((3320939821753 - 397931388624*Sqrt(89))*t)/3814697265625)^2 + ((-2*(-8870768547 + 36117871901*Sqrt(89)))/762939453125 + (2*(3320939821753 + 99482847156*Sqrt(89))*t)/3814697265625)^2 == 1 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && 2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	True,
+	True,
+	{prev_px_0 -> (2*(18816792862143 + 2127145655881*Sqrt(89)))/95367431640625, prev_py_0 -> (-75267171448572 + 2127145655881*Sqrt(89))/95367431640625, prev_px_1 -> (2*(3320939821753 + 99482847156*Sqrt(89)))/3814697265625, prev_py_1 -> (3320939821753 - 397931388624*Sqrt(89))/3814697265625, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 13*Sqrt(89))/25)
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && 2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	True,
+	True,
+	{prev_px_0 -> (2*(18816792862143 + 2127145655881*Sqrt(89)))/95367431640625, prev_py_0 -> (-75267171448572 + 2127145655881*Sqrt(89))/95367431640625, prev_px_1 -> (2*(3320939821753 + 99482847156*Sqrt(89)))/3814697265625, prev_py_1 -> (3320939821753 - 397931388624*Sqrt(89))/3814697265625, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 13*Sqrt(89))/25)
+
+--
+checkConsistencyPoint(2*prev_px_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dx) == prev_px_1,
+	ux == prev_px_0,
+	True,
+	True,
+	{prev_px_0 -> (2*(18816792862143 + 2127145655881*Sqrt(89)))/95367431640625, prev_py_0 -> (-75267171448572 + 2127145655881*Sqrt(89))/95367431640625, prev_px_1 -> (2*(3320939821753 + 99482847156*Sqrt(89)))/3814697265625, prev_py_1 -> (3320939821753 - 397931388624*Sqrt(89))/3814697265625, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 13*Sqrt(89))/25)
+
+--
+checkConsistencyPoint(2*prev_py_0*(prev_px_0*prev_px_1 + prev_py_0*prev_py_1) + Derivative(1)(dy) == prev_py_1,
+	uy == prev_py_0,
+	True,
+	True,
+	{prev_px_0 -> (2*(18816792862143 + 2127145655881*Sqrt(89)))/95367431640625, prev_py_0 -> (-75267171448572 + 2127145655881*Sqrt(89))/95367431640625, prev_px_1 -> (2*(3320939821753 + 99482847156*Sqrt(89)))/3814697265625, prev_py_1 -> (3320939821753 - 397931388624*Sqrt(89))/3814697265625, prev_px_2 -> 0, prev_py_2 -> 0},
+	{ux, uy, Derivative(1)(dx), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_px_0, prev_px_1, prev_px_2, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(3 + 13*Sqrt(89))/25)
+

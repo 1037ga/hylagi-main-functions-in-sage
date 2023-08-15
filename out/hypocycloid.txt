@@ -1,0 +1,20 @@
+checkConsistencyPoint(utime1 == 0 && uy == 0 && ux == 1 && Derivative(1)(dtime1) == 1 && 5*uy + Sin(4*utime1) == 4*Sin(utime1) && 5*ux == 4*Cos(utime1) + Cos(4*utime1),
+	True,
+	True,
+	True,
+	{},
+	{utime1, ux, uy, Derivative(1)(dtime1)},
+	{prev_ptime1_0, prev_ptime1_1, prev_px_0, prev_py_0},
+	{},
+	0)
+
+--
+checkConsistencyInterval(Derivative(1)(utime1)(t) == 1 && 4*Sin(utime1(t)) == Sin(4*utime1(t)) + 5*uy(t) && 4*Cos(utime1(t)) + Cos(4*utime1(t)) == 5*ux(t),
+	True,
+	True,
+	{utime1(t), ux(t), uy(t), Derivative(1)(utime1)(t)},
+	{prev_ptime1_0 -> 0, prev_px_0 -> 1, prev_py_0 -> 0, prev_ptime1_1 -> 1},
+	True,
+	True,
+	{})
+

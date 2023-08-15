@@ -1,0 +1,897 @@
+checkConsistencyPoint(uvx >= -1 && uvx <= 1 && Derivative(1)(dvx) == 0 && 10*ux0 >= 3 && 10*ux0 <= 7 && Derivative(1)(dx0) == 0 && ux == ux0 && uvx == Derivative(1)(dx) && Derivative(2)(dx) == 0,
+	True,
+	True,
+	True,
+	{},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uy == -1/10 && Derivative(1)(dy) == 2 && Derivative(2)(dy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{},
+	0)
+
+--
+checkConsistencyInterval(ux(t) == 0 && uy(t) >= 0 && uy(t) <= 2 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> prev_px0_0, prev_py_0 -> -1/10, prev_pvx_1 -> 0, prev_px_1 -> prev_pvx_0, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_pvx_0 <= 1 && prev_pvx_0 >= -1 && prev_px0_0 <= 7/10 && prev_px0_0 >= 3/10,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ux(t) == 2 && uy(t) >= 0 && uy(t) <= 2 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> prev_px0_0, prev_py_0 -> -1/10, prev_pvx_1 -> 0, prev_px_1 -> prev_pvx_0, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_pvx_0 <= 1 && prev_pvx_0 >= -1 && prev_px0_0 <= 7/10 && prev_px0_0 >= 3/10,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy(t) == 2 && ux(t) >= 0 && ux(t) <= 1 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> prev_px0_0, prev_py_0 -> -1/10, prev_pvx_1 -> 0, prev_px_1 -> prev_pvx_0, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_pvx_0 <= 1 && prev_pvx_0 >= -1 && prev_px0_0 <= 7/10 && prev_px0_0 >= 3/10,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy(t) == 0 && ux(t) >= 1 && ux(t) <= 2 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> prev_px0_0, prev_py_0 -> -1/10, prev_pvx_1 -> 0, prev_px_1 -> prev_pvx_0, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_pvx_0 <= 1 && prev_pvx_0 >= -1 && prev_px0_0 <= 7/10 && prev_px0_0 >= 3/10,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(1)(uvx)(t) == 0,
+	True,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> prev_px0_0, prev_py_0 -> -1/10, prev_pvx_1 -> 0, prev_px_1 -> prev_pvx_0, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_pvx_0 <= 1 && prev_pvx_0 >= -1 && prev_px0_0 <= 7/10 && prev_px0_0 >= 3/10,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(1)(ux0)(t) == 0,
+	True,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> prev_px0_0, prev_py_0 -> -1/10, prev_pvx_1 -> 0, prev_px_1 -> prev_pvx_0, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_pvx_0 <= 1 && prev_pvx_0 >= -1 && prev_px0_0 <= 7/10 && prev_px0_0 >= 3/10,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	True,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> prev_px0_0, prev_py_0 -> -1/10, prev_pvx_1 -> 0, prev_px_1 -> prev_pvx_0, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_pvx_0 <= 1 && prev_pvx_0 >= -1 && prev_px0_0 <= 7/10 && prev_px0_0 >= 3/10,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	True,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_px_0 -> prev_px0_0, prev_py_0 -> -1/10, prev_pvx_1 -> 0, prev_px_1 -> prev_pvx_0, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	prev_pvx_0 <= 1 && prev_pvx_0 >= -1 && prev_px0_0 <= 7/10 && prev_px0_0 >= 3/10,
+	True,
+	{})
+
+--
+minimizeTime(t*p_pvx_0_1 + p_px0_0_1 == 0 && 0 < t && -1/10 + 2*t >= 0 && 0 < t && 0 < t && -1/10 + 2*t <= 2,
+	Inequality(-1, LessEqual, p_pvx_0_1, LessEqual, 1) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(t*p_pvx_0_1 + p_px0_0_1 == 2 && 0 < t && -1/10 + 2*t >= 0 && 0 < t && 0 < t && -1/10 + 2*t <= 2,
+	Inequality(-1, LessEqual, p_pvx_0_1, LessEqual, 1) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-1/10 + 2*t == 2 && 0 < t && t*p_pvx_0_1 + p_px0_0_1 >= 0 && 0 < t && 0 < t && t*p_pvx_0_1 + p_px0_0_1 <= 1,
+	Inequality(-1, LessEqual, p_pvx_0_1, LessEqual, 1) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-1/10 + 2*t == 0 && 0 < t && t*p_pvx_0_1 + p_px0_0_1 >= 1 && 0 < t && 0 < t && t*p_pvx_0_1 + p_px0_0_1 <= 2,
+	Inequality(-1, LessEqual, p_pvx_0_1, LessEqual, 1) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10),
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime(Infinity,
+	21/20,
+	(-2/3 < p_pvx_0_1 && (-21*p_pvx_0_1)/20 < p_px0_0_1 && p_pvx_0_1 <= -2/7 && p_px0_0_1 <= 7/10) || (-2/7 < p_pvx_0_1 && 3/10 <= p_px0_0_1 && p_pvx_0_1 <= 1 && p_px0_0_1 <= 7/10),
+	3/10 <= p_px0_0_1 && p_pvx_0_1 <= (20 - 20*p_px0_0_1)/21 && (-20*p_px0_0_1)/21 <= p_pvx_0_1 && p_px0_0_1 <= 7/10)
+
+
+compareMinTime(-(p_px0_0_1/p_pvx_0_1),
+	21/20,
+	(p_pvx_0_1 == -2/7 && p_px0_0_1 == 3/10) || (-2/3 < p_pvx_0_1 && p_pvx_0_1 < -2/7 && 3/10 <= p_px0_0_1 && p_px0_0_1 <= (-21*p_pvx_0_1)/20) || (-1 <= p_pvx_0_1 && 3/10 <= p_px0_0_1 && p_pvx_0_1 <= -2/3 && p_px0_0_1 <= 7/10),
+	3/10 <= p_px0_0_1 && p_pvx_0_1 <= (20 - 20*p_px0_0_1)/21 && (-20*p_px0_0_1)/21 <= p_pvx_0_1 && p_px0_0_1 <= 7/10)
+
+
+
+--
+compareMinTime(Infinity,
+	Infinity,
+	(-2/3 < p_pvx_0_1 && (-21*p_pvx_0_1)/20 < p_px0_0_1 && p_pvx_0_1 <= -2/7 && p_px0_0_1 <= 7/10) || (-2/7 < p_pvx_0_1 && 3/10 <= p_px0_0_1 && p_pvx_0_1 <= 1 && p_px0_0_1 <= 7/10),
+	(p_pvx_0_1 < (-20*p_px0_0_1)/21 && -1 <= p_pvx_0_1 && 3/10 <= p_px0_0_1 && p_px0_0_1 <= 7/10) || ((20 - 20*p_px0_0_1)/21 < p_pvx_0_1 && 3/10 <= p_px0_0_1 && p_pvx_0_1 <= 1 && p_px0_0_1 <= 7/10))
+
+
+compareMinTime(-(p_px0_0_1/p_pvx_0_1),
+	Infinity,
+	(p_pvx_0_1 == -2/7 && p_px0_0_1 == 3/10) || (-2/3 < p_pvx_0_1 && p_pvx_0_1 < -2/7 && 3/10 <= p_px0_0_1 && p_px0_0_1 <= (-21*p_pvx_0_1)/20) || (-1 <= p_pvx_0_1 && 3/10 <= p_px0_0_1 && p_pvx_0_1 <= -2/3 && p_px0_0_1 <= 7/10),
+	(p_pvx_0_1 < (-20*p_px0_0_1)/21 && -1 <= p_pvx_0_1 && 3/10 <= p_px0_0_1 && p_px0_0_1 <= 7/10) || ((20 - 20*p_px0_0_1)/21 < p_pvx_0_1 && 3/10 <= p_px0_0_1 && p_pvx_0_1 <= 1 && p_px0_0_1 <= 7/10))
+
+
+
+--
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && prev_py_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/7, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (21*p_pvx_0_1)/20 + p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 2, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	21/20)
+
+--
+checkConsistencyPoint(prev_py_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/7, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (21*p_pvx_0_1)/20 + p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 2, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	21/20)
+
+--
+checkConsistencyInterval(uy(t) == 2 && ux(t) >= 0 && ux(t) <= 1 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (21*p_pvx_0_1)/20 + p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 2, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2, prev_px_2 -> 0},
+	True,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/7, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (21*p_pvx_0_1)/20 + p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 2, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2, prev_px_2 -> 0},
+	True,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/7, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+minimizeTime((21/20 + t)*p_pvx_0_1 + p_px0_0_1 == 0 && 0 < t && 2 - 2*t >= 0 && 0 < t && 0 < t && 2 - 2*t <= 2,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/7, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime((21/20 + t)*p_pvx_0_1 + p_px0_0_1 == 2 && 0 < t && 2 - 2*t >= 0 && 0 < t && 0 < t && 2 - 2*t <= 2,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/7, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2 - 2*t == 2 && 0 < t && (21/20 + t)*p_pvx_0_1 + p_px0_0_1 >= 0 && 0 < t && 0 < t && (21/20 + t)*p_pvx_0_1 + p_px0_0_1 <= 1,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/7, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2 - 2*t == 0 && 0 < t && (21/20 + t)*p_pvx_0_1 + p_px0_0_1 >= 1 && 0 < t && 0 < t && (21/20 + t)*p_pvx_0_1 + p_px0_0_1 <= 2,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/7, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime(Infinity,
+	1,
+	(-20*p_px0_0_1)/41 < p_pvx_0_1 && 3/10 <= p_px0_0_1 && p_pvx_0_1 <= (20 - 20*p_px0_0_1)/21 && p_px0_0_1 <= 7/10,
+	3/10 <= p_px0_0_1 && p_pvx_0_1 <= (20 - 20*p_px0_0_1)/21 && (20 - 20*p_px0_0_1)/41 <= p_pvx_0_1 && p_px0_0_1 <= 7/10)
+
+
+compareMinTime((-21*p_pvx_0_1 - 20*p_px0_0_1)/(20*p_pvx_0_1),
+	1,
+	(p_pvx_0_1 == -6/41 && p_px0_0_1 == 3/10) || (-2/3 < p_pvx_0_1 && (-21*p_pvx_0_1)/20 < p_px0_0_1 && p_pvx_0_1 <= -14/41 && p_px0_0_1 <= 7/10) || (-14/41 < p_pvx_0_1 && (-21*p_pvx_0_1)/20 < p_px0_0_1 && p_pvx_0_1 <= -2/7 && p_px0_0_1 <= (-41*p_pvx_0_1)/20) || (-2/7 < p_pvx_0_1 && p_pvx_0_1 < -6/41 && 3/10 <= p_px0_0_1 && p_px0_0_1 <= (-41*p_pvx_0_1)/20),
+	3/10 <= p_px0_0_1 && p_pvx_0_1 <= (20 - 20*p_px0_0_1)/21 && (20 - 20*p_px0_0_1)/41 <= p_pvx_0_1 && p_px0_0_1 <= 7/10)
+
+
+compareMinTime(Infinity,
+	Infinity,
+	(-20*p_px0_0_1)/41 < p_pvx_0_1 && 3/10 <= p_px0_0_1 && p_pvx_0_1 <= (20 - 20*p_px0_0_1)/21 && p_px0_0_1 <= 7/10,
+	p_pvx_0_1 < (20 - 20*p_px0_0_1)/41 && (-20*p_px0_0_1)/21 < p_pvx_0_1 && 3/10 <= p_px0_0_1 && p_px0_0_1 <= 7/10)
+
+
+compareMinTime((-21*p_pvx_0_1 - 20*p_px0_0_1)/(20*p_pvx_0_1),
+	Infinity,
+	(p_pvx_0_1 == -6/41 && p_px0_0_1 == 3/10) || (-2/3 < p_pvx_0_1 && (-21*p_pvx_0_1)/20 < p_px0_0_1 && p_pvx_0_1 <= -14/41 && p_px0_0_1 <= 7/10) || (-14/41 < p_pvx_0_1 && (-21*p_pvx_0_1)/20 < p_px0_0_1 && p_pvx_0_1 <= -2/7 && p_px0_0_1 <= (-41*p_pvx_0_1)/20) || (-2/7 < p_pvx_0_1 && p_pvx_0_1 < -6/41 && 3/10 <= p_px0_0_1 && p_px0_0_1 <= (-41*p_pvx_0_1)/20),
+	p_pvx_0_1 < (20 - 20*p_px0_0_1)/41 && (-20*p_px0_0_1)/21 < p_pvx_0_1 && 3/10 <= p_px0_0_1 && p_px0_0_1 <= 7/10)
+
+
+
+--
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && prev_py_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	(p_pvx_0_1 == 6/41 && p_px0_0_1 == 7/10) || (Inequality(6/41, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, LessEqual, 14/41) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(14/41, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (41*p_pvx_0_1)/20 + p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 0, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	41/20)
+
+--
+checkConsistencyPoint(prev_py_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0,
+	(p_pvx_0_1 == 6/41 && p_px0_0_1 == 7/10) || (Inequality(6/41, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, LessEqual, 14/41) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(14/41, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (41*p_pvx_0_1)/20 + p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 0, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	41/20)
+
+--
+checkConsistencyInterval(uy(t) == 0 && ux(t) >= 1 && ux(t) <= 2 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (41*p_pvx_0_1)/20 + p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 0, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0},
+	True,
+	(p_pvx_0_1 == 6/41 && p_px0_0_1 == 7/10) || (Inequality(6/41, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, LessEqual, 14/41) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(14/41, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (41*p_pvx_0_1)/20 + p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 0, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0},
+	True,
+	(p_pvx_0_1 == 6/41 && p_px0_0_1 == 7/10) || (Inequality(6/41, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, LessEqual, 14/41) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(14/41, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+minimizeTime((41/20 + t)*p_pvx_0_1 + p_px0_0_1 == 0 && 0 < t && 2*t >= 0 && 0 < t && 0 < t && 2*t <= 2,
+	(p_pvx_0_1 == 6/41 && p_px0_0_1 == 7/10) || (Inequality(6/41, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, LessEqual, 14/41) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(14/41, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime((41/20 + t)*p_pvx_0_1 + p_px0_0_1 == 2 && 0 < t && 2*t >= 0 && 0 < t && 0 < t && 2*t <= 2,
+	(p_pvx_0_1 == 6/41 && p_px0_0_1 == 7/10) || (Inequality(6/41, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, LessEqual, 14/41) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(14/41, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2*t == 2 && 0 < t && (41/20 + t)*p_pvx_0_1 + p_px0_0_1 >= 0 && 0 < t && 0 < t && (41/20 + t)*p_pvx_0_1 + p_px0_0_1 <= 1,
+	(p_pvx_0_1 == 6/41 && p_px0_0_1 == 7/10) || (Inequality(6/41, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, LessEqual, 14/41) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(14/41, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2*t == 0 && 0 < t && (41/20 + t)*p_pvx_0_1 + p_px0_0_1 >= 1 && 0 < t && 0 < t && (41/20 + t)*p_pvx_0_1 + p_px0_0_1 <= 2,
+	(p_pvx_0_1 == 6/41 && p_px0_0_1 == 7/10) || (Inequality(6/41, Less, p_pvx_0_1, LessEqual, 2/7) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(2/7, Less, p_pvx_0_1, LessEqual, 14/41) && Inequality((20 - 41*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(14/41, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && prev_px_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	p_pvx_0_1 == 1/2 && p_px0_0_1 == 19/40,
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (61*p_pvx_0_1)/20 + p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 2, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	61/20)
+
+--
+checkConsistencyPoint(prev_px_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0,
+	p_pvx_0_1 == 1/2 && p_px0_0_1 == 19/40,
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (61*p_pvx_0_1)/20 + p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 2, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	61/20)
+
+--
+checkConsistencyInterval(ux(t) == 2 && uy(t) >= 0 && uy(t) <= 2 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (61*p_pvx_0_1)/20 + p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 2, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_py_2 -> 0},
+	True,
+	p_pvx_0_1 == 1/2 && p_px0_0_1 == 19/40,
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (61*p_pvx_0_1)/20 + p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 2, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_py_2 -> 0},
+	True,
+	p_pvx_0_1 == 1/2 && p_px0_0_1 == 19/40,
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+minimizeTime((61*p_pvx_0_1)/20 - t*p_pvx_0_1 + p_px0_0_1 == 0 && 0 < t && 2*(1 + t) >= 0 && 0 < t && 0 < t && 2*(1 + t) <= 2,
+	p_pvx_0_1 == 1/2 && p_px0_0_1 == 19/40,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime((61*p_pvx_0_1)/20 - t*p_pvx_0_1 + p_px0_0_1 == 2 && 0 < t && 2*(1 + t) >= 0 && 0 < t && 0 < t && 2*(1 + t) <= 2,
+	p_pvx_0_1 == 1/2 && p_px0_0_1 == 19/40,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2*(1 + t) == 2 && 0 < t && (61*p_pvx_0_1)/20 - t*p_pvx_0_1 + p_px0_0_1 >= 0 && 0 < t && 0 < t && (61*p_pvx_0_1)/20 - t*p_pvx_0_1 + p_px0_0_1 <= 1,
+	p_pvx_0_1 == 1/2 && p_px0_0_1 == 19/40,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2*(1 + t) == 0 && 0 < t && (61*p_pvx_0_1)/20 - t*p_pvx_0_1 + p_px0_0_1 >= 1 && 0 < t && 0 < t && (61*p_pvx_0_1)/20 - t*p_pvx_0_1 + p_px0_0_1 <= 2,
+	p_pvx_0_1 == 1/2 && p_px0_0_1 == 19/40,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && prev_px_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	(Inequality(1/2, Less, p_pvx_0_1, LessEqual, 34/61) && Inequality((40 - 61*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(34/61, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 2, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -41/10 + (4 - 2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	(2 - p_px0_0_1)/p_pvx_0_1)
+
+--
+checkConsistencyPoint(prev_px_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0,
+	(Inequality(1/2, Less, p_pvx_0_1, LessEqual, 34/61) && Inequality((40 - 61*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(34/61, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 2, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -41/10 + (4 - 2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	(2 - p_px0_0_1)/p_pvx_0_1)
+
+--
+checkConsistencyInterval(ux(t) == 2 && uy(t) >= 0 && uy(t) <= 2 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 2, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -41/10 + (4 - 2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_py_2 -> 0},
+	True,
+	(Inequality(1/2, Less, p_pvx_0_1, LessEqual, 34/61) && Inequality((40 - 61*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(34/61, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 2, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -41/10 + (4 - 2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_py_2 -> 0},
+	True,
+	(Inequality(1/2, Less, p_pvx_0_1, LessEqual, 34/61) && Inequality((40 - 61*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(34/61, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+minimizeTime(2 - t*p_pvx_0_1 == 0 && 0 < t && 2*(-41/20 + t + (2 - p_px0_0_1)/p_pvx_0_1) >= 0 && 0 < t && 0 < t && 2*(-41/20 + t + (2 - p_px0_0_1)/p_pvx_0_1) <= 2,
+	(Inequality(1/2, Less, p_pvx_0_1, LessEqual, 34/61) && Inequality((40 - 61*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(34/61, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2 - t*p_pvx_0_1 == 2 && 0 < t && 2*(-41/20 + t + (2 - p_px0_0_1)/p_pvx_0_1) >= 0 && 0 < t && 0 < t && 2*(-41/20 + t + (2 - p_px0_0_1)/p_pvx_0_1) <= 2,
+	(Inequality(1/2, Less, p_pvx_0_1, LessEqual, 34/61) && Inequality((40 - 61*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(34/61, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2*(-41/20 + t + (2 - p_px0_0_1)/p_pvx_0_1) == 2 && 0 < t && 2 - t*p_pvx_0_1 >= 0 && 0 < t && 0 < t && 2 - t*p_pvx_0_1 <= 1,
+	(Inequality(1/2, Less, p_pvx_0_1, LessEqual, 34/61) && Inequality((40 - 61*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(34/61, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2*(-41/20 + t + (2 - p_px0_0_1)/p_pvx_0_1) == 0 && 0 < t && 2 - t*p_pvx_0_1 >= 1 && 0 < t && 0 < t && 2 - t*p_pvx_0_1 <= 2,
+	(Inequality(1/2, Less, p_pvx_0_1, LessEqual, 34/61) && Inequality((40 - 61*p_pvx_0_1)/20, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (Inequality(34/61, Less, p_pvx_0_1, Less, 2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (20 - 21*p_pvx_0_1)/20)) || (p_pvx_0_1 == 2/3 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && prev_px_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -14/41) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-14/41, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (Inequality(-2/7, Less, p_pvx_0_1, Less, -6/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -6/41 && p_px0_0_1 == 3/10),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 41/10 + (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	-(p_px0_0_1/p_pvx_0_1))
+
+--
+checkConsistencyPoint(prev_px_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -14/41) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-14/41, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (Inequality(-2/7, Less, p_pvx_0_1, Less, -6/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -6/41 && p_px0_0_1 == 3/10),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 41/10 + (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	-(p_px0_0_1/p_pvx_0_1))
+
+--
+checkConsistencyInterval(ux(t) == 0 && uy(t) >= 0 && uy(t) <= 2 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 41/10 + (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2, prev_py_2 -> 0},
+	True,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -14/41) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-14/41, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (Inequality(-2/7, Less, p_pvx_0_1, Less, -6/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -6/41 && p_px0_0_1 == 3/10),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 41/10 + (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2, prev_py_2 -> 0},
+	True,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -14/41) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-14/41, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (Inequality(-2/7, Less, p_pvx_0_1, Less, -6/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -6/41 && p_px0_0_1 == 3/10),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+minimizeTime(-(t*p_pvx_0_1) == 0 && 0 < t && 41/10 - 2*t + (2*p_px0_0_1)/p_pvx_0_1 >= 0 && 0 < t && 0 < t && 41/10 - 2*t + (2*p_px0_0_1)/p_pvx_0_1 <= 2,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -14/41) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-14/41, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (Inequality(-2/7, Less, p_pvx_0_1, Less, -6/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -6/41 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-(t*p_pvx_0_1) == 2 && 0 < t && 41/10 - 2*t + (2*p_px0_0_1)/p_pvx_0_1 >= 0 && 0 < t && 0 < t && 41/10 - 2*t + (2*p_px0_0_1)/p_pvx_0_1 <= 2,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -14/41) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-14/41, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (Inequality(-2/7, Less, p_pvx_0_1, Less, -6/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -6/41 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(41/10 - 2*t + (2*p_px0_0_1)/p_pvx_0_1 == 2 && 0 < t && -(t*p_pvx_0_1) >= 0 && 0 < t && 0 < t && -(t*p_pvx_0_1) <= 1,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -14/41) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-14/41, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (Inequality(-2/7, Less, p_pvx_0_1, Less, -6/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -6/41 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(41/10 - 2*t + (2*p_px0_0_1)/p_pvx_0_1 == 0 && 0 < t && -(t*p_pvx_0_1) >= 1 && 0 < t && 0 < t && -(t*p_pvx_0_1) <= 2,
+	(Inequality(-2/3, Less, p_pvx_0_1, LessEqual, -14/41) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-14/41, Less, p_pvx_0_1, LessEqual, -2/7) && Inequality((-21*p_pvx_0_1)/20, Less, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (Inequality(-2/7, Less, p_pvx_0_1, Less, -6/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -6/41 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && prev_px_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	Inequality(-2/3, LessEqual, p_pvx_0_1, LessEqual, -2/7) && p_px0_0_1 == (-21*p_pvx_0_1)/20,
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -1/10 - (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	-(p_px0_0_1/p_pvx_0_1))
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && prev_py_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	Inequality(-2/3, LessEqual, p_pvx_0_1, LessEqual, -2/7) && p_px0_0_1 == (-21*p_pvx_0_1)/20,
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -1/10 - (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	-(p_px0_0_1/p_pvx_0_1))
+
+--
+checkConsistencyPoint(prev_px_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0,
+	Inequality(-2/3, LessEqual, p_pvx_0_1, LessEqual, -2/7) && p_px0_0_1 == (-21*p_pvx_0_1)/20,
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -1/10 - (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	-(p_px0_0_1/p_pvx_0_1))
+
+--
+checkConsistencyPoint(prev_py_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0,
+	Inequality(-2/3, LessEqual, p_pvx_0_1, LessEqual, -2/7) && p_px0_0_1 == (-21*p_pvx_0_1)/20,
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -1/10 - (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	-(p_px0_0_1/p_pvx_0_1))
+
+--
+checkConsistencyInterval(ux(t) == 0 && uy(t) >= 0 && uy(t) <= 2 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -1/10 - (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2},
+	True,
+	Inequality(-2/3, LessEqual, p_pvx_0_1, LessEqual, -2/7) && p_px0_0_1 == (-21*p_pvx_0_1)/20,
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+checkConsistencyInterval(uy(t) == 2 && ux(t) >= 0 && ux(t) <= 1 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -1/10 - (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2},
+	True,
+	Inequality(-2/3, LessEqual, p_pvx_0_1, LessEqual, -2/7) && p_px0_0_1 == (-21*p_pvx_0_1)/20,
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -1/10 - (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2},
+	True,
+	Inequality(-2/3, LessEqual, p_pvx_0_1, LessEqual, -2/7) && p_px0_0_1 == (-21*p_pvx_0_1)/20,
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -1/10 - (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2},
+	True,
+	Inequality(-2/3, LessEqual, p_pvx_0_1, LessEqual, -2/7) && p_px0_0_1 == (-21*p_pvx_0_1)/20,
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+minimizeTime(-(t*p_pvx_0_1) == 0 && 0 < t && -1/10 - 2*t - (2*p_px0_0_1)/p_pvx_0_1 >= 0 && 0 < t && 0 < t && -1/10 - 2*t - (2*p_px0_0_1)/p_pvx_0_1 <= 2,
+	Inequality(-2/3, LessEqual, p_pvx_0_1, LessEqual, -2/7) && p_px0_0_1 == (-21*p_pvx_0_1)/20,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-(t*p_pvx_0_1) == 2 && 0 < t && -1/10 - 2*t - (2*p_px0_0_1)/p_pvx_0_1 >= 0 && 0 < t && 0 < t && -1/10 - 2*t - (2*p_px0_0_1)/p_pvx_0_1 <= 2,
+	Inequality(-2/3, LessEqual, p_pvx_0_1, LessEqual, -2/7) && p_px0_0_1 == (-21*p_pvx_0_1)/20,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-1/10 - 2*t - (2*p_px0_0_1)/p_pvx_0_1 == 2 && 0 < t && -(t*p_pvx_0_1) >= 0 && 0 < t && 0 < t && -(t*p_pvx_0_1) <= 1,
+	Inequality(-2/3, LessEqual, p_pvx_0_1, LessEqual, -2/7) && p_px0_0_1 == (-21*p_pvx_0_1)/20,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-1/10 - 2*t - (2*p_px0_0_1)/p_pvx_0_1 == 0 && 0 < t && -(t*p_pvx_0_1) >= 1 && 0 < t && 0 < t && -(t*p_pvx_0_1) <= 2,
+	Inequality(-2/3, LessEqual, p_pvx_0_1, LessEqual, -2/7) && p_px0_0_1 == (-21*p_pvx_0_1)/20,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dx) == 0 && prev_px_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0 && Derivative(1)(dx) == prev_px_1,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -1/10 - (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	-(p_px0_0_1/p_pvx_0_1))
+
+--
+checkConsistencyPoint(prev_px_1 + Derivative(1)(dx) == 0,
+	ux == prev_px_0,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -1/10 - (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	-(p_px0_0_1/p_pvx_0_1))
+
+--
+checkConsistencyInterval(ux(t) == 0 && uy(t) >= 0 && uy(t) <= 2 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -1/10 - (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_py_2 -> 0},
+	True,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+checkConsistencyInterval(Derivative(2)(ux)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> 0, prev_px0_0 -> p_px0_0_1, prev_py_0 -> -1/10 - (2*p_px0_0_1)/p_pvx_0_1, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_py_2 -> 0},
+	True,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+minimizeTime(-(t*p_pvx_0_1) == 0 && 0 < t && -1/10 + 2*t - (2*p_px0_0_1)/p_pvx_0_1 >= 0 && 0 < t && 0 < t && -1/10 + 2*t - (2*p_px0_0_1)/p_pvx_0_1 <= 2,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-(t*p_pvx_0_1) == 2 && 0 < t && -1/10 + 2*t - (2*p_px0_0_1)/p_pvx_0_1 >= 0 && 0 < t && 0 < t && -1/10 + 2*t - (2*p_px0_0_1)/p_pvx_0_1 <= 2,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-1/10 + 2*t - (2*p_px0_0_1)/p_pvx_0_1 == 2 && 0 < t && -(t*p_pvx_0_1) >= 0 && 0 < t && 0 < t && -(t*p_pvx_0_1) <= 1,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-1/10 + 2*t - (2*p_px0_0_1)/p_pvx_0_1 == 0 && 0 < t && -(t*p_pvx_0_1) >= 1 && 0 < t && 0 < t && -(t*p_pvx_0_1) <= 2,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && prev_py_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (-21*p_pvx_0_1)/20 - p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 2, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	21/20)
+
+--
+checkConsistencyPoint(prev_py_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (-21*p_pvx_0_1)/20 - p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 2, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	21/20)
+
+--
+checkConsistencyInterval(uy(t) == 2 && ux(t) >= 0 && ux(t) <= 1 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (-21*p_pvx_0_1)/20 - p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 2, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2, prev_px_2 -> 0},
+	True,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (-21*p_pvx_0_1)/20 - p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 2, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2, prev_px_2 -> 0},
+	True,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+minimizeTime(-((21/20 + t)*p_pvx_0_1) - p_px0_0_1 == 0 && 0 < t && 2 - 2*t >= 0 && 0 < t && 0 < t && 2 - 2*t <= 2,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-((21/20 + t)*p_pvx_0_1) - p_px0_0_1 == 2 && 0 < t && 2 - 2*t >= 0 && 0 < t && 0 < t && 2 - 2*t <= 2,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2 - 2*t == 2 && 0 < t && -((21/20 + t)*p_pvx_0_1) - p_px0_0_1 >= 0 && 0 < t && 0 < t && -((21/20 + t)*p_pvx_0_1) - p_px0_0_1 <= 1,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2 - 2*t == 0 && 0 < t && -((21/20 + t)*p_pvx_0_1) - p_px0_0_1 >= 1 && 0 < t && 0 < t && -((21/20 + t)*p_pvx_0_1) - p_px0_0_1 <= 2,
+	(Inequality(-1, LessEqual, p_pvx_0_1, Less, -2/3) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-2/3, LessEqual, p_pvx_0_1, Less, -2/7) && Inequality(3/10, LessEqual, p_px0_0_1, Less, (-21*p_pvx_0_1)/20)),
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == 0 && prev_py_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	(Inequality(-1, LessEqual, p_pvx_0_1, LessEqual, -34/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-34/41, Less, p_pvx_0_1, Less, -26/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-20 - 41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -26/41 && p_px0_0_1 == 3/10),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (-41*p_pvx_0_1)/20 - p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 0, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	41/20)
+
+--
+checkConsistencyPoint(prev_py_1 + Derivative(1)(dy) == 0,
+	uy == prev_py_0,
+	(Inequality(-1, LessEqual, p_pvx_0_1, LessEqual, -34/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-34/41, Less, p_pvx_0_1, Less, -26/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-20 - 41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -26/41 && p_px0_0_1 == 3/10),
+	True,
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (-41*p_pvx_0_1)/20 - p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 0, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> -2, prev_px_2 -> 0, prev_py_2 -> 0},
+	{uvx, ux, ux0, uy, Derivative(1)(dvx), Derivative(1)(dx), Derivative(1)(dx0), Derivative(1)(dy), Derivative(2)(dx), Derivative(2)(dy)},
+	{prev_pvx_0, prev_pvx_1, prev_px_0, prev_px_1, prev_px_2, prev_px0_0, prev_px0_1, prev_py_0, prev_py_1, prev_py_2},
+	{p_pvx_0_1, p_px0_0_1},
+	41/20)
+
+--
+checkConsistencyInterval(uy(t) == 0 && ux(t) >= 1 && ux(t) <= 2 && Derivative(2)(ux)(t) == 0 && Derivative(2)(uy)(t) == 0,
+	ux(0) == prev_px_0 && Derivative(1)(ux)(0) == prev_px_1 && uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (-41*p_pvx_0_1)/20 - p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 0, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0},
+	True,
+	(Inequality(-1, LessEqual, p_pvx_0_1, LessEqual, -34/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-34/41, Less, p_pvx_0_1, Less, -26/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-20 - 41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -26/41 && p_px0_0_1 == 3/10),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == 0,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uvx(t), ux(t), ux0(t), uy(t), Derivative(1)(uvx)(t), Derivative(1)(ux)(t), Derivative(1)(ux0)(t), Derivative(1)(uy)(t), Derivative(2)(ux)(t), Derivative(2)(uy)(t)},
+	{prev_pvx_0 -> p_pvx_0_1, prev_px_0 -> (-41*p_pvx_0_1)/20 - p_px0_0_1, prev_px0_0 -> p_px0_0_1, prev_py_0 -> 0, prev_pvx_1 -> 0, prev_px_1 -> -p_pvx_0_1, prev_px0_1 -> 0, prev_py_1 -> 2, prev_px_2 -> 0},
+	True,
+	(Inequality(-1, LessEqual, p_pvx_0_1, LessEqual, -34/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-34/41, Less, p_pvx_0_1, Less, -26/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-20 - 41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -26/41 && p_px0_0_1 == 3/10),
+	{p_pvx_0_1, p_px0_0_1})
+
+--
+minimizeTime(-((41/20 + t)*p_pvx_0_1) - p_px0_0_1 == 0 && 0 < t && 2*t >= 0 && 0 < t && 0 < t && 2*t <= 2,
+	(Inequality(-1, LessEqual, p_pvx_0_1, LessEqual, -34/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-34/41, Less, p_pvx_0_1, Less, -26/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-20 - 41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -26/41 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(-((41/20 + t)*p_pvx_0_1) - p_px0_0_1 == 2 && 0 < t && 2*t >= 0 && 0 < t && 0 < t && 2*t <= 2,
+	(Inequality(-1, LessEqual, p_pvx_0_1, LessEqual, -34/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-34/41, Less, p_pvx_0_1, Less, -26/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-20 - 41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -26/41 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2*t == 2 && 0 < t && -((41/20 + t)*p_pvx_0_1) - p_px0_0_1 >= 0 && 0 < t && 0 < t && -((41/20 + t)*p_pvx_0_1) - p_px0_0_1 <= 1,
+	(Inequality(-1, LessEqual, p_pvx_0_1, LessEqual, -34/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-34/41, Less, p_pvx_0_1, Less, -26/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-20 - 41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -26/41 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(2*t == 0 && 0 < t && -((41/20 + t)*p_pvx_0_1) - p_px0_0_1 >= 1 && 0 < t && 0 < t && -((41/20 + t)*p_pvx_0_1) - p_px0_0_1 <= 2,
+	(Inequality(-1, LessEqual, p_pvx_0_1, LessEqual, -34/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, 7/10)) || (Inequality(-34/41, Less, p_pvx_0_1, Less, -26/41) && Inequality(3/10, LessEqual, p_px0_0_1, LessEqual, (-20 - 41*p_pvx_0_1)/20)) || (p_pvx_0_1 == -26/41 && p_px0_0_1 == 3/10),
+	0,
+	Infinity)
+
+
+

@@ -1,0 +1,1496 @@
+checkConsistencyPoint(0 < upx && upx < 1 && 0 < upy && upy < 1 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 1 <= upy && upy < 2 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 2 <= upy && upy < 3 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 0 < upy && upy < 1 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint( !(1 <= upx && upx < 2 && 0 < upy && upy < 1) && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 0 < upy && upy < 1 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 1 <= upy && upy < 2 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 2 <= upy && upy < 3 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 0 < upy && upy < 1 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint( !(1 <= upx && upx < 2 && 0 < upy && upy < 1) && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(False,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(False,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(False,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(False,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(False,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(False,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(2*upy == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 0 < upy && upy < 1 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 1 <= upy && upy < 2 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 2 <= upy && upy < 3 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 0 < upy && upy < 1 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint( !(1 <= upx && upx < 2 && 0 < upy && upy < 1) && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 0 < upy && upy < 1 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 1 <= upy && upy < 2 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 2 <= upy && upy < 3 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 0 < upy && upy < 1 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint( !(1 <= upx && upx < 2 && 0 < upy && upy < 1) && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 1 <= upy && upy < 2 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == -1 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 2 <= upy && upy < 3 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == -1 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(2 <= upx && upx < 3 && 0 < upy && upy < 1 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == -1 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(2 <= upx && upx < 3 && 1 <= upy && upy < 2 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == -1 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(2 <= upx && upx < 3 && 2 <= upy && upy < 3 && 5*upx == 6 && 2*upy == 1 && Derivative(1)(dpx) == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpx) == -1 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(5*upx == 6 && Derivative(1)(dpx) == 1 && Derivative(2)(dpx) == -1,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(2*upy == 1 && Derivative(1)(dpy) == 1 && Derivative(2)(dpy) == 0,
+	True,
+	True,
+	True,
+	{},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	0)
+
+--
+checkConsistencyInterval(0 < upx(t) && upx(t) < 1 && 0 < upy(t) && upy(t) < 1 && Derivative(2)(upx)(t) == 0 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(0 < upx(t) && upx(t) < 1 && 1 <= upy(t) && upy(t) < 2 && Derivative(2)(upx)(t) == 0 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(0 < upx(t) && upx(t) < 1 && 2 <= upy(t) && upy(t) < 3 && Derivative(2)(upx)(t) == 0 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(1 <= upx(t) && upx(t) < 2 && 0 < upy(t) && upy(t) < 1 && Derivative(2)(upx)(t) == 0 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval( !(1 <= upx(t) && upx(t) < 2 && 0 < upy(t) && upy(t) < 1) && Derivative(2)(upx)(t) == 0 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(False,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(False,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(False,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(False,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(False,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(False,
+	True,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(upy)(t) == 0,
+	True,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(0 < upx(t) && upx(t) < 1 && 0 < upy(t) && upy(t) < 1,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(0 < upx(t) && upx(t) < 1 && 1 <= upy(t) && upy(t) < 2,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(0 < upx(t) && upx(t) < 1 && 2 <= upy(t) && upy(t) < 3,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(1 <= upx(t) && upx(t) < 2 && 0 < upy(t) && upy(t) < 1,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval( !(1 <= upx(t) && upx(t) < 2 && 0 < upy(t) && upy(t) < 1),
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(1 <= upx(t) && upx(t) < 2 && 1 <= upy(t) && upy(t) < 2 && Derivative(2)(upx)(t) == -1 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(1 <= upx(t) && upx(t) < 2 && 2 <= upy(t) && upy(t) < 3 && Derivative(2)(upx)(t) == -1 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(2 <= upx(t) && upx(t) < 3 && 0 < upy(t) && upy(t) < 1 && Derivative(2)(upx)(t) == -1 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(2 <= upx(t) && upx(t) < 3 && 1 <= upy(t) && upy(t) < 2 && Derivative(2)(upx)(t) == -1 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(2 <= upx(t) && upx(t) < 3 && 2 <= upy(t) && upy(t) < 3 && Derivative(2)(upx)(t) == -1 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(upx)(t) == -1,
+	True,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(upy)(t) == 0,
+	True,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 6/5, prev_ppy_0 -> 1/2, prev_ppx_1 -> 1, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(0 < t && 0 < (12/5 + 2*t - t^2)/2 && 0 < t && (12/5 + 2*t - t^2)/2 < 1 && 0 < t && 0 < 1/2 + t && 0 < t && 1/2 + t < 1,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 0 < (12/5 + 2*t - t^2)/2 && 0 < t && (12/5 + 2*t - t^2)/2 < 1 && 0 < t && 1 <= 1/2 + t && 0 < t && 1/2 + t < 2,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 0 < (12/5 + 2*t - t^2)/2 && 0 < t && (12/5 + 2*t - t^2)/2 < 1 && 0 < t && 2 <= 1/2 + t && 0 < t && 1/2 + t < 3,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime( !(0 < t && 1 <= (12/5 + 2*t - t^2)/2 && 0 < t && (12/5 + 2*t - t^2)/2 < 2 && 0 < t && 0 < 1/2 + t && 0 < t && 1/2 + t < 1),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= (12/5 + 2*t - t^2)/2 && 0 < t && (12/5 + 2*t - t^2)/2 < 2 && 0 < t && 1 <= 1/2 + t && 0 < t && 1/2 + t < 2,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= (12/5 + 2*t - t^2)/2 && 0 < t && (12/5 + 2*t - t^2)/2 < 2 && 0 < t && 2 <= 1/2 + t && 0 < t && 1/2 + t < 3,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 2 <= (12/5 + 2*t - t^2)/2 && 0 < t && (12/5 + 2*t - t^2)/2 < 3 && 0 < t && 0 < 1/2 + t && 0 < t && 1/2 + t < 1,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 2 <= (12/5 + 2*t - t^2)/2 && 0 < t && (12/5 + 2*t - t^2)/2 < 3 && 0 < t && 1 <= 1/2 + t && 0 < t && 1/2 + t < 2,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 2 <= (12/5 + 2*t - t^2)/2 && 0 < t && (12/5 + 2*t - t^2)/2 < 3 && 0 < t && 2 <= 1/2 + t && 0 < t && 1/2 + t < 3,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime((5 + Sqrt(35))/5,
+	1/2,
+	True,
+	True)
+
+
+compareMinTime(1/2,
+	1/2,
+	True,
+	True)
+
+
+
+--
+compareMinTime(1/2,
+	3/2,
+	True,
+	True)
+
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 0 < upy && upy < 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 1 <= upy && upy < 2 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 2 <= upy && upy < 3 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 0 < upy && upy < 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 0 < upy && upy < 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 1 <= upy && upy < 2 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 2 <= upy && upy < 3 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 0 < upy && upy < 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 1 <= upy && upy < 2 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint( !(1 <= upx && upx < 2 && 1 <= upy && upy < 2) && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 0 < upy && upy < 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 1 <= upy && upy < 2 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 2 <= upy && upy < 3 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 0 < upy && upy < 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 1 <= upy && upy < 2 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint( !(1 <= upx && upx < 2 && 1 <= upy && upy < 2) && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(False,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(False,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(False,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(False,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(False,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(False,
+	upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 0 < upy && upy < 1,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 0 < upy && upy < 1,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 1 <= upy && upy < 2,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 2 <= upy && upy < 3,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 0 < upy && upy < 1,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 1 <= upy && upy < 2,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint( !(1 <= upx && upx < 2 && 1 <= upy && upy < 2),
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 0 < upy && upy < 1,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 1 <= upy && upy < 2,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 2 <= upy && upy < 3,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 0 < upy && upy < 1,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 1 <= upy && upy < 2,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint( !(1 <= upx && upx < 2 && 1 <= upy && upy < 2),
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 2 <= upy && upy < 3 && 1/Sqrt(2) + Derivative(2)(dpx) == 0 && 1/Sqrt(2) + Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(2 <= upx && upx < 3 && 0 < upy && upy < 1 && 1/Sqrt(2) + Derivative(2)(dpx) == 0 && 1/Sqrt(2) + Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(2 <= upx && upx < 3 && 1 <= upy && upy < 2 && 1/Sqrt(2) + Derivative(2)(dpx) == 0 && 1/Sqrt(2) + Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(2 <= upx && upx < 3 && 2 <= upy && upy < 3 && 1/Sqrt(2) + Derivative(2)(dpx) == 0 && 1/Sqrt(2) + Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1/Sqrt(2) + Derivative(2)(dpx) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyPoint(1/Sqrt(2) + Derivative(2)(dpy) == 0,
+	upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -1, prev_ppy_2 -> 0},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	1/2)
+
+--
+checkConsistencyInterval(1 <= upx(t) && upx(t) < 2 && 0 < upy(t) && upy(t) < 1 && Derivative(2)(upx)(t) == 0 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(1 <= upx(t) && upx(t) < 2 && 1 <= upy(t) && upy(t) < 2 && Derivative(2)(upx)(t) == 0 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval( !(1 <= upx(t) && upx(t) < 2 && 1 <= upy(t) && upy(t) < 2) && Derivative(2)(upx)(t) == 0 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(False,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(False,
+	upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(1 <= upx(t) && upx(t) < 2 && 0 < upy(t) && upy(t) < 1,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(1 <= upx(t) && upx(t) < 2 && 1 <= upy(t) && upy(t) < 2,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval( !(1 <= upx(t) && upx(t) < 2 && 1 <= upy(t) && upy(t) < 2),
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(1/Sqrt(2) + Derivative(2)(upx)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(1/Sqrt(2) + Derivative(2)(upy)(t) == 0,
+	upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 63/40, prev_ppy_0 -> 1, prev_ppx_1 -> 1/2, prev_ppy_1 -> 1, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(0 < t && 0 < (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 1 && 0 < t && 0 < (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 1,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 0 < (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 1 && 0 < t && 1 <= (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 2,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 0 < (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 1 && 0 < t && 2 <= (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 3,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 2 && 0 < t && 0 < (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 1,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime( !(0 < t && 1 <= (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 2 && 0 < t && 1 <= (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 2),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 2 && 0 < t && 2 <= (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 3,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 2 <= (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 3 && 0 < t && 0 < (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 1,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 2 <= (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 3 && 0 < t && 1 <= (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 2,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 2 <= (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (63/(10*Sqrt(2)) + Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 3 && 0 < t && 2 <= (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) && 0 < t && (2*Sqrt(2) + 2*Sqrt(2)*t - t^2)/(2*Sqrt(2)) < 3,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime(2*Sqrt(2),
+	1/Sqrt(2) + Sqrt((10 + 23*Sqrt(2))/5)/2,
+	True,
+	True)
+
+
+compareMinTime(1/Sqrt(2) + Sqrt((10 + 23*Sqrt(2))/5)/2,
+	1/Sqrt(2) + Sqrt((10 + 23*Sqrt(2))/5)/2,
+	True,
+	True)
+
+
+
+--
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 0 < upy && upy < 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	(5 + 5*Sqrt(2) + Sqrt(50 + 115*Sqrt(2)))/10)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 1 <= upy && upy < 2 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	(5 + 5*Sqrt(2) + Sqrt(50 + 115*Sqrt(2)))/10)
+
+--
+checkConsistencyPoint(0 < upx && upx < 1 && 2 <= upy && upy < 3 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	(5 + 5*Sqrt(2) + Sqrt(50 + 115*Sqrt(2)))/10)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 0 < upy && upy < 1 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	(5 + 5*Sqrt(2) + Sqrt(50 + 115*Sqrt(2)))/10)
+
+--
+checkConsistencyPoint(1 <= upx && upx < 2 && 1 <= upy && upy < 2 && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	(5 + 5*Sqrt(2) + Sqrt(50 + 115*Sqrt(2)))/10)
+
+--
+checkConsistencyPoint( !(1 <= upx && upx < 2 && 1 <= upy && upy < 2) && Derivative(2)(dpx) == 0 && Derivative(2)(dpy) == 0,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	(5 + 5*Sqrt(2) + Sqrt(50 + 115*Sqrt(2)))/10)
+
+--
+checkConsistencyPoint(False,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	(5 + 5*Sqrt(2) + Sqrt(50 + 115*Sqrt(2)))/10)
+
+--
+checkConsistencyPoint(False,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	(5 + 5*Sqrt(2) + Sqrt(50 + 115*Sqrt(2)))/10)
+
+--
+checkConsistencyPoint(False,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	(5 + 5*Sqrt(2) + Sqrt(50 + 115*Sqrt(2)))/10)
+
+--
+checkConsistencyPoint(False,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1 && upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	(5 + 5*Sqrt(2) + Sqrt(50 + 115*Sqrt(2)))/10)
+
+--
+checkConsistencyPoint(False,
+	upx == prev_ppx_0 && Derivative(1)(dpx) == prev_ppx_1,
+	True,
+	True,
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	(5 + 5*Sqrt(2) + Sqrt(50 + 115*Sqrt(2)))/10)
+
+--
+checkConsistencyPoint(False,
+	upy == prev_ppy_0 && Derivative(1)(dpy) == prev_ppy_1,
+	True,
+	True,
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	{upx, upy, Derivative(1)(dpx), Derivative(1)(dpy), Derivative(2)(dpx), Derivative(2)(dpy)},
+	{prev_ppx_0, prev_ppx_1, prev_ppx_2, prev_ppy_0, prev_ppy_1, prev_ppy_2},
+	{},
+	(5 + 5*Sqrt(2) + Sqrt(50 + 115*Sqrt(2)))/10)
+
+--
+checkConsistencyInterval(0 < upx(t) && upx(t) < 1 && 1 <= upy(t) && upy(t) < 2 && Derivative(2)(upx)(t) == 0 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval( !(0 < upx(t) && upx(t) < 1 && 1 <= upy(t) && upy(t) < 2) && Derivative(2)(upx)(t) == 0 && Derivative(2)(upy)(t) == 0,
+	upx(0) == prev_ppx_0 && Derivative(1)(upx)(0) == prev_ppx_1 && upy(0) == prev_ppy_0 && Derivative(1)(upy)(0) == prev_ppy_1,
+	True,
+	{upx(t), upy(t), Derivative(1)(upx)(t), Derivative(1)(upy)(t), Derivative(2)(upx)(t), Derivative(2)(upy)(t)},
+	{prev_ppx_0 -> 1, prev_ppy_0 -> (17 + 10*Sqrt(2) + 2*Sqrt(50 + 115*Sqrt(2)))/40, prev_ppx_1 -> -Sqrt(1 + 23/(5*Sqrt(2)))/2, prev_ppy_1 -> (10 - Sqrt(100 + 230*Sqrt(2)))/20, prev_ppx_2 -> -(1/Sqrt(2)), prev_ppy_2 -> -(1/Sqrt(2))},
+	True,
+	True,
+	{})
+

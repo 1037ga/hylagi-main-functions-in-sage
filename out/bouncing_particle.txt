@@ -1,0 +1,238 @@
+checkConsistencyPoint(uy == 10 && Derivative(1)(dy) == 0 && Derivative(2)(dy) == -10,
+	True,
+	True,
+	True,
+	{},
+	{uy, Derivative(1)(dy), Derivative(2)(dy)},
+	{prev_py_0, prev_py_1, prev_py_2},
+	{},
+	0)
+
+--
+checkConsistencyInterval(uy(t) == 0 && Derivative(2)(uy)(t) == -10,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uy(t), Derivative(1)(uy)(t), Derivative(2)(uy)(t)},
+	{prev_py_0 -> 10, prev_py_1 -> 0, prev_py_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == -10,
+	True,
+	True,
+	{uy(t), Derivative(1)(uy)(t), Derivative(2)(uy)(t)},
+	{prev_py_0 -> 10, prev_py_1 -> 0, prev_py_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(10 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == -10 && Derivative(1)(dy) == (-4*prev_py_1)/5,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	True,
+	True,
+	{prev_py_0 -> 0, prev_py_1 -> -10*Sqrt(2), prev_py_2 -> -10},
+	{uy, Derivative(1)(dy), Derivative(2)(dy)},
+	{prev_py_0, prev_py_1, prev_py_2},
+	{},
+	Sqrt(2))
+
+--
+checkConsistencyPoint(Derivative(1)(dy) == (-4*prev_py_1)/5,
+	uy == prev_py_0,
+	True,
+	True,
+	{prev_py_0 -> 0, prev_py_1 -> -10*Sqrt(2), prev_py_2 -> -10},
+	{uy, Derivative(1)(dy), Derivative(2)(dy)},
+	{prev_py_0, prev_py_1, prev_py_2},
+	{},
+	Sqrt(2))
+
+--
+checkConsistencyInterval(uy(t) == 0 && Derivative(2)(uy)(t) == -10,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uy(t), Derivative(1)(uy)(t), Derivative(2)(uy)(t)},
+	{prev_py_0 -> 0, prev_py_1 -> 8*Sqrt(2)},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == -10,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uy(t), Derivative(1)(uy)(t), Derivative(2)(uy)(t)},
+	{prev_py_0 -> 0, prev_py_1 -> 8*Sqrt(2)},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(8*Sqrt(2)*t - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == -10 && Derivative(1)(dy) == (-4*prev_py_1)/5,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	True,
+	True,
+	{prev_py_0 -> 0, prev_py_1 -> -8*Sqrt(2), prev_py_2 -> -10},
+	{uy, Derivative(1)(dy), Derivative(2)(dy)},
+	{prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(13*Sqrt(2))/5)
+
+--
+checkConsistencyPoint(Derivative(1)(dy) == (-4*prev_py_1)/5,
+	uy == prev_py_0,
+	True,
+	True,
+	{prev_py_0 -> 0, prev_py_1 -> -8*Sqrt(2), prev_py_2 -> -10},
+	{uy, Derivative(1)(dy), Derivative(2)(dy)},
+	{prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(13*Sqrt(2))/5)
+
+--
+checkConsistencyInterval(uy(t) == 0 && Derivative(2)(uy)(t) == -10,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uy(t), Derivative(1)(uy)(t), Derivative(2)(uy)(t)},
+	{prev_py_0 -> 0, prev_py_1 -> (32*Sqrt(2))/5},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == -10,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uy(t), Derivative(1)(uy)(t), Derivative(2)(uy)(t)},
+	{prev_py_0 -> 0, prev_py_1 -> (32*Sqrt(2))/5},
+	True,
+	True,
+	{})
+
+--
+minimizeTime((32*Sqrt(2)*t)/5 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == -10 && Derivative(1)(dy) == (-4*prev_py_1)/5,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	True,
+	True,
+	{prev_py_0 -> 0, prev_py_1 -> (-32*Sqrt(2))/5, prev_py_2 -> -10},
+	{uy, Derivative(1)(dy), Derivative(2)(dy)},
+	{prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(97*Sqrt(2))/25)
+
+--
+checkConsistencyPoint(Derivative(1)(dy) == (-4*prev_py_1)/5,
+	uy == prev_py_0,
+	True,
+	True,
+	{prev_py_0 -> 0, prev_py_1 -> (-32*Sqrt(2))/5, prev_py_2 -> -10},
+	{uy, Derivative(1)(dy), Derivative(2)(dy)},
+	{prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(97*Sqrt(2))/25)
+
+--
+checkConsistencyInterval(uy(t) == 0 && Derivative(2)(uy)(t) == -10,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uy(t), Derivative(1)(uy)(t), Derivative(2)(uy)(t)},
+	{prev_py_0 -> 0, prev_py_1 -> (128*Sqrt(2))/25},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == -10,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uy(t), Derivative(1)(uy)(t), Derivative(2)(uy)(t)},
+	{prev_py_0 -> 0, prev_py_1 -> (128*Sqrt(2))/25},
+	True,
+	True,
+	{})
+
+--
+minimizeTime((128*Sqrt(2)*t)/25 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+checkConsistencyPoint(Derivative(2)(dy) == -10 && Derivative(1)(dy) == (-4*prev_py_1)/5,
+	uy == prev_py_0 && Derivative(1)(dy) == prev_py_1,
+	True,
+	True,
+	{prev_py_0 -> 0, prev_py_1 -> (-128*Sqrt(2))/25, prev_py_2 -> -10},
+	{uy, Derivative(1)(dy), Derivative(2)(dy)},
+	{prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(613*Sqrt(2))/125)
+
+--
+checkConsistencyPoint(Derivative(1)(dy) == (-4*prev_py_1)/5,
+	uy == prev_py_0,
+	True,
+	True,
+	{prev_py_0 -> 0, prev_py_1 -> (-128*Sqrt(2))/25, prev_py_2 -> -10},
+	{uy, Derivative(1)(dy), Derivative(2)(dy)},
+	{prev_py_0, prev_py_1, prev_py_2},
+	{},
+	(613*Sqrt(2))/125)
+
+--
+checkConsistencyInterval(uy(t) == 0 && Derivative(2)(uy)(t) == -10,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uy(t), Derivative(1)(uy)(t), Derivative(2)(uy)(t)},
+	{prev_py_0 -> 0, prev_py_1 -> (512*Sqrt(2))/125},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy)(t) == -10,
+	uy(0) == prev_py_0 && Derivative(1)(uy)(0) == prev_py_1,
+	True,
+	{uy(t), Derivative(1)(uy)(t), Derivative(2)(uy)(t)},
+	{prev_py_0 -> 0, prev_py_1 -> (512*Sqrt(2))/125},
+	True,
+	True,
+	{})
+
+--
+minimizeTime((512*Sqrt(2)*t)/125 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+

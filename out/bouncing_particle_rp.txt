@@ -1,0 +1,299 @@
+checkConsistencyPoint(5 < uht && uht < 15 && uv == 0 && uv == Derivative(1)(dht) && Derivative(1)(dv) == -10,
+	True,
+	True,
+	True,
+	{},
+	{ue, uht, uv, Derivative(1)(de), Derivative(1)(dht), Derivative(1)(dv)},
+	{prev_pe_0, prev_pe_1, prev_pht_0, prev_pht_1, prev_pv_0, prev_pv_1},
+	{},
+	0)
+
+--
+checkConsistencyPoint(5*ue == 4 && Derivative(1)(de) == 0,
+	True,
+	True,
+	True,
+	{},
+	{ue, uht, uv, Derivative(1)(de), Derivative(1)(dht), Derivative(1)(dv)},
+	{prev_pe_0, prev_pe_1, prev_pht_0, prev_pht_1, prev_pv_0, prev_pv_1},
+	{},
+	0)
+
+--
+checkConsistencyInterval(uht(t) == 0 && uv(t) == Derivative(1)(uht)(t) && Derivative(1)(uv)(t) == -10,
+	uht(0) == prev_pht_0 && uv(0) == prev_pv_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pv_0 -> 0, prev_pe_1 -> 0, prev_pht_1 -> 0, prev_pv_1 -> -10},
+	prev_pht_0 < 15 && prev_pht_0 > 5,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uv(t) == Derivative(1)(uht)(t) && Derivative(1)(uv)(t) == -10,
+	True,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pv_0 -> 0, prev_pe_1 -> 0, prev_pht_1 -> 0, prev_pv_1 -> -10},
+	prev_pht_0 < 15 && prev_pht_0 > 5,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(1)(ue)(t) == 0,
+	True,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pv_0 -> 0, prev_pe_1 -> 0, prev_pht_1 -> 0, prev_pv_1 -> -10},
+	prev_pht_0 < 15 && prev_pht_0 > 5,
+	True,
+	{})
+
+--
+minimizeTime(-5*t^2 + p_pht_0_1 == 0 && 0 < t,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	0,
+	5)
+
+
+
+--
+checkConsistencyPoint(uv == Derivative(1)(dht) && Derivative(1)(de) == 0 && Derivative(1)(dv) == -10 && uv + ue*prev_pv_0 == 0,
+	ue == prev_pe_0 && uht == prev_pht_0 && uv == prev_pv_0,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	True,
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> -2*Sqrt(5)*Sqrt(p_pht_0_1), prev_pe_1 -> 0, prev_pht_1 -> -2*Sqrt(5)*Sqrt(p_pht_0_1), prev_pv_1 -> -10},
+	{ue, uht, uv, Derivative(1)(de), Derivative(1)(dht), Derivative(1)(dv)},
+	{prev_pe_0, prev_pe_1, prev_pht_0, prev_pht_1, prev_pv_0, prev_pv_1},
+	{p_pht_0_1},
+	Sqrt(p_pht_0_1)/Sqrt(5))
+
+--
+checkConsistencyPoint(uv == Derivative(1)(dht) && Derivative(1)(de) == 0 && uv + ue*prev_pv_0 == 0,
+	ue == prev_pe_0 && uht == prev_pht_0,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	True,
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> -2*Sqrt(5)*Sqrt(p_pht_0_1), prev_pe_1 -> 0, prev_pht_1 -> -2*Sqrt(5)*Sqrt(p_pht_0_1), prev_pv_1 -> -10},
+	{ue, uht, uv, Derivative(1)(de), Derivative(1)(dht), Derivative(1)(dv)},
+	{prev_pe_0, prev_pe_1, prev_pht_0, prev_pht_1, prev_pv_0, prev_pv_1},
+	{p_pht_0_1},
+	Sqrt(p_pht_0_1)/Sqrt(5))
+
+--
+checkConsistencyInterval(uht(t) == 0 && uv(t) == Derivative(1)(uht)(t) && Derivative(1)(uv)(t) == -10,
+	uht(0) == prev_pht_0 && uv(0) == prev_pv_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (8*Sqrt(p_pht_0_1))/Sqrt(5), prev_pe_1 -> 0, prev_pht_1 -> (8*Sqrt(p_pht_0_1))/Sqrt(5)},
+	True,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	{p_pht_0_1})
+
+--
+checkConsistencyInterval(uv(t) == Derivative(1)(uht)(t) && Derivative(1)(uv)(t) == -10,
+	uht(0) == prev_pht_0 && uv(0) == prev_pv_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (8*Sqrt(p_pht_0_1))/Sqrt(5), prev_pe_1 -> 0, prev_pht_1 -> (8*Sqrt(p_pht_0_1))/Sqrt(5)},
+	True,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	{p_pht_0_1})
+
+--
+checkConsistencyInterval(Derivative(1)(ue)(t) == 0,
+	ue(0) == prev_pe_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (8*Sqrt(p_pht_0_1))/Sqrt(5), prev_pe_1 -> 0, prev_pht_1 -> (8*Sqrt(p_pht_0_1))/Sqrt(5)},
+	True,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	{p_pht_0_1})
+
+--
+minimizeTime(-5*t^2 + (8*t*Sqrt(p_pht_0_1))/Sqrt(5) == 0 && 0 < t,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	0,
+	5 - Sqrt(p_pht_0_1)/Sqrt(5))
+
+
+
+--
+checkConsistencyPoint(uv == Derivative(1)(dht) && Derivative(1)(de) == 0 && Derivative(1)(dv) == -10 && uv + ue*prev_pv_0 == 0,
+	ue == prev_pe_0 && uht == prev_pht_0 && uv == prev_pv_0,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	True,
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (-8*Sqrt(p_pht_0_1))/Sqrt(5), prev_pe_1 -> 0, prev_pht_1 -> (-8*Sqrt(p_pht_0_1))/Sqrt(5), prev_pv_1 -> -10},
+	{ue, uht, uv, Derivative(1)(de), Derivative(1)(dht), Derivative(1)(dv)},
+	{prev_pe_0, prev_pe_1, prev_pht_0, prev_pht_1, prev_pv_0, prev_pv_1},
+	{p_pht_0_1},
+	(13*Sqrt(p_pht_0_1))/(5*Sqrt(5)))
+
+--
+checkConsistencyPoint(uv == Derivative(1)(dht) && Derivative(1)(de) == 0 && uv + ue*prev_pv_0 == 0,
+	ue == prev_pe_0 && uht == prev_pht_0,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	True,
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (-8*Sqrt(p_pht_0_1))/Sqrt(5), prev_pe_1 -> 0, prev_pht_1 -> (-8*Sqrt(p_pht_0_1))/Sqrt(5), prev_pv_1 -> -10},
+	{ue, uht, uv, Derivative(1)(de), Derivative(1)(dht), Derivative(1)(dv)},
+	{prev_pe_0, prev_pe_1, prev_pht_0, prev_pht_1, prev_pv_0, prev_pv_1},
+	{p_pht_0_1},
+	(13*Sqrt(p_pht_0_1))/(5*Sqrt(5)))
+
+--
+checkConsistencyInterval(uht(t) == 0 && uv(t) == Derivative(1)(uht)(t) && Derivative(1)(uv)(t) == -10,
+	uht(0) == prev_pht_0 && uv(0) == prev_pv_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (32*Sqrt(p_pht_0_1))/(5*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (32*Sqrt(p_pht_0_1))/(5*Sqrt(5))},
+	True,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	{p_pht_0_1})
+
+--
+checkConsistencyInterval(uv(t) == Derivative(1)(uht)(t) && Derivative(1)(uv)(t) == -10,
+	uht(0) == prev_pht_0 && uv(0) == prev_pv_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (32*Sqrt(p_pht_0_1))/(5*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (32*Sqrt(p_pht_0_1))/(5*Sqrt(5))},
+	True,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	{p_pht_0_1})
+
+--
+checkConsistencyInterval(Derivative(1)(ue)(t) == 0,
+	ue(0) == prev_pe_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (32*Sqrt(p_pht_0_1))/(5*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (32*Sqrt(p_pht_0_1))/(5*Sqrt(5))},
+	True,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	{p_pht_0_1})
+
+--
+minimizeTime(-5*t^2 + (32*t*Sqrt(p_pht_0_1))/(5*Sqrt(5)) == 0 && 0 < t,
+	Inequality(5, Less, p_pht_0_1, Less, 15),
+	0,
+	5 - (13*Sqrt(p_pht_0_1))/(5*Sqrt(5)))
+
+
+
+--
+checkConsistencyPoint(uv == Derivative(1)(dht) && Derivative(1)(de) == 0 && Derivative(1)(dv) == -10 && uv + ue*prev_pv_0 == 0,
+	ue == prev_pe_0 && uht == prev_pht_0 && uv == prev_pv_0,
+	Inequality(5, Less, p_pht_0_1, Less, 78125/9409),
+	True,
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (-32*Sqrt(p_pht_0_1))/(5*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (-32*Sqrt(p_pht_0_1))/(5*Sqrt(5)), prev_pv_1 -> -10},
+	{ue, uht, uv, Derivative(1)(de), Derivative(1)(dht), Derivative(1)(dv)},
+	{prev_pe_0, prev_pe_1, prev_pht_0, prev_pht_1, prev_pv_0, prev_pv_1},
+	{p_pht_0_1},
+	(97*Sqrt(p_pht_0_1))/(25*Sqrt(5)))
+
+--
+checkConsistencyPoint(uv == Derivative(1)(dht) && Derivative(1)(de) == 0 && uv + ue*prev_pv_0 == 0,
+	ue == prev_pe_0 && uht == prev_pht_0,
+	Inequality(5, Less, p_pht_0_1, Less, 78125/9409),
+	True,
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (-32*Sqrt(p_pht_0_1))/(5*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (-32*Sqrt(p_pht_0_1))/(5*Sqrt(5)), prev_pv_1 -> -10},
+	{ue, uht, uv, Derivative(1)(de), Derivative(1)(dht), Derivative(1)(dv)},
+	{prev_pe_0, prev_pe_1, prev_pht_0, prev_pht_1, prev_pv_0, prev_pv_1},
+	{p_pht_0_1},
+	(97*Sqrt(p_pht_0_1))/(25*Sqrt(5)))
+
+--
+checkConsistencyInterval(uht(t) == 0 && uv(t) == Derivative(1)(uht)(t) && Derivative(1)(uv)(t) == -10,
+	uht(0) == prev_pht_0 && uv(0) == prev_pv_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (128*Sqrt(p_pht_0_1))/(25*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (128*Sqrt(p_pht_0_1))/(25*Sqrt(5))},
+	True,
+	Inequality(5, Less, p_pht_0_1, Less, 78125/9409),
+	{p_pht_0_1})
+
+--
+checkConsistencyInterval(uv(t) == Derivative(1)(uht)(t) && Derivative(1)(uv)(t) == -10,
+	uht(0) == prev_pht_0 && uv(0) == prev_pv_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (128*Sqrt(p_pht_0_1))/(25*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (128*Sqrt(p_pht_0_1))/(25*Sqrt(5))},
+	True,
+	Inequality(5, Less, p_pht_0_1, Less, 78125/9409),
+	{p_pht_0_1})
+
+--
+checkConsistencyInterval(Derivative(1)(ue)(t) == 0,
+	ue(0) == prev_pe_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (128*Sqrt(p_pht_0_1))/(25*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (128*Sqrt(p_pht_0_1))/(25*Sqrt(5))},
+	True,
+	Inequality(5, Less, p_pht_0_1, Less, 78125/9409),
+	{p_pht_0_1})
+
+--
+minimizeTime(-5*t^2 + (128*t*Sqrt(p_pht_0_1))/(25*Sqrt(5)) == 0 && 0 < t,
+	Inequality(5, Less, p_pht_0_1, Less, 78125/9409),
+	0,
+	5 - (97*Sqrt(p_pht_0_1))/(25*Sqrt(5)))
+
+
+
+--
+checkConsistencyPoint(uv == Derivative(1)(dht) && Derivative(1)(de) == 0 && Derivative(1)(dv) == -10 && uv + ue*prev_pv_0 == 0,
+	ue == prev_pe_0 && uht == prev_pht_0 && uv == prev_pv_0,
+	Inequality(5, Less, p_pht_0_1, Less, 1953125/375769),
+	True,
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (-128*Sqrt(p_pht_0_1))/(25*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (-128*Sqrt(p_pht_0_1))/(25*Sqrt(5)), prev_pv_1 -> -10},
+	{ue, uht, uv, Derivative(1)(de), Derivative(1)(dht), Derivative(1)(dv)},
+	{prev_pe_0, prev_pe_1, prev_pht_0, prev_pht_1, prev_pv_0, prev_pv_1},
+	{p_pht_0_1},
+	(613*Sqrt(p_pht_0_1))/(125*Sqrt(5)))
+
+--
+checkConsistencyPoint(uv == Derivative(1)(dht) && Derivative(1)(de) == 0 && uv + ue*prev_pv_0 == 0,
+	ue == prev_pe_0 && uht == prev_pht_0,
+	Inequality(5, Less, p_pht_0_1, Less, 1953125/375769),
+	True,
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (-128*Sqrt(p_pht_0_1))/(25*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (-128*Sqrt(p_pht_0_1))/(25*Sqrt(5)), prev_pv_1 -> -10},
+	{ue, uht, uv, Derivative(1)(de), Derivative(1)(dht), Derivative(1)(dv)},
+	{prev_pe_0, prev_pe_1, prev_pht_0, prev_pht_1, prev_pv_0, prev_pv_1},
+	{p_pht_0_1},
+	(613*Sqrt(p_pht_0_1))/(125*Sqrt(5)))
+
+--
+checkConsistencyInterval(uht(t) == 0 && uv(t) == Derivative(1)(uht)(t) && Derivative(1)(uv)(t) == -10,
+	uht(0) == prev_pht_0 && uv(0) == prev_pv_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (512*Sqrt(p_pht_0_1))/(125*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (512*Sqrt(p_pht_0_1))/(125*Sqrt(5))},
+	True,
+	Inequality(5, Less, p_pht_0_1, Less, 1953125/375769),
+	{p_pht_0_1})
+
+--
+checkConsistencyInterval(uv(t) == Derivative(1)(uht)(t) && Derivative(1)(uv)(t) == -10,
+	uht(0) == prev_pht_0 && uv(0) == prev_pv_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (512*Sqrt(p_pht_0_1))/(125*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (512*Sqrt(p_pht_0_1))/(125*Sqrt(5))},
+	True,
+	Inequality(5, Less, p_pht_0_1, Less, 1953125/375769),
+	{p_pht_0_1})
+
+--
+checkConsistencyInterval(Derivative(1)(ue)(t) == 0,
+	ue(0) == prev_pe_0,
+	True,
+	{ue(t), uht(t), uv(t), Derivative(1)(ue)(t), Derivative(1)(uht)(t), Derivative(1)(uv)(t)},
+	{prev_pe_0 -> 4/5, prev_pht_0 -> 0, prev_pv_0 -> (512*Sqrt(p_pht_0_1))/(125*Sqrt(5)), prev_pe_1 -> 0, prev_pht_1 -> (512*Sqrt(p_pht_0_1))/(125*Sqrt(5))},
+	True,
+	Inequality(5, Less, p_pht_0_1, Less, 1953125/375769),
+	{p_pht_0_1})
+
+--
+minimizeTime(-5*t^2 + (512*t*Sqrt(p_pht_0_1))/(125*Sqrt(5)) == 0 && 0 < t,
+	Inequality(5, Less, p_pht_0_1, Less, 1953125/375769),
+	0,
+	5 - (613*Sqrt(p_pht_0_1))/(125*Sqrt(5)))
+
+
+

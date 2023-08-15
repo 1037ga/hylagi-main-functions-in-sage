@@ -1,0 +1,654 @@
+checkConsistencyPoint(uy0 == 2 && Derivative(1)(dy0) == 0 && Derivative(2)(dy0) == -10,
+	True,
+	True,
+	True,
+	{},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uy1 == 3 && Derivative(1)(dy1) == 0 && Derivative(2)(dy1) == -10,
+	True,
+	True,
+	True,
+	{},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uy2 == 4 && Derivative(1)(dy2) == 0 && Derivative(2)(dy2) == -10,
+	True,
+	True,
+	True,
+	{},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uy3 == 5 && Derivative(1)(dy3) == 0 && Derivative(2)(dy3) == -10,
+	True,
+	True,
+	True,
+	{},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uy4 == 6 && Derivative(1)(dy4) == 0 && Derivative(2)(dy4) == -10,
+	True,
+	True,
+	True,
+	{},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uy5 == 7 && Derivative(1)(dy5) == 0 && Derivative(2)(dy5) == -10,
+	True,
+	True,
+	True,
+	{},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uy6 == 8 && Derivative(1)(dy6) == 0 && Derivative(2)(dy6) == -10,
+	True,
+	True,
+	True,
+	{},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uy7 == 9 && Derivative(1)(dy7) == 0 && Derivative(2)(dy7) == -10,
+	True,
+	True,
+	True,
+	{},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uy8 == 10 && Derivative(1)(dy8) == 0 && Derivative(2)(dy8) == -10,
+	True,
+	True,
+	True,
+	{},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uy9 == 11 && Derivative(1)(dy9) == 0 && Derivative(2)(dy9) == -10,
+	True,
+	True,
+	True,
+	{},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	0)
+
+--
+checkConsistencyInterval(uy0(t) == 0 && Derivative(2)(uy0)(t) == -10,
+	uy0(0) == prev_py0_0 && Derivative(1)(uy0)(0) == prev_py0_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy1(t) == 0 && Derivative(2)(uy1)(t) == -10,
+	uy1(0) == prev_py1_0 && Derivative(1)(uy1)(0) == prev_py1_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy2(t) == 0 && Derivative(2)(uy2)(t) == -10,
+	uy2(0) == prev_py2_0 && Derivative(1)(uy2)(0) == prev_py2_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy3(t) == 0 && Derivative(2)(uy3)(t) == -10,
+	uy3(0) == prev_py3_0 && Derivative(1)(uy3)(0) == prev_py3_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy4(t) == 0 && Derivative(2)(uy4)(t) == -10,
+	uy4(0) == prev_py4_0 && Derivative(1)(uy4)(0) == prev_py4_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy5(t) == 0 && Derivative(2)(uy5)(t) == -10,
+	uy5(0) == prev_py5_0 && Derivative(1)(uy5)(0) == prev_py5_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy6(t) == 0 && Derivative(2)(uy6)(t) == -10,
+	uy6(0) == prev_py6_0 && Derivative(1)(uy6)(0) == prev_py6_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy7(t) == 0 && Derivative(2)(uy7)(t) == -10,
+	uy7(0) == prev_py7_0 && Derivative(1)(uy7)(0) == prev_py7_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy8(t) == 0 && Derivative(2)(uy8)(t) == -10,
+	uy8(0) == prev_py8_0 && Derivative(1)(uy8)(0) == prev_py8_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uy9(t) == 0 && Derivative(2)(uy9)(t) == -10,
+	uy9(0) == prev_py9_0 && Derivative(1)(uy9)(0) == prev_py9_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy0)(t) == -10,
+	True,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy1)(t) == -10,
+	True,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy2)(t) == -10,
+	True,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy3)(t) == -10,
+	True,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy4)(t) == -10,
+	True,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy5)(t) == -10,
+	True,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy6)(t) == -10,
+	True,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy7)(t) == -10,
+	True,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy8)(t) == -10,
+	True,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy9)(t) == -10,
+	True,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 2, prev_py1_0 -> 3, prev_py2_0 -> 4, prev_py3_0 -> 5, prev_py4_0 -> 6, prev_py5_0 -> 7, prev_py6_0 -> 8, prev_py7_0 -> 9, prev_py8_0 -> 10, prev_py9_0 -> 11, prev_py0_1 -> 0, prev_py1_1 -> 0, prev_py2_1 -> 0, prev_py3_1 -> 0, prev_py4_1 -> 0, prev_py5_1 -> 0, prev_py6_1 -> 0, prev_py7_1 -> 0, prev_py8_1 -> 0, prev_py9_1 -> 0, prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(2 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(3 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(4 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(5 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(6 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(7 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(8 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(9 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(10 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(11 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime(Sqrt(2/5),
+	Sqrt(3/5),
+	True,
+	True)
+
+
+compareMinTime(Sqrt(2/5),
+	2/Sqrt(5),
+	True,
+	True)
+
+
+compareMinTime(Sqrt(2/5),
+	1,
+	True,
+	True)
+
+
+compareMinTime(Sqrt(2/5),
+	Sqrt(6/5),
+	True,
+	True)
+
+
+compareMinTime(Sqrt(2/5),
+	Sqrt(7/5),
+	True,
+	True)
+
+
+compareMinTime(Sqrt(2/5),
+	2*Sqrt(2/5),
+	True,
+	True)
+
+
+compareMinTime(Sqrt(2/5),
+	3/Sqrt(5),
+	True,
+	True)
+
+
+compareMinTime(Sqrt(2/5),
+	Sqrt(2),
+	True,
+	True)
+
+
+compareMinTime(Sqrt(2/5),
+	Sqrt(11/5),
+	True,
+	True)
+
+
+--
+checkConsistencyPoint(Derivative(2)(dy0) == -10 && prev_py0_1 + Derivative(1)(dy0) == 0,
+	uy0 == prev_py0_0 && Derivative(1)(dy0) == prev_py0_1,
+	True,
+	True,
+	{prev_py0_0 -> 0, prev_py1_0 -> 1, prev_py2_0 -> 2, prev_py3_0 -> 3, prev_py4_0 -> 4, prev_py5_0 -> 5, prev_py6_0 -> 6, prev_py7_0 -> 7, prev_py8_0 -> 8, prev_py9_0 -> 9, prev_py0_1 -> -2*Sqrt(10), prev_py1_1 -> -2*Sqrt(10), prev_py2_1 -> -2*Sqrt(10), prev_py3_1 -> -2*Sqrt(10), prev_py4_1 -> -2*Sqrt(10), prev_py5_1 -> -2*Sqrt(10), prev_py6_1 -> -2*Sqrt(10), prev_py7_1 -> -2*Sqrt(10), prev_py8_1 -> -2*Sqrt(10), prev_py9_1 -> -2*Sqrt(10), prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	Sqrt(2/5))
+
+--
+checkConsistencyPoint(prev_py0_1 + Derivative(1)(dy0) == 0,
+	uy0 == prev_py0_0,
+	True,
+	True,
+	{prev_py0_0 -> 0, prev_py1_0 -> 1, prev_py2_0 -> 2, prev_py3_0 -> 3, prev_py4_0 -> 4, prev_py5_0 -> 5, prev_py6_0 -> 6, prev_py7_0 -> 7, prev_py8_0 -> 8, prev_py9_0 -> 9, prev_py0_1 -> -2*Sqrt(10), prev_py1_1 -> -2*Sqrt(10), prev_py2_1 -> -2*Sqrt(10), prev_py3_1 -> -2*Sqrt(10), prev_py4_1 -> -2*Sqrt(10), prev_py5_1 -> -2*Sqrt(10), prev_py6_1 -> -2*Sqrt(10), prev_py7_1 -> -2*Sqrt(10), prev_py8_1 -> -2*Sqrt(10), prev_py9_1 -> -2*Sqrt(10), prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	Sqrt(2/5))
+
+--
+checkConsistencyInterval(uy0(t) == 0 && Derivative(2)(uy0)(t) == -10,
+	uy0(0) == prev_py0_0 && Derivative(1)(uy0)(0) == prev_py0_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 0, prev_py1_0 -> 1, prev_py2_0 -> 2, prev_py3_0 -> 3, prev_py4_0 -> 4, prev_py5_0 -> 5, prev_py6_0 -> 6, prev_py7_0 -> 7, prev_py8_0 -> 8, prev_py9_0 -> 9, prev_py0_1 -> 2*Sqrt(10), prev_py1_1 -> -2*Sqrt(10), prev_py2_1 -> -2*Sqrt(10), prev_py3_1 -> -2*Sqrt(10), prev_py4_1 -> -2*Sqrt(10), prev_py5_1 -> -2*Sqrt(10), prev_py6_1 -> -2*Sqrt(10), prev_py7_1 -> -2*Sqrt(10), prev_py8_1 -> -2*Sqrt(10), prev_py9_1 -> -2*Sqrt(10), prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy0)(t) == -10,
+	uy0(0) == prev_py0_0 && Derivative(1)(uy0)(0) == prev_py0_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> 0, prev_py1_0 -> 1, prev_py2_0 -> 2, prev_py3_0 -> 3, prev_py4_0 -> 4, prev_py5_0 -> 5, prev_py6_0 -> 6, prev_py7_0 -> 7, prev_py8_0 -> 8, prev_py9_0 -> 9, prev_py0_1 -> 2*Sqrt(10), prev_py1_1 -> -2*Sqrt(10), prev_py2_1 -> -2*Sqrt(10), prev_py3_1 -> -2*Sqrt(10), prev_py4_1 -> -2*Sqrt(10), prev_py5_1 -> -2*Sqrt(10), prev_py6_1 -> -2*Sqrt(10), prev_py7_1 -> -2*Sqrt(10), prev_py8_1 -> -2*Sqrt(10), prev_py9_1 -> -2*Sqrt(10), prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(2*Sqrt(10)*t - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime(2*Sqrt(2/5),
+	-Sqrt(2/5) + Sqrt(3/5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(2/5) + Sqrt(3/5),
+	-Sqrt(2/5) + 2/Sqrt(5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(2/5) + Sqrt(3/5),
+	1 - Sqrt(2/5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(2/5) + Sqrt(3/5),
+	-Sqrt(2/5) + Sqrt(6/5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(2/5) + Sqrt(3/5),
+	-Sqrt(2/5) + Sqrt(7/5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(2/5) + Sqrt(3/5),
+	Sqrt(2/5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(2/5) + Sqrt(3/5),
+	-Sqrt(2/5) + 3/Sqrt(5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(2/5) + Sqrt(3/5),
+	-Sqrt(2/5) + Sqrt(2),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(2/5) + Sqrt(3/5),
+	-Sqrt(2/5) + Sqrt(11/5),
+	True,
+	True)
+
+
+--
+checkConsistencyPoint(Derivative(2)(dy1) == -10 && prev_py1_1 + Derivative(1)(dy1) == 0,
+	uy1 == prev_py1_0 && Derivative(1)(dy1) == prev_py1_1,
+	True,
+	True,
+	{prev_py0_0 -> -9 + 4*Sqrt(6), prev_py1_0 -> 0, prev_py2_0 -> 1, prev_py3_0 -> 2, prev_py4_0 -> 3, prev_py5_0 -> 4, prev_py6_0 -> 5, prev_py7_0 -> 6, prev_py8_0 -> 7, prev_py9_0 -> 8, prev_py0_1 -> 4*Sqrt(10) - 2*Sqrt(15), prev_py1_1 -> -2*Sqrt(15), prev_py2_1 -> -2*Sqrt(15), prev_py3_1 -> -2*Sqrt(15), prev_py4_1 -> -2*Sqrt(15), prev_py5_1 -> -2*Sqrt(15), prev_py6_1 -> -2*Sqrt(15), prev_py7_1 -> -2*Sqrt(15), prev_py8_1 -> -2*Sqrt(15), prev_py9_1 -> -2*Sqrt(15), prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	Sqrt(3/5))
+
+--
+checkConsistencyPoint(prev_py1_1 + Derivative(1)(dy1) == 0,
+	uy1 == prev_py1_0,
+	True,
+	True,
+	{prev_py0_0 -> -9 + 4*Sqrt(6), prev_py1_0 -> 0, prev_py2_0 -> 1, prev_py3_0 -> 2, prev_py4_0 -> 3, prev_py5_0 -> 4, prev_py6_0 -> 5, prev_py7_0 -> 6, prev_py8_0 -> 7, prev_py9_0 -> 8, prev_py0_1 -> 4*Sqrt(10) - 2*Sqrt(15), prev_py1_1 -> -2*Sqrt(15), prev_py2_1 -> -2*Sqrt(15), prev_py3_1 -> -2*Sqrt(15), prev_py4_1 -> -2*Sqrt(15), prev_py5_1 -> -2*Sqrt(15), prev_py6_1 -> -2*Sqrt(15), prev_py7_1 -> -2*Sqrt(15), prev_py8_1 -> -2*Sqrt(15), prev_py9_1 -> -2*Sqrt(15), prev_py0_2 -> -10, prev_py1_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	{uy0, uy1, uy2, uy3, uy4, uy5, uy6, uy7, uy8, uy9, Derivative(1)(dy0), Derivative(1)(dy1), Derivative(1)(dy2), Derivative(1)(dy3), Derivative(1)(dy4), Derivative(1)(dy5), Derivative(1)(dy6), Derivative(1)(dy7), Derivative(1)(dy8), Derivative(1)(dy9), Derivative(2)(dy0), Derivative(2)(dy1), Derivative(2)(dy2), Derivative(2)(dy3), Derivative(2)(dy4), Derivative(2)(dy5), Derivative(2)(dy6), Derivative(2)(dy7), Derivative(2)(dy8), Derivative(2)(dy9)},
+	{prev_py0_0, prev_py0_1, prev_py0_2, prev_py1_0, prev_py1_1, prev_py1_2, prev_py2_0, prev_py2_1, prev_py2_2, prev_py3_0, prev_py3_1, prev_py3_2, prev_py4_0, prev_py4_1, prev_py4_2, prev_py5_0, prev_py5_1, prev_py5_2, prev_py6_0, prev_py6_1, prev_py6_2, prev_py7_0, prev_py7_1, prev_py7_2, prev_py8_0, prev_py8_1, prev_py8_2, prev_py9_0, prev_py9_1, prev_py9_2},
+	{},
+	Sqrt(3/5))
+
+--
+checkConsistencyInterval(uy1(t) == 0 && Derivative(2)(uy1)(t) == -10,
+	uy1(0) == prev_py1_0 && Derivative(1)(uy1)(0) == prev_py1_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> -9 + 4*Sqrt(6), prev_py1_0 -> 0, prev_py2_0 -> 1, prev_py3_0 -> 2, prev_py4_0 -> 3, prev_py5_0 -> 4, prev_py6_0 -> 5, prev_py7_0 -> 6, prev_py8_0 -> 7, prev_py9_0 -> 8, prev_py0_1 -> 4*Sqrt(10) - 2*Sqrt(15), prev_py1_1 -> 2*Sqrt(15), prev_py2_1 -> -2*Sqrt(15), prev_py3_1 -> -2*Sqrt(15), prev_py4_1 -> -2*Sqrt(15), prev_py5_1 -> -2*Sqrt(15), prev_py6_1 -> -2*Sqrt(15), prev_py7_1 -> -2*Sqrt(15), prev_py8_1 -> -2*Sqrt(15), prev_py9_1 -> -2*Sqrt(15), prev_py0_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(Derivative(2)(uy1)(t) == -10,
+	uy1(0) == prev_py1_0 && Derivative(1)(uy1)(0) == prev_py1_1,
+	True,
+	{uy0(t), uy1(t), uy2(t), uy3(t), uy4(t), uy5(t), uy6(t), uy7(t), uy8(t), uy9(t), Derivative(1)(uy0)(t), Derivative(1)(uy1)(t), Derivative(1)(uy2)(t), Derivative(1)(uy3)(t), Derivative(1)(uy4)(t), Derivative(1)(uy5)(t), Derivative(1)(uy6)(t), Derivative(1)(uy7)(t), Derivative(1)(uy8)(t), Derivative(1)(uy9)(t), Derivative(2)(uy0)(t), Derivative(2)(uy1)(t), Derivative(2)(uy2)(t), Derivative(2)(uy3)(t), Derivative(2)(uy4)(t), Derivative(2)(uy5)(t), Derivative(2)(uy6)(t), Derivative(2)(uy7)(t), Derivative(2)(uy8)(t), Derivative(2)(uy9)(t)},
+	{prev_py0_0 -> -9 + 4*Sqrt(6), prev_py1_0 -> 0, prev_py2_0 -> 1, prev_py3_0 -> 2, prev_py4_0 -> 3, prev_py5_0 -> 4, prev_py6_0 -> 5, prev_py7_0 -> 6, prev_py8_0 -> 7, prev_py9_0 -> 8, prev_py0_1 -> 4*Sqrt(10) - 2*Sqrt(15), prev_py1_1 -> 2*Sqrt(15), prev_py2_1 -> -2*Sqrt(15), prev_py3_1 -> -2*Sqrt(15), prev_py4_1 -> -2*Sqrt(15), prev_py5_1 -> -2*Sqrt(15), prev_py6_1 -> -2*Sqrt(15), prev_py7_1 -> -2*Sqrt(15), prev_py8_1 -> -2*Sqrt(15), prev_py9_1 -> -2*Sqrt(15), prev_py0_2 -> -10, prev_py2_2 -> -10, prev_py3_2 -> -10, prev_py4_2 -> -10, prev_py5_2 -> -10, prev_py6_2 -> -10, prev_py7_2 -> -10, prev_py8_2 -> -10, prev_py9_2 -> -10},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(2*Sqrt(15)*t - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime(3*Sqrt(2/5) - Sqrt(3/5),
+	2*Sqrt(3/5),
+	True,
+	True)
+
+
+compareMinTime(3*Sqrt(2/5) - Sqrt(3/5),
+	-Sqrt(3/5) + 2/Sqrt(5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(3/5) + 2/Sqrt(5),
+	1 - Sqrt(3/5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(3/5) + 2/Sqrt(5),
+	-Sqrt(3/5) + Sqrt(6/5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(3/5) + 2/Sqrt(5),
+	-Sqrt(3/5) + Sqrt(7/5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(3/5) + 2/Sqrt(5),
+	2*Sqrt(2/5) - Sqrt(3/5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(3/5) + 2/Sqrt(5),
+	-Sqrt(3/5) + 3/Sqrt(5),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(3/5) + 2/Sqrt(5),
+	-Sqrt(3/5) + Sqrt(2),
+	True,
+	True)
+
+
+compareMinTime(-Sqrt(3/5) + 2/Sqrt(5),
+	-Sqrt(3/5) + Sqrt(11/5),
+	True,
+	True)
+
+

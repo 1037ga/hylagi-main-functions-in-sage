@@ -1,0 +1,1176 @@
+checkConsistencyPoint(3*ubx == 4 && Derivative(1)(dbx) == 1 && ubvx == Derivative(1)(dbx) && Derivative(1)(dbvx) == 0,
+	True,
+	True,
+	True,
+	{},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	0)
+
+--
+checkConsistencyPoint(uby == 20 && Derivative(1)(dby) == 0 && ubvy == Derivative(1)(dby) && Derivative(1)(dbvy) == -10,
+	True,
+	True,
+	True,
+	{},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	0)
+
+--
+checkConsistencyPoint(100*ue == 77,
+	True,
+	True,
+	True,
+	{},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	0)
+
+--
+checkConsistencyInterval(5 <= ubx(t) && ubx(t) <= 6 && (uby(t) == 6 || uby(t) == 14) && ubvy(t) == Derivative(1)(uby)(t) && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvy)(t) == -10 && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubvy(0) == prev_pbvy_0 && ubx(0) == prev_pbx_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 0, prev_pbx_0 -> 4/3, prev_pby_0 -> 20, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(6 <= uby(t) && uby(t) <= 14 && (ubx(t) == 5 || ubx(t) == 6) && ubvy(t) == Derivative(1)(uby)(t) && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvy)(t) == -10 && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubvy(0) == prev_pbvy_0 && ubx(0) == prev_pbx_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 0, prev_pbx_0 -> 4/3, prev_pby_0 -> 20, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(1 <= ubx(t) && ubx(t) <= 4 && (uby(t) == 9/2 || uby(t) == 15) && ubvy(t) == Derivative(1)(uby)(t) && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvy)(t) == -10 && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubvy(0) == prev_pbvy_0 && ubx(0) == prev_pbx_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 0, prev_pbx_0 -> 4/3, prev_pby_0 -> 20, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(9/2 <= uby(t) && uby(t) <= 15 && (ubx(t) == 1 || ubx(t) == 4) && ubvy(t) == Derivative(1)(uby)(t) && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvy)(t) == -10 && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubvy(0) == prev_pbvy_0 && ubx(0) == prev_pbx_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 0, prev_pbx_0 -> 4/3, prev_pby_0 -> 20, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubx(t) == 0 && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubx(0) == prev_pbx_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 0, prev_pbx_0 -> 4/3, prev_pby_0 -> 20, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubx(t) == 6 && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubx(0) == prev_pbx_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 0, prev_pbx_0 -> 4/3, prev_pby_0 -> 20, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(uby(t) == 0 && ubvy(t) == Derivative(1)(uby)(t) && Derivative(1)(ubvy)(t) == -10,
+	ubvy(0) == prev_pbvy_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 0, prev_pbx_0 -> 4/3, prev_pby_0 -> 20, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvx)(t) == 0,
+	True,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 0, prev_pbx_0 -> 4/3, prev_pby_0 -> 20, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubvy(t) == Derivative(1)(uby)(t) && Derivative(1)(ubvy)(t) == -10,
+	True,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 0, prev_pbx_0 -> 4/3, prev_pby_0 -> 20, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> 0},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(100*ue(t) == 77,
+	True,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 0, prev_pbx_0 -> 4/3, prev_pby_0 -> 20, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> 0},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(0 < t && 5 <= 4/3 + t && 0 < t && 4/3 + t <= 6 && ((20 - 5*t^2 == 6 && 0 < t) || (20 - 5*t^2 == 14 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 6 <= 20 - 5*t^2 && 0 < t && 20 - 5*t^2 <= 14 && ((4/3 + t == 5 && 0 < t) || (4/3 + t == 6 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= 4/3 + t && 0 < t && 4/3 + t <= 4 && ((20 - 5*t^2 == 9/2 && 0 < t) || (20 - 5*t^2 == 15 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 9/2 <= 20 - 5*t^2 && 0 < t && 20 - 5*t^2 <= 15 && ((4/3 + t == 1 && 0 < t) || (4/3 + t == 4 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(4/3 + t == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(4/3 + t == 6 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(20 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime(1,
+	14/3,
+	True,
+	True)
+
+
+compareMinTime(1,
+	2,
+	True,
+	True)
+
+
+--
+checkConsistencyPoint(ubvy == Derivative(1)(dby) && 100*ue == 77 && Derivative(1)(dbvy) == -10 && ubvy + ue*prev_pbvy_0 == 0,
+	ubvy == prev_pbvy_0 && uby == prev_pby_0,
+	True,
+	True,
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> -10, prev_pbx_0 -> 7/3, prev_pby_0 -> 15, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> -10},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	1)
+
+--
+checkConsistencyPoint(ubvy == Derivative(1)(dby) && 100*ue == 77 && ubvy + ue*prev_pbvy_0 == 0,
+	uby == prev_pby_0,
+	True,
+	True,
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> -10, prev_pbx_0 -> 7/3, prev_pby_0 -> 15, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> -10},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	1)
+
+--
+checkConsistencyInterval(1 <= ubx(t) && ubx(t) <= 4 && (uby(t) == 9/2 || uby(t) == 15) && ubvy(t) == Derivative(1)(uby)(t) && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvy)(t) == -10 && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubvy(0) == prev_pbvy_0 && ubx(0) == prev_pbx_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 77/10, prev_pbx_0 -> 7/3, prev_pby_0 -> 15, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> 1, prev_pby_1 -> 77/10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubvy(t) == Derivative(1)(uby)(t) && Derivative(1)(ubvy)(t) == -10,
+	ubvy(0) == prev_pbvy_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 77/10, prev_pbx_0 -> 7/3, prev_pby_0 -> 15, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> 1, prev_pby_1 -> 77/10},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(100*ue(t) == 77,
+	True,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 77/10, prev_pbx_0 -> 7/3, prev_pby_0 -> 15, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> 1, prev_pby_1 -> 77/10},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(0 < t && 5 <= 7/3 + t && 0 < t && 7/3 + t <= 6 && ((15 + (77*t)/10 - 5*t^2 == 6 && 0 < t) || (15 + (77*t)/10 - 5*t^2 == 14 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 6 <= 15 + (77*t)/10 - 5*t^2 && 0 < t && 15 + (77*t)/10 - 5*t^2 <= 14 && ((7/3 + t == 5 && 0 < t) || (7/3 + t == 6 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= 7/3 + t && 0 < t && 7/3 + t <= 4 && ((15 + (77*t)/10 - 5*t^2 == 9/2 && 0 < t) || (15 + (77*t)/10 - 5*t^2 == 15 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 9/2 <= 15 + (77*t)/10 - 5*t^2 && 0 < t && 15 + (77*t)/10 - 5*t^2 <= 15 && ((7/3 + t == 1 && 0 < t) || (7/3 + t == 4 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(15 + (77*t)/10 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime(77/50,
+	5/3,
+	True,
+	True)
+
+
+compareMinTime(77/50,
+	11/3,
+	True,
+	True)
+
+
+compareMinTime(77/50,
+	(77 + Sqrt(35929))/100,
+	True,
+	True)
+
+
+--
+checkConsistencyPoint(ubvy == Derivative(1)(dby) && 100*ue == 77 && Derivative(1)(dbvy) == -10 && ubvy + ue*prev_pbvy_0 == 0,
+	ubvy == prev_pbvy_0 && uby == prev_pby_0,
+	True,
+	True,
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> -77/10, prev_pbx_0 -> 581/150, prev_pby_0 -> 15, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> -77/10},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	127/50)
+
+--
+checkConsistencyPoint(ubvy == Derivative(1)(dby) && 100*ue == 77 && ubvy + ue*prev_pbvy_0 == 0,
+	uby == prev_pby_0,
+	True,
+	True,
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> -77/10, prev_pbx_0 -> 581/150, prev_pby_0 -> 15, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> -77/10},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	127/50)
+
+--
+checkConsistencyInterval(1 <= ubx(t) && ubx(t) <= 4 && (uby(t) == 9/2 || uby(t) == 15) && ubvy(t) == Derivative(1)(uby)(t) && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvy)(t) == -10 && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubvy(0) == prev_pbvy_0 && ubx(0) == prev_pbx_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 5929/1000, prev_pbx_0 -> 581/150, prev_pby_0 -> 15, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> 1, prev_pby_1 -> 5929/1000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubvy(t) == Derivative(1)(uby)(t) && Derivative(1)(ubvy)(t) == -10,
+	ubvy(0) == prev_pbvy_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 5929/1000, prev_pbx_0 -> 581/150, prev_pby_0 -> 15, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> 1, prev_pby_1 -> 5929/1000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(100*ue(t) == 77,
+	True,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> 5929/1000, prev_pbx_0 -> 581/150, prev_pby_0 -> 15, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> 1, prev_pby_1 -> 5929/1000},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(0 < t && 5 <= 581/150 + t && 0 < t && 581/150 + t <= 6 && ((15 + (5929*t)/1000 - 5*t^2 == 6 && 0 < t) || (15 + (5929*t)/1000 - 5*t^2 == 14 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 6 <= 15 + (5929*t)/1000 - 5*t^2 && 0 < t && 15 + (5929*t)/1000 - 5*t^2 <= 14 && ((581/150 + t == 5 && 0 < t) || (581/150 + t == 6 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= 581/150 + t && 0 < t && 581/150 + t <= 4 && ((15 + (5929*t)/1000 - 5*t^2 == 9/2 && 0 < t) || (15 + (5929*t)/1000 - 5*t^2 == 15 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 9/2 <= 15 + (5929*t)/1000 - 5*t^2 && 0 < t && 15 + (5929*t)/1000 - 5*t^2 <= 15 && ((581/150 + t == 1 && 0 < t) || (581/150 + t == 4 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(15 + (5929*t)/1000 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime((5929 + Sqrt(55153041))/10000,
+	319/150,
+	True,
+	True)
+
+
+compareMinTime((5929 + Sqrt(55153041))/10000,
+	(5929 + Sqrt(335153041))/10000,
+	True,
+	True)
+
+
+--
+checkConsistencyPoint(ubvy == Derivative(1)(dby) && 100*ue == 77 && Derivative(1)(dbvy) == -10 && ubvy + ue*prev_pbvy_0 == 0,
+	ubvy == prev_pbvy_0 && uby == prev_pby_0,
+	True,
+	True,
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> -Sqrt(55153041)/1000, prev_pbx_0 -> (133987 + 3*Sqrt(55153041))/30000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> -Sqrt(55153041)/1000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	(31329 + Sqrt(55153041))/10000)
+
+--
+checkConsistencyPoint(ubvy == Derivative(1)(dby) && 100*ue == 77 && ubvy + ue*prev_pbvy_0 == 0,
+	uby == prev_pby_0,
+	True,
+	True,
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> -Sqrt(55153041)/1000, prev_pbx_0 -> (133987 + 3*Sqrt(55153041))/30000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> -Sqrt(55153041)/1000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	(31329 + Sqrt(55153041))/10000)
+
+--
+checkConsistencyInterval(5 <= ubx(t) && ubx(t) <= 6 && (uby(t) == 6 || uby(t) == 14) && ubvy(t) == Derivative(1)(uby)(t) && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvy)(t) == -10 && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubvy(0) == prev_pbvy_0 && ubx(0) == prev_pbx_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> (77*Sqrt(55153041))/100000, prev_pbx_0 -> (133987 + 3*Sqrt(55153041))/30000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> 1, prev_pby_1 -> (77*Sqrt(55153041))/100000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubvy(t) == Derivative(1)(uby)(t) && Derivative(1)(ubvy)(t) == -10,
+	ubvy(0) == prev_pbvy_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> (77*Sqrt(55153041))/100000, prev_pbx_0 -> (133987 + 3*Sqrt(55153041))/30000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> 1, prev_pby_1 -> (77*Sqrt(55153041))/100000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(100*ue(t) == 77,
+	True,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> (77*Sqrt(55153041))/100000, prev_pbx_0 -> (133987 + 3*Sqrt(55153041))/30000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> 1, prev_pby_1 -> (77*Sqrt(55153041))/100000},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(0 < t && 5 <= (133987 + 3*Sqrt(55153041))/30000 + t && 0 < t && (133987 + 3*Sqrt(55153041))/30000 + t <= 6 && ((14 + (77*Sqrt(55153041)*t)/100000 - 5*t^2 == 6 && 0 < t) || (14 + (77*Sqrt(55153041)*t)/100000 - 5*t^2 == 14 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 6 <= 14 + (77*Sqrt(55153041)*t)/100000 - 5*t^2 && 0 < t && 14 + (77*Sqrt(55153041)*t)/100000 - 5*t^2 <= 14 && (((133987 + 3*Sqrt(55153041))/30000 + t == 5 && 0 < t) || ((133987 + 3*Sqrt(55153041))/30000 + t == 6 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= (133987 + 3*Sqrt(55153041))/30000 + t && 0 < t && (133987 + 3*Sqrt(55153041))/30000 + t <= 4 && ((14 + (77*Sqrt(55153041)*t)/100000 - 5*t^2 == 9/2 && 0 < t) || (14 + (77*Sqrt(55153041)*t)/100000 - 5*t^2 == 15 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 9/2 <= 14 + (77*Sqrt(55153041)*t)/100000 - 5*t^2 && 0 < t && 14 + (77*Sqrt(55153041)*t)/100000 - 5*t^2 <= 15 && (((133987 + 3*Sqrt(55153041))/30000 + t == 1 && 0 < t) || ((133987 + 3*Sqrt(55153041))/30000 + t == 4 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(14 + (77*Sqrt(55153041)*t)/100000 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime(14/3 + (-31329 - Sqrt(55153041))/10000,
+	(77*Sqrt(55153041))/1000000 + Sqrt(3127002380089)/1000000,
+	True,
+	True)
+
+
+--
+checkConsistencyPoint(ubvx == Derivative(1)(dbx) && 100*ue == 77 && Derivative(1)(dbvx) == 0 && ubvx + ue*prev_pbvx_0 == 0,
+	ubvx == prev_pbvx_0 && ubx == prev_pbx_0,
+	True,
+	True,
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> (-4601300 + 531*Sqrt(55153041))/300000, prev_pbx_0 -> 6, prev_pby_0 -> (-42899734313 + 24432903*Sqrt(55153041))/9000000000, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> (-4601300 + 531*Sqrt(55153041))/300000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	14/3)
+
+--
+checkConsistencyPoint(ubvx == Derivative(1)(dbx) && 100*ue == 77 && ubvx + ue*prev_pbvx_0 == 0,
+	ubx == prev_pbx_0,
+	True,
+	True,
+	{prev_pbvx_0 -> 1, prev_pbvy_0 -> (-4601300 + 531*Sqrt(55153041))/300000, prev_pbx_0 -> 6, prev_pby_0 -> (-42899734313 + 24432903*Sqrt(55153041))/9000000000, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 1, prev_pby_1 -> (-4601300 + 531*Sqrt(55153041))/300000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	14/3)
+
+--
+checkConsistencyInterval(ubx(t) == 6 && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubx(0) == prev_pbx_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (-4601300 + 531*Sqrt(55153041))/300000, prev_pbx_0 -> 6, prev_pby_0 -> (-42899734313 + 24432903*Sqrt(55153041))/9000000000, prev_pe_0 -> 77/100, prev_pbvy_1 -> -10, prev_pbx_1 -> -77/100, prev_pby_1 -> (-4601300 + 531*Sqrt(55153041))/300000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubx(0) == prev_pbx_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (-4601300 + 531*Sqrt(55153041))/300000, prev_pbx_0 -> 6, prev_pby_0 -> (-42899734313 + 24432903*Sqrt(55153041))/9000000000, prev_pe_0 -> 77/100, prev_pbvy_1 -> -10, prev_pbx_1 -> -77/100, prev_pby_1 -> (-4601300 + 531*Sqrt(55153041))/300000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(100*ue(t) == 77,
+	True,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (-4601300 + 531*Sqrt(55153041))/300000, prev_pbx_0 -> 6, prev_pby_0 -> (-42899734313 + 24432903*Sqrt(55153041))/9000000000, prev_pe_0 -> 77/100, prev_pbvy_1 -> -10, prev_pbx_1 -> -77/100, prev_pby_1 -> (-4601300 + 531*Sqrt(55153041))/300000},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(0 < t && 5 <= 6 - (77*t)/100 && 0 < t && 6 - (77*t)/100 <= 6 && (((-42899734313 + 24432903*Sqrt(55153041))/9000000000 + ((-4601300 + 531*Sqrt(55153041))*t)/300000 - 5*t^2 == 6 && 0 < t) || ((-42899734313 + 24432903*Sqrt(55153041))/9000000000 + ((-4601300 + 531*Sqrt(55153041))*t)/300000 - 5*t^2 == 14 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 6 <= (-42899734313 + 24432903*Sqrt(55153041))/9000000000 + ((-4601300 + 531*Sqrt(55153041))*t)/300000 - 5*t^2 && 0 < t && (-42899734313 + 24432903*Sqrt(55153041))/9000000000 + ((-4601300 + 531*Sqrt(55153041))*t)/300000 - 5*t^2 <= 14 && ((6 - (77*t)/100 == 5 && 0 < t) || (6 - (77*t)/100 == 6 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= 6 - (77*t)/100 && 0 < t && 6 - (77*t)/100 <= 4 && (((-42899734313 + 24432903*Sqrt(55153041))/9000000000 + ((-4601300 + 531*Sqrt(55153041))*t)/300000 - 5*t^2 == 9/2 && 0 < t) || ((-42899734313 + 24432903*Sqrt(55153041))/9000000000 + ((-4601300 + 531*Sqrt(55153041))*t)/300000 - 5*t^2 == 15 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 9/2 <= (-42899734313 + 24432903*Sqrt(55153041))/9000000000 + ((-4601300 + 531*Sqrt(55153041))*t)/300000 - 5*t^2 && 0 < t && (-42899734313 + 24432903*Sqrt(55153041))/9000000000 + ((-4601300 + 531*Sqrt(55153041))*t)/300000 - 5*t^2 <= 15 && ((6 - (77*t)/100 == 1 && 0 < t) || (6 - (77*t)/100 == 4 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(6 - (77*t)/100 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(6 - (77*t)/100 == 6 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime((77*Sqrt(55153041))/1000000 + (-4601300 + 531*Sqrt(55153041))/3000000,
+	600/77,
+	True,
+	True)
+
+
+compareMinTime((77*Sqrt(55153041))/1000000 + (-4601300 + 531*Sqrt(55153041))/3000000,
+	-14/3 + (77*Sqrt(55153041))/1000000 + Sqrt(3127002380089)/1000000 + (31329 + Sqrt(55153041))/10000,
+	True,
+	True)
+
+
+--
+checkConsistencyPoint(ubvy == Derivative(1)(dby) && 100*ue == 77 && Derivative(1)(dbvy) == -10 && ubvy + ue*prev_pbvy_0 == 0,
+	ubvy == prev_pbvy_0 && uby == prev_pby_0,
+	True,
+	True,
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (-77*Sqrt(55153041))/100000, prev_pbx_0 -> (1077150050 - 29337*Sqrt(55153041))/150000000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> -77/100, prev_pby_1 -> (-77*Sqrt(55153041))/100000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	(1566450 + 127*Sqrt(55153041))/500000)
+
+--
+checkConsistencyPoint(ubvy == Derivative(1)(dby) && 100*ue == 77 && ubvy + ue*prev_pbvy_0 == 0,
+	uby == prev_pby_0,
+	True,
+	True,
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (-77*Sqrt(55153041))/100000, prev_pbx_0 -> (1077150050 - 29337*Sqrt(55153041))/150000000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> -77/100, prev_pby_1 -> (-77*Sqrt(55153041))/100000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	(1566450 + 127*Sqrt(55153041))/500000)
+
+--
+checkConsistencyInterval(5 <= ubx(t) && ubx(t) <= 6 && (uby(t) == 6 || uby(t) == 14) && ubvy(t) == Derivative(1)(uby)(t) && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvy)(t) == -10 && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubvy(0) == prev_pbvy_0 && ubx(0) == prev_pbx_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (5929*Sqrt(55153041))/10000000, prev_pbx_0 -> (1077150050 - 29337*Sqrt(55153041))/150000000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> -77/100, prev_pby_1 -> (5929*Sqrt(55153041))/10000000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubvy(t) == Derivative(1)(uby)(t) && Derivative(1)(ubvy)(t) == -10,
+	ubvy(0) == prev_pbvy_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (5929*Sqrt(55153041))/10000000, prev_pbx_0 -> (1077150050 - 29337*Sqrt(55153041))/150000000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> -77/100, prev_pby_1 -> (5929*Sqrt(55153041))/10000000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(100*ue(t) == 77,
+	True,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (5929*Sqrt(55153041))/10000000, prev_pbx_0 -> (1077150050 - 29337*Sqrt(55153041))/150000000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> -77/100, prev_pby_1 -> (5929*Sqrt(55153041))/10000000},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(0 < t && 5 <= (2878 - 231*((1566450 + 127*Sqrt(55153041))/500000 + t))/300 && 0 < t && (2878 - 231*((1566450 + 127*Sqrt(55153041))/500000 + t))/300 <= 6 && ((14 + (5929*Sqrt(55153041)*t)/10000000 - 5*t^2 == 6 && 0 < t) || (14 + (5929*Sqrt(55153041)*t)/10000000 - 5*t^2 == 14 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 6 <= 14 + (5929*Sqrt(55153041)*t)/10000000 - 5*t^2 && 0 < t && 14 + (5929*Sqrt(55153041)*t)/10000000 - 5*t^2 <= 14 && (((2878 - 231*((1566450 + 127*Sqrt(55153041))/500000 + t))/300 == 5 && 0 < t) || ((2878 - 231*((1566450 + 127*Sqrt(55153041))/500000 + t))/300 == 6 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= (2878 - 231*((1566450 + 127*Sqrt(55153041))/500000 + t))/300 && 0 < t && (2878 - 231*((1566450 + 127*Sqrt(55153041))/500000 + t))/300 <= 4 && ((14 + (5929*Sqrt(55153041)*t)/10000000 - 5*t^2 == 9/2 && 0 < t) || (14 + (5929*Sqrt(55153041)*t)/10000000 - 5*t^2 == 15 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 9/2 <= 14 + (5929*Sqrt(55153041)*t)/10000000 - 5*t^2 && 0 < t && 14 + (5929*Sqrt(55153041)*t)/10000000 - 5*t^2 <= 15 && (((2878 - 231*((1566450 + 127*Sqrt(55153041))/500000 + t))/300 == 1 && 0 < t) || ((2878 - 231*((1566450 + 127*Sqrt(55153041))/500000 + t))/300 == 4 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(14 + (5929*Sqrt(55153041)*t)/10000000 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime((5929*Sqrt(55153041))/50000000,
+	(327150050 - 29337*Sqrt(55153041))/115500000,
+	True,
+	True)
+
+
+compareMinTime((5929*Sqrt(55153041))/50000000,
+	2878/231 + (-1566450 - 127*Sqrt(55153041))/500000,
+	True,
+	True)
+
+
+compareMinTime((5929*Sqrt(55153041))/50000000,
+	(5929*Sqrt(55153041))/100000000 + Sqrt(29938797111547681)/100000000,
+	True,
+	True)
+
+
+--
+checkConsistencyPoint(ubvy == Derivative(1)(dby) && 100*ue == 77 && Derivative(1)(dbvy) == -10 && ubvy + ue*prev_pbvy_0 == 0,
+	ubvy == prev_pbvy_0 && uby == prev_pby_0,
+	True,
+	True,
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (-5929*Sqrt(55153041))/10000000, prev_pbx_0 -> (107715005000 - 4303299*Sqrt(55153041))/15000000000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> -77/100, prev_pby_1 -> (-5929*Sqrt(55153041))/10000000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	(156645000 + 18629*Sqrt(55153041))/50000000)
+
+--
+checkConsistencyPoint(ubvy == Derivative(1)(dby) && 100*ue == 77 && ubvy + ue*prev_pbvy_0 == 0,
+	uby == prev_pby_0,
+	True,
+	True,
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (-5929*Sqrt(55153041))/10000000, prev_pbx_0 -> (107715005000 - 4303299*Sqrt(55153041))/15000000000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> -77/100, prev_pby_1 -> (-5929*Sqrt(55153041))/10000000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	(156645000 + 18629*Sqrt(55153041))/50000000)
+
+--
+checkConsistencyInterval(5 <= ubx(t) && ubx(t) <= 6 && (uby(t) == 6 || uby(t) == 14) && ubvy(t) == Derivative(1)(uby)(t) && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvy)(t) == -10 && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubvy(0) == prev_pbvy_0 && ubx(0) == prev_pbx_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (456533*Sqrt(55153041))/1000000000, prev_pbx_0 -> (107715005000 - 4303299*Sqrt(55153041))/15000000000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> -77/100, prev_pby_1 -> (456533*Sqrt(55153041))/1000000000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubvy(t) == Derivative(1)(uby)(t) && Derivative(1)(ubvy)(t) == -10,
+	ubvy(0) == prev_pbvy_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (456533*Sqrt(55153041))/1000000000, prev_pbx_0 -> (107715005000 - 4303299*Sqrt(55153041))/15000000000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> -77/100, prev_pby_1 -> (456533*Sqrt(55153041))/1000000000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(100*ue(t) == 77,
+	True,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> (456533*Sqrt(55153041))/1000000000, prev_pbx_0 -> (107715005000 - 4303299*Sqrt(55153041))/15000000000, prev_pby_0 -> 14, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> -77/100, prev_pby_1 -> (456533*Sqrt(55153041))/1000000000},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(0 < t && 5 <= (2878 - 231*(31329/10000 + (18629*Sqrt(55153041))/50000000 + t))/300 && 0 < t && (2878 - 231*(31329/10000 + (18629*Sqrt(55153041))/50000000 + t))/300 <= 6 && ((14 + (456533*Sqrt(55153041)*t)/1000000000 - 5*t^2 == 6 && 0 < t) || (14 + (456533*Sqrt(55153041)*t)/1000000000 - 5*t^2 == 14 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 6 <= 14 + (456533*Sqrt(55153041)*t)/1000000000 - 5*t^2 && 0 < t && 14 + (456533*Sqrt(55153041)*t)/1000000000 - 5*t^2 <= 14 && (((2878 - 231*(31329/10000 + (18629*Sqrt(55153041))/50000000 + t))/300 == 5 && 0 < t) || ((2878 - 231*(31329/10000 + (18629*Sqrt(55153041))/50000000 + t))/300 == 6 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= (2878 - 231*(31329/10000 + (18629*Sqrt(55153041))/50000000 + t))/300 && 0 < t && (2878 - 231*(31329/10000 + (18629*Sqrt(55153041))/50000000 + t))/300 <= 4 && ((14 + (456533*Sqrt(55153041)*t)/1000000000 - 5*t^2 == 9/2 && 0 < t) || (14 + (456533*Sqrt(55153041)*t)/1000000000 - 5*t^2 == 15 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 9/2 <= 14 + (456533*Sqrt(55153041)*t)/1000000000 - 5*t^2 && 0 < t && 14 + (456533*Sqrt(55153041)*t)/1000000000 - 5*t^2 <= 15 && (((2878 - 231*(31329/10000 + (18629*Sqrt(55153041))/50000000 + t))/300 == 1 && 0 < t) || ((2878 - 231*(31329/10000 + (18629*Sqrt(55153041))/50000000 + t))/300 == 4 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(14 + (456533*Sqrt(55153041)*t)/1000000000 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime((456533*Sqrt(55153041))/10000000000 + Sqrt(201495128074366200649)/10000000000,
+	(47715005000 - 4303299*Sqrt(55153041))/11550000000,
+	True,
+	True)
+
+
+compareMinTime((47715005000 - 4303299*Sqrt(55153041))/11550000000,
+	2878/231 + (-156645000 - 18629*Sqrt(55153041))/50000000 + (-1566450 - 127*Sqrt(55153041))/500000 + (1566450 + 127*Sqrt(55153041))/500000,
+	True,
+	True)
+
+
+compareMinTime((47715005000 - 4303299*Sqrt(55153041))/11550000000,
+	(456533*Sqrt(55153041))/10000000000 + Sqrt(291495128074366200649)/10000000000,
+	True,
+	True)
+
+
+--
+checkConsistencyPoint(ubvx == Derivative(1)(dbx) && 100*ue == 77 && Derivative(1)(dbvx) == 0 && ubvx + ue*prev_pbvx_0 == 0,
+	ubvx == prev_pbvx_0 && ubx == prev_pbx_0,
+	True,
+	True,
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> -9543001/231000 + (4182333*Sqrt(55153041))/1000000000, prev_pbx_0 -> 4, prev_pby_0 -> (-317483650961989469542957 + 46098369241539615000*Sqrt(55153041))/2668050000000000000000, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> -77/100, prev_pby_1 -> -9543001/231000 + (4182333*Sqrt(55153041))/1000000000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	1678/231)
+
+--
+checkConsistencyPoint(ubvx == Derivative(1)(dbx) && 100*ue == 77 && ubvx + ue*prev_pbvx_0 == 0,
+	ubx == prev_pbx_0,
+	True,
+	True,
+	{prev_pbvx_0 -> -77/100, prev_pbvy_0 -> -9543001/231000 + (4182333*Sqrt(55153041))/1000000000, prev_pbx_0 -> 4, prev_pby_0 -> (-317483650961989469542957 + 46098369241539615000*Sqrt(55153041))/2668050000000000000000, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> -77/100, prev_pby_1 -> -9543001/231000 + (4182333*Sqrt(55153041))/1000000000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	1678/231)
+
+--
+checkConsistencyInterval(9/2 <= uby(t) && uby(t) <= 15 && (ubx(t) == 1 || ubx(t) == 4) && ubvy(t) == Derivative(1)(uby)(t) && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvy)(t) == -10 && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubvy(0) == prev_pbvy_0 && ubx(0) == prev_pbx_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 5929/10000, prev_pbvy_0 -> -9543001/231000 + (4182333*Sqrt(55153041))/1000000000, prev_pbx_0 -> 4, prev_pby_0 -> (-317483650961989469542957 + 46098369241539615000*Sqrt(55153041))/2668050000000000000000, prev_pe_0 -> 77/100, prev_pbvy_1 -> -10, prev_pbx_1 -> 5929/10000, prev_pby_1 -> -9543001/231000 + (4182333*Sqrt(55153041))/1000000000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubx(0) == prev_pbx_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 5929/10000, prev_pbvy_0 -> -9543001/231000 + (4182333*Sqrt(55153041))/1000000000, prev_pbx_0 -> 4, prev_pby_0 -> (-317483650961989469542957 + 46098369241539615000*Sqrt(55153041))/2668050000000000000000, prev_pe_0 -> 77/100, prev_pbvy_1 -> -10, prev_pbx_1 -> 5929/10000, prev_pby_1 -> -9543001/231000 + (4182333*Sqrt(55153041))/1000000000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(100*ue(t) == 77,
+	True,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 5929/10000, prev_pbvy_0 -> -9543001/231000 + (4182333*Sqrt(55153041))/1000000000, prev_pbx_0 -> 4, prev_pby_0 -> (-317483650961989469542957 + 46098369241539615000*Sqrt(55153041))/2668050000000000000000, prev_pe_0 -> 77/100, prev_pbvy_1 -> -10, prev_pbx_1 -> 5929/10000, prev_pby_1 -> -9543001/231000 + (4182333*Sqrt(55153041))/1000000000},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(0 < t && 5 <= 4 + (5929*t)/10000 && 0 < t && 4 + (5929*t)/10000 <= 6 && (((-4136857762448032637 - 655141552785000*Sqrt(55153041))/50000000000000000 - 5*(1678/231 + t)^2 + (59*(177000000 + 23629*Sqrt(55153041))*(1678 + 231*t))/77000000000 == 6 && 0 < t) || ((-4136857762448032637 - 655141552785000*Sqrt(55153041))/50000000000000000 - 5*(1678/231 + t)^2 + (59*(177000000 + 23629*Sqrt(55153041))*(1678 + 231*t))/77000000000 == 14 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 6 <= (-4136857762448032637 - 655141552785000*Sqrt(55153041))/50000000000000000 - 5*(1678/231 + t)^2 + (59*(177000000 + 23629*Sqrt(55153041))*(1678 + 231*t))/77000000000 && 0 < t && (-4136857762448032637 - 655141552785000*Sqrt(55153041))/50000000000000000 - 5*(1678/231 + t)^2 + (59*(177000000 + 23629*Sqrt(55153041))*(1678 + 231*t))/77000000000 <= 14 && ((4 + (5929*t)/10000 == 5 && 0 < t) || (4 + (5929*t)/10000 == 6 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= 4 + (5929*t)/10000 && 0 < t && 4 + (5929*t)/10000 <= 4 && (((-4136857762448032637 - 655141552785000*Sqrt(55153041))/50000000000000000 - 5*(1678/231 + t)^2 + (59*(177000000 + 23629*Sqrt(55153041))*(1678 + 231*t))/77000000000 == 9/2 && 0 < t) || ((-4136857762448032637 - 655141552785000*Sqrt(55153041))/50000000000000000 - 5*(1678/231 + t)^2 + (59*(177000000 + 23629*Sqrt(55153041))*(1678 + 231*t))/77000000000 == 15 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 9/2 <= (-4136857762448032637 - 655141552785000*Sqrt(55153041))/50000000000000000 - 5*(1678/231 + t)^2 + (59*(177000000 + 23629*Sqrt(55153041))*(1678 + 231*t))/77000000000 && 0 < t && (-4136857762448032637 - 655141552785000*Sqrt(55153041))/50000000000000000 - 5*(1678/231 + t)^2 + (59*(177000000 + 23629*Sqrt(55153041))*(1678 + 231*t))/77000000000 <= 15 && ((4 + (5929*t)/10000 == 1 && 0 < t) || (4 + (5929*t)/10000 == 4 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(4 + (5929*t)/10000 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(4 + (5929*t)/10000 == 6 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime(20000/5929,
+	-1678/231 + (456533*Sqrt(55153041))/10000000000 + Sqrt(291495128074366200649)/10000000000 + (156645000 + 18629*Sqrt(55153041))/50000000,
+	True,
+	True)
+
+
+--
+checkConsistencyPoint(ubvy == Derivative(1)(dby) && 100*ue == 77 && Derivative(1)(dbvy) == -10 && ubvy + ue*prev_pbvy_0 == 0,
+	ubvy == prev_pbvy_0 && uby == prev_pby_0,
+	True,
+	True,
+	{prev_pbvx_0 -> 5929/10000, prev_pbvy_0 -> -Sqrt(291495128074366200649)/1000000000, prev_pbx_0 -> (465188923000000 + 74391157071*Sqrt(55153041) + 17787*Sqrt(291495128074366200649))/300000000000000, prev_pby_0 -> 0, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 5929/10000, prev_pby_1 -> -Sqrt(291495128074366200649)/1000000000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	(31329000000 + 4182333*Sqrt(55153041) + Sqrt(291495128074366200649))/10000000000)
+
+--
+checkConsistencyPoint(ubvy == Derivative(1)(dby) && 100*ue == 77 && ubvy + ue*prev_pbvy_0 == 0,
+	uby == prev_pby_0,
+	True,
+	True,
+	{prev_pbvx_0 -> 5929/10000, prev_pbvy_0 -> -Sqrt(291495128074366200649)/1000000000, prev_pbx_0 -> (465188923000000 + 74391157071*Sqrt(55153041) + 17787*Sqrt(291495128074366200649))/300000000000000, prev_pby_0 -> 0, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 5929/10000, prev_pby_1 -> -Sqrt(291495128074366200649)/1000000000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	(31329000000 + 4182333*Sqrt(55153041) + Sqrt(291495128074366200649))/10000000000)
+
+--
+checkConsistencyInterval(uby(t) == 0 && ubvy(t) == Derivative(1)(uby)(t) && Derivative(1)(ubvy)(t) == -10,
+	ubvy(0) == prev_pbvy_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 5929/10000, prev_pbvy_0 -> (77*Sqrt(291495128074366200649))/100000000000, prev_pbx_0 -> (465188923000000 + 74391157071*Sqrt(55153041) + 17787*Sqrt(291495128074366200649))/300000000000000, prev_pby_0 -> 0, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> 5929/10000, prev_pby_1 -> (77*Sqrt(291495128074366200649))/100000000000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubvy(t) == Derivative(1)(uby)(t) && Derivative(1)(ubvy)(t) == -10,
+	ubvy(0) == prev_pbvy_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 5929/10000, prev_pbvy_0 -> (77*Sqrt(291495128074366200649))/100000000000, prev_pbx_0 -> (465188923000000 + 74391157071*Sqrt(55153041) + 17787*Sqrt(291495128074366200649))/300000000000000, prev_pby_0 -> 0, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> 5929/10000, prev_pby_1 -> (77*Sqrt(291495128074366200649))/100000000000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(100*ue(t) == 77,
+	True,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> 5929/10000, prev_pbvy_0 -> (77*Sqrt(291495128074366200649))/100000000000, prev_pbx_0 -> (465188923000000 + 74391157071*Sqrt(55153041) + 17787*Sqrt(291495128074366200649))/300000000000000, prev_pby_0 -> 0, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbx_1 -> 5929/10000, prev_pby_1 -> (77*Sqrt(291495128074366200649))/100000000000},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(0 < t && 5 <= (-9206 + 17787*((31329000000 + 4182333*Sqrt(55153041) + Sqrt(291495128074366200649))/10000000000 + t))/30000 && 0 < t && (-9206 + 17787*((31329000000 + 4182333*Sqrt(55153041) + Sqrt(291495128074366200649))/10000000000 + t))/30000 <= 6 && (((77*Sqrt(291495128074366200649)*t)/100000000000 - 5*t^2 == 6 && 0 < t) || ((77*Sqrt(291495128074366200649)*t)/100000000000 - 5*t^2 == 14 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 6 <= (77*Sqrt(291495128074366200649)*t)/100000000000 - 5*t^2 && 0 < t && (77*Sqrt(291495128074366200649)*t)/100000000000 - 5*t^2 <= 14 && (((-9206 + 17787*((31329000000 + 4182333*Sqrt(55153041) + Sqrt(291495128074366200649))/10000000000 + t))/30000 == 5 && 0 < t) || ((-9206 + 17787*((31329000000 + 4182333*Sqrt(55153041) + Sqrt(291495128074366200649))/10000000000 + t))/30000 == 6 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= (-9206 + 17787*((31329000000 + 4182333*Sqrt(55153041) + Sqrt(291495128074366200649))/10000000000 + t))/30000 && 0 < t && (-9206 + 17787*((31329000000 + 4182333*Sqrt(55153041) + Sqrt(291495128074366200649))/10000000000 + t))/30000 <= 4 && (((77*Sqrt(291495128074366200649)*t)/100000000000 - 5*t^2 == 9/2 && 0 < t) || ((77*Sqrt(291495128074366200649)*t)/100000000000 - 5*t^2 == 15 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 9/2 <= (77*Sqrt(291495128074366200649)*t)/100000000000 - 5*t^2 && 0 < t && (77*Sqrt(291495128074366200649)*t)/100000000000 - 5*t^2 <= 15 && (((-9206 + 17787*((31329000000 + 4182333*Sqrt(55153041) + Sqrt(291495128074366200649))/10000000000 + t))/30000 == 1 && 0 < t) || ((-9206 + 17787*((31329000000 + 4182333*Sqrt(55153041) + Sqrt(291495128074366200649))/10000000000 + t))/30000 == 4 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime((77*Sqrt(291495128074366200649)*t)/100000000000 - 5*t^2 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime((77*Sqrt(291495128074366200649))/1000000000000 + Sqrt(528274614352917203647921)/1000000000000,
+	(1034811077000000 - 74391157071*Sqrt(55153041) - 17787*Sqrt(291495128074366200649))/177870000000000,
+	True,
+	True)
+
+
+compareMinTime((1034811077000000 - 74391157071*Sqrt(55153041) - 17787*Sqrt(291495128074366200649))/177870000000000,
+	189206/17787 + (-31329000000 - 4182333*Sqrt(55153041) - Sqrt(291495128074366200649))/10000000000,
+	True,
+	True)
+
+
+compareMinTime((1034811077000000 - 74391157071*Sqrt(55153041) - 17787*Sqrt(291495128074366200649))/177870000000000,
+	(77*Sqrt(291495128074366200649))/500000000000,
+	True,
+	True)
+
+
+--
+checkConsistencyPoint(ubvx == Derivative(1)(dbx) && 100*ue == 77 && Derivative(1)(dbvx) == 0 && ubvx + ue*prev_pbvx_0 == 0,
+	ubvx == prev_pbvx_0 && ubx == prev_pbx_0,
+	True,
+	True,
+	{prev_pbvx_0 -> 5929/10000, prev_pbvy_0 -> -1034811077/17787000 + (4182333*Sqrt(55153041))/1000000000 + (177*Sqrt(291495128074366200649))/100000000000, prev_pbx_0 -> 5, prev_pby_0 -> -((-1034811077000000 + 74391157071*Sqrt(55153041) + 17787*Sqrt(291495128074366200649))*(-51740553850000000 + 3719557853550*Sqrt(55153041) + 2258949*Sqrt(291495128074366200649)))/316377369000000000000000000000, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 5929/10000, prev_pby_1 -> -1034811077/17787000 + (4182333*Sqrt(55153041))/1000000000 + (177*Sqrt(291495128074366200649))/100000000000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	159206/17787)
+
+--
+checkConsistencyPoint(ubvx == Derivative(1)(dbx) && 100*ue == 77 && ubvx + ue*prev_pbvx_0 == 0,
+	ubx == prev_pbx_0,
+	True,
+	True,
+	{prev_pbvx_0 -> 5929/10000, prev_pbvy_0 -> -1034811077/17787000 + (4182333*Sqrt(55153041))/1000000000 + (177*Sqrt(291495128074366200649))/100000000000, prev_pbx_0 -> 5, prev_pby_0 -> -((-1034811077000000 + 74391157071*Sqrt(55153041) + 17787*Sqrt(291495128074366200649))*(-51740553850000000 + 3719557853550*Sqrt(55153041) + 2258949*Sqrt(291495128074366200649)))/316377369000000000000000000000, prev_pe_0 -> 77/100, prev_pbvx_1 -> 0, prev_pbvy_1 -> -10, prev_pbx_1 -> 5929/10000, prev_pby_1 -> -1034811077/17787000 + (4182333*Sqrt(55153041))/1000000000 + (177*Sqrt(291495128074366200649))/100000000000},
+	{ubvx, ubvy, ubx, uby, ue, Derivative(1)(dbvx), Derivative(1)(dbvy), Derivative(1)(dbx), Derivative(1)(dby)},
+	{prev_pbvx_0, prev_pbvx_1, prev_pbvy_0, prev_pbvy_1, prev_pbx_0, prev_pbx_1, prev_pby_0, prev_pby_1, prev_pe_0},
+	{},
+	159206/17787)
+
+--
+checkConsistencyInterval(6 <= uby(t) && uby(t) <= 14 && (ubx(t) == 5 || ubx(t) == 6) && ubvy(t) == Derivative(1)(uby)(t) && ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvy)(t) == -10 && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubvy(0) == prev_pbvy_0 && ubx(0) == prev_pbx_0 && uby(0) == prev_pby_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> -456533/1000000, prev_pbvy_0 -> -1034811077/17787000 + (4182333*Sqrt(55153041))/1000000000 + (177*Sqrt(291495128074366200649))/100000000000, prev_pbx_0 -> 5, prev_pby_0 -> -((-1034811077000000 + 74391157071*Sqrt(55153041) + 17787*Sqrt(291495128074366200649))*(-51740553850000000 + 3719557853550*Sqrt(55153041) + 2258949*Sqrt(291495128074366200649)))/316377369000000000000000000000, prev_pe_0 -> 77/100, prev_pbvy_1 -> -10, prev_pbx_1 -> -456533/1000000, prev_pby_1 -> -1034811077/17787000 + (4182333*Sqrt(55153041))/1000000000 + (177*Sqrt(291495128074366200649))/100000000000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(ubvx(t) == Derivative(1)(ubx)(t) && Derivative(1)(ubvx)(t) == 0,
+	ubvx(0) == prev_pbvx_0 && ubx(0) == prev_pbx_0,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> -456533/1000000, prev_pbvy_0 -> -1034811077/17787000 + (4182333*Sqrt(55153041))/1000000000 + (177*Sqrt(291495128074366200649))/100000000000, prev_pbx_0 -> 5, prev_pby_0 -> -((-1034811077000000 + 74391157071*Sqrt(55153041) + 17787*Sqrt(291495128074366200649))*(-51740553850000000 + 3719557853550*Sqrt(55153041) + 2258949*Sqrt(291495128074366200649)))/316377369000000000000000000000, prev_pe_0 -> 77/100, prev_pbvy_1 -> -10, prev_pbx_1 -> -456533/1000000, prev_pby_1 -> -1034811077/17787000 + (4182333*Sqrt(55153041))/1000000000 + (177*Sqrt(291495128074366200649))/100000000000},
+	True,
+	True,
+	{})
+
+--
+checkConsistencyInterval(100*ue(t) == 77,
+	True,
+	True,
+	{ubvx(t), ubvy(t), ubx(t), uby(t), ue(t), Derivative(1)(ubvx)(t), Derivative(1)(ubvy)(t), Derivative(1)(ubx)(t), Derivative(1)(uby)(t)},
+	{prev_pbvx_0 -> -456533/1000000, prev_pbvy_0 -> -1034811077/17787000 + (4182333*Sqrt(55153041))/1000000000 + (177*Sqrt(291495128074366200649))/100000000000, prev_pbx_0 -> 5, prev_pby_0 -> -((-1034811077000000 + 74391157071*Sqrt(55153041) + 17787*Sqrt(291495128074366200649))*(-51740553850000000 + 3719557853550*Sqrt(55153041) + 2258949*Sqrt(291495128074366200649)))/316377369000000000000000000000, prev_pe_0 -> 77/100, prev_pbvy_1 -> -10, prev_pbx_1 -> -456533/1000000, prev_pby_1 -> -1034811077/17787000 + (4182333*Sqrt(55153041))/1000000000 + (177*Sqrt(291495128074366200649))/100000000000},
+	True,
+	True,
+	{})
+
+--
+minimizeTime(0 < t && 5 <= 5 - (456533*t)/1000000 && 0 < t && 5 - (456533*t)/1000000 <= 6 && ((((-51740553850000000/17787 + 209116650*Sqrt(55153041) + 127*Sqrt(291495128074366200649) - 500000000000*t)*(1034811077000000/17787 - 4182333*Sqrt(55153041) - Sqrt(291495128074366200649) + 10000000000*t))/1000000000000000000000 == 6 && 0 < t) || (((-51740553850000000/17787 + 209116650*Sqrt(55153041) + 127*Sqrt(291495128074366200649) - 500000000000*t)*(1034811077000000/17787 - 4182333*Sqrt(55153041) - Sqrt(291495128074366200649) + 10000000000*t))/1000000000000000000000 == 14 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 6 <= ((-51740553850000000/17787 + 209116650*Sqrt(55153041) + 127*Sqrt(291495128074366200649) - 500000000000*t)*(1034811077000000/17787 - 4182333*Sqrt(55153041) - Sqrt(291495128074366200649) + 10000000000*t))/1000000000000000000000 && 0 < t && ((-51740553850000000/17787 + 209116650*Sqrt(55153041) + 127*Sqrt(291495128074366200649) - 500000000000*t)*(1034811077000000/17787 - 4182333*Sqrt(55153041) - Sqrt(291495128074366200649) + 10000000000*t))/1000000000000000000000 <= 14 && ((5 - (456533*t)/1000000 == 5 && 0 < t) || (5 - (456533*t)/1000000 == 6 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 1 <= 5 - (456533*t)/1000000 && 0 < t && 5 - (456533*t)/1000000 <= 4 && ((((-51740553850000000/17787 + 209116650*Sqrt(55153041) + 127*Sqrt(291495128074366200649) - 500000000000*t)*(1034811077000000/17787 - 4182333*Sqrt(55153041) - Sqrt(291495128074366200649) + 10000000000*t))/1000000000000000000000 == 9/2 && 0 < t) || (((-51740553850000000/17787 + 209116650*Sqrt(55153041) + 127*Sqrt(291495128074366200649) - 500000000000*t)*(1034811077000000/17787 - 4182333*Sqrt(55153041) - Sqrt(291495128074366200649) + 10000000000*t))/1000000000000000000000 == 15 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(0 < t && 9/2 <= ((-51740553850000000/17787 + 209116650*Sqrt(55153041) + 127*Sqrt(291495128074366200649) - 500000000000*t)*(1034811077000000/17787 - 4182333*Sqrt(55153041) - Sqrt(291495128074366200649) + 10000000000*t))/1000000000000000000000 && 0 < t && ((-51740553850000000/17787 + 209116650*Sqrt(55153041) + 127*Sqrt(291495128074366200649) - 500000000000*t)*(1034811077000000/17787 - 4182333*Sqrt(55153041) - Sqrt(291495128074366200649) + 10000000000*t))/1000000000000000000000 <= 15 && ((5 - (456533*t)/1000000 == 1 && 0 < t) || (5 - (456533*t)/1000000 == 4 && 0 < t)),
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(5 - (456533*t)/1000000 == 0 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+minimizeTime(5 - (456533*t)/1000000 == 6 && 0 < t,
+	True,
+	0,
+	Infinity)
+
+
+
+--
+compareMinTime(5000000/456533,
+	-159206/17787 + (77*Sqrt(291495128074366200649))/500000000000 + (31329000000 + 4182333*Sqrt(55153041) + Sqrt(291495128074366200649))/10000000000,
+	True,
+	True)
+
+
